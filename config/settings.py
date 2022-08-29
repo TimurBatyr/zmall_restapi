@@ -13,6 +13,7 @@ import datetime
 import os
 from pathlib import Path
 
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,8 @@ SECRET_KEY = 'django-insecure-10^senp1jgf(0hq-t9$7%htw%7t@j06!p-s_jgxh$8944ttty$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zmall.herokuapp.com']
 
 
 # Application definition
@@ -85,16 +87,27 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'zmall_db',
+#         # 'ENGINE': 'django.db.backends.sqlite3',
+#         # 'NAME': 'zmall_db',
+#         'USER': 'admin',
+#         'PASSWORD': 'admin',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+#for heroku
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'zmall_db',
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': 'zmall_db',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'daspgbrq2md7h5',
+        'USER': 'psxmblqcfziuhh',
+        'PASSWORD': 'b89e7f956a8a98ff1d8011ed183709a98bc45739c4bd5808720160eac63b77a4',
+        'HOST': 'ec2-44-205-63-142.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -138,8 +151,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
