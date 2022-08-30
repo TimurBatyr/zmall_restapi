@@ -19,6 +19,8 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
+from .yasg import urlpatterns as doc_urls
+
 from adds.views import PostAddViewSet
 
 router = DefaultRouter()
@@ -31,3 +33,5 @@ urlpatterns = [
     path('api/v1/adds/', include('adds.urls')),
     path('api/v1/', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += doc_urls
