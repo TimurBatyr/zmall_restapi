@@ -52,6 +52,7 @@ class SearchAPIListView(generics.ListAPIView):
     search_fields = ['title']
 
 
+
 # ---------
 # Фильтр по категориям
 class Filter(filters.FilterSet):
