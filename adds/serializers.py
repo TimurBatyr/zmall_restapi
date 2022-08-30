@@ -29,19 +29,32 @@ class PostSerializer(serializers.ModelSerializer):
         fields = ('title', 'from_price', 'image', 'subscription')
 
 
-class AddPostSerializer(serializers.ModelSerializer):
-    # Image_Post = ImageSerializer(many=True, read_only=True)  # Вложенный Сериализатор
-    Image_Post = serializers.StringRelatedField(many=True)
+class ImageSerializer(serializers.ModelSerializer):
+    """Фотографии для товаров"""
+    class Meta:
+        model = PostImages
+        fields = ('images',)
+
+
+
+class PostCRUDSerializer(serializers.ModelSerializer):
+    images = ImageSerializer(source='images.image', many=True, read_only=True)
+
 
     class Meta:
         model = Post
-        fields = ('id', 'category', 'subcategory',
-                  'title', 'from_price', 'to_price',
-                  'description', 'image', 'Image_Post', 'city',
-                  'email', 'phone_number'
-                  )
+        fields = ('title', 'description', 'images')
+        # exclude = ('user', 'status',)
 
-    exclude = ('status',)
+    def create(self, validated_data):
+        images_data = self.context.get('view').request.FILES
+        task = Post.objects.create(title=validated_data.get('title', 'no-title'),
+                                   user_id=1)
+        for image_data in images_data.values():
+            PostImages.objects.create(task=task, image=image_data)
+        return task
+
+
 
 # class DetailPostSerializer(serializers.ModelSerializer):
 #     category = CategorySerializer

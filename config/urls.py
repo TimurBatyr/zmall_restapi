@@ -21,11 +21,11 @@ from rest_framework.routers import DefaultRouter
 
 from .yasg import urlpatterns as doc_urls
 
-from adds.views import PostAddViewSet
+from adds.views import PostCRUDViewSet
 
 router = DefaultRouter()
 # router.register('adds/detailpost', DetailPostViewSet) #URL для товара +id
-router.register('adds/addpost', PostAddViewSet, 'Add') #URL для товара +id
+router.register('adds/crudpost', PostCRUDViewSet, 'Add') #URL для товара +id
 
 urlpatterns = [
     path('admin/', admin.site.urls),

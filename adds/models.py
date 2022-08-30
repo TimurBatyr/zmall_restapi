@@ -1,16 +1,18 @@
-import datetime
-
 from django.db import models
 
 from account.models import UserProfile
 
 
 class Category(models.Model):
+    """Category for post"""
     title = models.CharField(max_length=100)
     icon_image = models.ImageField(max_length=100)
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['-id']
 
 
 class Subcategory(models.Model):
@@ -18,7 +20,11 @@ class Subcategory(models.Model):
     title = models.CharField(max_length=100, verbose_name='Subcategory')
 
     def __str__(self):
-        return self.title
+        return self.title + '--' + self.category.title
+
+
+    class Meta:
+        ordering = ['-id']
 
 
 class City(models.Model):
@@ -29,14 +35,14 @@ class City(models.Model):
 
 
 class PhonePost(models.Model):
-    phone_number_0 = models.CharField(max_length=10)
+    phone_number = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.phone_number_0
+        return self.phone_number
 
 
 STATUS = (
-        ('in_progress', 'in_pprigress'),
+        ('in_progress', 'in_progress'),
         ('verified', 'verified'),
         ('rejected', 'rejected')
     )
@@ -59,7 +65,12 @@ class Post(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return f'ID {self.id} : {self.title}'
+
+
+class PostImages(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.DO_NOTHING, related_name='images')
+    images = models.ImageField(upload_to='images', blank=True, verbose_name='Фотографии')
 
 
 class Views(models.Model):
@@ -68,14 +79,12 @@ class Views(models.Model):
     post = models.ForeignKey(Post, related_name='Views_Post', on_delete=models.CASCADE)
 
 
-class PostImages(models.Model):
-    post = models.ForeignKey(Post, related_name='Image_Post', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True, verbose_name='Фотография')
-
-
 class Favorite(models.Model):
     post = models.ManyToManyField(Post, related_name='Favorite_Post')
     user = models.ForeignKey(UserProfile, related_name='Favorite_User', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.post
 
 
 LIST = (
@@ -92,7 +101,7 @@ class Subscription(models.Model):
     end_date = models.DateTimeField(auto_now_add=True)
 
 
-class Transaction(models.Model):
+class Transactions(models.Model):
     pass
 
 

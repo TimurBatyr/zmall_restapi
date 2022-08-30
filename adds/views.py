@@ -97,9 +97,9 @@ class ProductList(generics.ListAPIView):
 #     serializer_class = DetailPostSerializer
 
 
-class PostAddViewSet(viewsets.ModelViewSet):
+class PostCRUDViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
-    serializer_class = AddPostSerializer
+    serializer_class = PostCRUDSerializer
 
 
 
