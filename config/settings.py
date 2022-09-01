@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_yasg',
 
+    'phonenumber_field',
     'rest_framework',
     'rest_framework_simplejwt',
+
 
     'account',
     'adds',
@@ -87,10 +89,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'zmall_db',
-        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
         # 'NAME': 'zmall_db',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'zmall_db',
         'USER': 'admin',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
@@ -153,8 +155,8 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=10),
-    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=1),
+    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=600),
+    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=3),
 }
 
 

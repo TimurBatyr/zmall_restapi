@@ -21,17 +21,17 @@ from rest_framework.routers import DefaultRouter
 
 from .yasg import urlpatterns as doc_urls
 
-from adds.views import PostCRUDViewSet
+# from adds.views import PostViewSet
 
-router = DefaultRouter()
-# router.register('adds/detailpost', DetailPostViewSet) #URL для товара +id
-router.register('adds/crudpost', PostCRUDViewSet, 'Add') #URL для товара +id
+# router = DefaultRouter()
+# # # router.register('adds/detailpost', DetailPostViewSet) #URL для товара +id
+# router.register('adds/post', PostViewSet) #URL для товара +id
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/account/', include('account.urls')),
     path('api/v1/adds/', include('adds.urls')),
-    path('api/v1/', include(router.urls)),
+    # path('api/v1/', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += doc_urls

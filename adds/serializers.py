@@ -1,77 +1,96 @@
 from rest_framework import serializers
+from rest_framework.validators import ValidationError
 
 from .models import *
 
 
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = ('title', 'icon_image')
-
-
-class Subscription(serializers.ModelSerializer):
-    class Meta:
-        model = Subscription
-        fields = ['choice']
-
-
-class SubscriptionSerializer(serializers.ModelSerializer):
-    Subscription = Subscription(many=True, read_only=True)
-
+class PostCreateSerializer(serializers.ModelSerializer):
+    ''' Create Post '''
     class Meta:
         model = Post
-        fields = ('title', 'from_price', 'image', 'subcategory', 'Subscription')
+        exclude = ['status',]
 
 
-class PostSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = ('title', 'from_price', 'image', 'subscription')
-
-
-class ImageSerializer(serializers.ModelSerializer):
-    """Фотографии для товаров"""
+class PostImagesSerializer(serializers.ModelSerializer):
+    ''' Create images for a post'''
     class Meta:
         model = PostImages
-        fields = ('images',)
+        fields = '__all__'
+
+    def validate(self, attrs):
+        if PostImages.objects.filter(post=attrs['post']).count() > 8:
+            raise ValidationError('Number of images should not exceed 7')
+        return attrs
 
 
+class PostContactsSerializer(serializers.ModelSerializer):
+    ''' Adding images for a post'''
+    class Meta:
+        model = PostContacts
+        fields = '__all__'
 
-class PostCRUDSerializer(serializers.ModelSerializer):
-    images = ImageSerializer(source='images.image', many=True, read_only=True)
 
+class PostEditSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('title', 'description', 'images')
-        # exclude = ('user', 'status',)
-
-    def create(self, validated_data):
-        images_data = self.context.get('view').request.FILES
-        task = Post.objects.create(title=validated_data.get('title', 'no-title'),
-                                   user_id=1)
-        for image_data in images_data.values():
-            PostImages.objects.create(task=task, image=image_data)
-        return task
+        exclude = ['status']
+        read_only_fields = ['user']
 
 
+# class CategorySerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Category
+#         fields = ('title', 'icon_image')
 
-# class DetailPostSerializer(serializers.ModelSerializer):
-#     category = CategorySerializer
+
+#
+# class PostSerializer(serializers.ModelSerializer):
 #
 #     class Meta:
 #         model = Post
-#         fields = '__all__'
+#         exclude = ('status', )
 #
-#     exclude = ('status',)
-
-
-class NewSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = ('title', 'from_price', 'image', 'subcategory', 'date_created')
-
-class SearchSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields =('title','image','from_price','subcategory')
+#
+#
+#
+#
+#
+#
+# class Subscription(serializers.ModelSerializer):
+#     class Meta:
+#         model = Subscription
+#         fields = ['choice']
+#
+#
+# class SubscriptionSerializer(serializers.ModelSerializer):
+#     Subscription = Subscription(many=True, read_only=True)
+#
+#     class Meta:
+#         model = Post
+#         fields = ('title', 'from_price', 'image', 'subcategory', 'Subscription')
+#
+#
+# class PostSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Post
+#         fields = ('title', 'from_price', 'image', 'subscription')
+#
+#
+# class ImageSerializer(serializers.ModelSerializer):
+#     """Фотографии для товаров"""
+#     class Meta:
+#         model = PostImages
+#         fields = ('image',)
+#
+#
+#
+# class NewSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Post
+#         fields = ('title', 'from_price', 'image', 'subcategory', 'date_created')
+#
+# class SearchSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Post
+#         fields =('title','image','from_price','subcategory')
