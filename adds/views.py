@@ -21,6 +21,7 @@ class PostCreate(generics.CreateAPIView):
 
 
 class PostImagesView(APIView):
+    '''Adding images to post'''
     permission_classes = [AllowAny]
     # permission_classes = [IsAuthenticated]
     parser_classes = (MultiPartParser, FormParser)
@@ -67,8 +68,8 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     '''Post Update/delete/detail View'''
 
     serializer_class = PostEditSerializer
-    permission_classes = [IsAuthenticated, UserPermission, ]
-    # permission_classes = [AllowAny]
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
     lookup_field ='pk'
     queryset = Post.objects.all()
 

@@ -6,9 +6,11 @@ from .models import *
 
 class PostCreateSerializer(serializers.ModelSerializer):
     ''' Create Post '''
+    user = serializers.SlugRelatedField(slug_field='email', queryset=UserProfile.objects.all())
+
     class Meta:
         model = Post
-        exclude = ['status',]
+        exclude = ['status']
 
 
 class PostImagesSerializer(serializers.ModelSerializer):
@@ -31,7 +33,7 @@ class PostContactsSerializer(serializers.ModelSerializer):
 
 
 class PostEditSerializer(serializers.ModelSerializer):
-
+    ''' Editing(detail, delete, update) post'''
     class Meta:
         model = Post
         exclude = ['status']
