@@ -6,7 +6,7 @@ from .models import *
 admin.site.register(Category)
 admin.site.register(Subcategory)
 admin.site.register(City)
-admin.site.register(PhonePost)
+admin.site.register(PostContacts)
 admin.site.register(Post)
 admin.site.register(Views)
 admin.site.register(PostImages)
