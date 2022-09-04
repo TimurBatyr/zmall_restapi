@@ -73,7 +73,7 @@ class Post(models.Model):
     description = models.TextField(max_length=300)
     from_price = models.DecimalField(max_digits=10, decimal_places=2)
     to_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
-    image = models.ImageField(upload_to='products/%Y/%m/%d', verbose_name='Фотография')
+    image = models.ImageField(upload_to='products/%Y/%m/%d', verbose_name='Фотография', blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
     email = models.EmailField(max_length=100)
     phone_number = PhoneNumberField()

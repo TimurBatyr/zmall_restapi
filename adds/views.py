@@ -114,33 +114,44 @@ class PostContactsDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = PostContacts.objects.all()
 
 
+class PostListHighlightPagination(Pagination):
+    '''Pagination for post list by date'''
+    page_size = 10
+
+
+class ProductFilter(filters.FilterSet):
+    '''Setting filters from and to on prices and cities'''
+    min_price = filters.NumberFilter(field_name="from_price", lookup_expr='gte')
+    max_price = filters.NumberFilter(field_name="from_price", lookup_expr='lte')
+
+    class Meta:
+        model = Post
+        fields = ['category', 'city']
+
+
+class PostListHighlight(generics.ListAPIView):
+    '''Post List by date'''
+    filter_backends = [DjangoFilterBackend]
+    serializer_class = PostListSerializer
+    filter_backends = [SearchFilter, DjangoFilterBackend, f.OrderingFilter]
+    search_fields = ['title', 'description']
+    # filterset_fields = ['category', ]
+    ordering_fields = ['date_created', 'from_price']
+    queryset = Post.objects.filter(is_activated=True).order_by('-date_created')
+    pagination_class = PostListHighlightPagination
+    filterset_class = ProductFilter
+
 
 class PostListDatePagination(Pagination):
     '''Pagination for post list by date'''
     page_size = 20
 
 
-class PostListDate(generics.ListAPIView):
-    '''Post List by date'''
-    filter_backends = [DjangoFilterBackend]
-    serializer_class = PostListSerializer
-    filter_backends = [SearchFilter, DjangoFilterBackend]
-    search_fields = ['title', 'description', 'sub']
-    filterset_fields = ['category', ]
-    queryset = Post.objects.all().order_by('-date_created')
-    pagination_class = PostListDatePagination
-
-
-class PostListHighlightPagination(Pagination):
-    '''Pagination for post list by date'''
-    page_size = 10
-
-
-class PostlistHighlight(generics.ListAPIView):
+class PostlistDate(generics.ListAPIView):
     '''Post List by highlighted subscription'''
     serializer_class = PostListSerializer
     queryset = Post.objects.filter(subscription__choice='highlight').order_by('-date_created')
-    pagination_class = PostListHighlightPagination
+    pagination_class = PostListDatePagination
 
     # def get_queryset(self):
     #     return Post.objects.filter(subscription__choice='highlight')
@@ -165,65 +176,8 @@ class ReviewCreateView(APIView):
         return Response(status=201)
 
 
-# # Create your views here.
-# # Просмотр каталога и обьявления
-#
 
-#
-#
-# # def get(self, request, pr):
-# #        movie = Product.objects.filter(category=pr)
-# #        serializer = ListProductSerializer
-# #        return Response(serializer(movie, many=True).data)
-# #
-# class SubscriptionApi(APIView):
-#
-#     def get(self, request):
-#         x = Subscription.objects.values('post')
-#         print(x)
-#         wer = []
-#         for i in x:
-#             print(i['post'])
-#
-#             qq = Post.objects.get(pk=i['post'])
-#             wer.append(qq)
-#
-#         movie = Post.objects.all()[0:10]
-#         print(wer)
-#
-#         serializer = SubscriptionSerializer
-#         return Response(serializer(wer, many=True).data)
-#
-#
-# class NewAdApiView(generics.ListAPIView):
-#     queryset = Post.objects.all().order_by('-date_created')[0:20]
-#     serializer_class = NewSerializer
-#
-#
-# # _________
-# # Поиск
-# class SearchAPIListView(generics.ListAPIView):
-#     queryset = Post.objects.all()
-#     serializer_class = SearchSerializer
-#     filter_backends = [f.SearchFilter]
-#     search_fields = ['title']
-#
-#
-# # ---------
-# # Фильтр по категориям
-# class Filter(filters.FilterSet):
-#     class Meta:
-#         model = Post
-#         fields = ['category']
-#
-#
-# class PostFilterList(generics.ListAPIView):
-#     queryset = Post.objects.all()
-#     serializer_class = SearchSerializer
-#     filter_backends = (filters.DjangoFilterBackend,)
-#     filterset_class = Filter
-#
-#
+
 # # Фильтры
 # class FilterAPIView(generics.ListAPIView):
 #     queryset = Post.objects.all()
@@ -239,60 +193,9 @@ class ReviewCreateView(APIView):
 #     class Meta:
 #         model = Post
 #         fields = ['category', 'city']
-#
-#
+
 # class ProductList(generics.ListAPIView):
 #     queryset = Post.objects.all()
 #     serializer_class = SearchSerializer
 #     filter_backends = (filters.DjangoFilterBackend,)
 #     filterset_class = ProductFilter
-#
-#
-# # class DetailPostViewSet(viewsets.ModelViewSet):
-# #     """Товар"""
-# #     queryset = Post.objects.all()
-# #     serializer_class = DetailPostSerializer
-#
-#
-# class PostCRUDViewSet(viewsets.ModelViewSet):
-#     serializer_class = PostSerializer
-#     queryset = Post.objects.all()
-#     # permission_classes = [IsAuthenticated]
-#
-#     # def perform_create(self, serializer):
-#     #     return serializer.save(user=self.request.user)
-#
-#     # def get_serializer_class(self):
-#     #     serializer_class = super().get_serializer_class()
-#     #     if self.action == 'list':
-#     #         serializer_class = PostCRUDSerializer
-#     #     return serializer_class
-#
-#
-#
-# # ____________________________
-#
-# class SubcategoryAPIView(APIView):
-#     def get(self, request, pk):
-#
-#         posts = Post.objects.filter(category=pk)
-#         serializer222 = SearchSerializer(posts, many=True).data
-#
-#         count = dict()
-#         for i in Subcategory.objects.values('id', 'title', 'category').filter(category=pk):
-#             count[i['title']] = Post.objects.filter(subcategory=i['id']).count()
-#             idcategory = i['category']
-#
-#         try:
-#             NameCategory = Category.objects.filter(id=idcategory).values('title')
-#             Name = NameCategory[0]['title']
-#         except:
-#             Name = None
-#             raise Http404
-#
-#         context = {
-#             'Category': Name,
-#             'Subcategory': count,
-#             Name: serializer222
-#         }
-#         return Response(context)

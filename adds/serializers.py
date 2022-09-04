@@ -123,39 +123,4 @@ class PostListSerializer(serializers.ModelSerializer):
     subscription = SubscriptionSerializer(many=True, read_only=True)
     class Meta:
         model = Post
-        fields = ('title', 'subscription', 'from_price', 'subcategory')
-
-
-
-
-# class SubscriptionSerializer(serializers.ModelSerializer):
-#     Subscription = Subscription(many=True, read_only=True)
-#
-#     class Meta:
-#         model = Post
-#         fields = ('title', 'from_price', 'image', 'subcategory', 'Subscription')
-#
-#
-# class PostSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Post
-#         fields = ('title', 'from_price', 'image', 'subscription')
-#
-#
-# class ImageSerializer(serializers.ModelSerializer):
-#     """Фотографии для товаров"""
-#     class Meta:
-#         model = PostImages
-#         fields = ('image',)
-#
-#
-#
-# class NewSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Post
-#         fields = ('title', 'from_price', 'image', 'subcategory', 'date_created')
-#
-# class SearchSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Post
-#         fields =('title','image','from_price','subcategory')
+        fields = ('title', 'subscription', 'from_price', 'subcategory', 'image')
