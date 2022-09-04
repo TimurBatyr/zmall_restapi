@@ -1,5 +1,8 @@
 from django.http import Http404, JsonResponse
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, viewsets, status, filters as f
+from rest_framework.filters import SearchFilter
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
@@ -12,9 +15,38 @@ from django_filters import rest_framework as filters
 from .utils import multiple_images
 
 
+class Pagination(PageNumberPagination):
+    '''Pagination for all'''
+    def get_paginated_response(self, data):
+        return super().get_paginated_response(data)
+
+
+class CategoryAPIView(generics.ListAPIView):
+    '''List of categories'''
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class SubcategoryAPIView(generics.ListAPIView):
+    '''List of subcategories'''
+    queryset = Subcategory.objects.all()
+    serializer_class = SubcategorySerializer
+
+
+class CityAPIView(generics.ListAPIView):
+    '''List of cities'''
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
+
+
+class SubscriptionAPIView(generics.ListAPIView):
+    '''List of subscriptions'''
+    queryset = Subscription.objects.all()
+    serializer_class = SubscriptionSerializer
+
+
 class PostCreate(generics.CreateAPIView):
     '''Create Post'''
-
     serializer_class = PostCreateSerializer
     permission_classes = [AllowAny]
     # permission_classes = [IsAuthenticated]
@@ -56,7 +88,7 @@ class PostImagesView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class PostContacts(generics.CreateAPIView):
+class PostContactsCreate(generics.CreateAPIView):
     '''Adding/updating contacts to the post'''
 
     serializer_class = PostContactsSerializer
@@ -65,7 +97,7 @@ class PostContacts(generics.CreateAPIView):
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
-    '''Post Update/delete/detail View'''
+    '''Post Update/delete/detail'''
 
     serializer_class = PostEditSerializer
     # permission_classes = [IsAuthenticated, UserPermission, ]
@@ -73,14 +105,70 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     lookup_field ='pk'
     queryset = Post.objects.all()
 
+class PostContactsDetail(generics.RetrieveUpdateDestroyAPIView):
+    '''Contacts Update/delete/detail'''
+    serializer_class = PostContactsSerializer
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
+    lookup_field = 'pk'
+    queryset = PostContacts.objects.all()
+
+
+
+class PostListDatePagination(Pagination):
+    '''Pagination for post list by date'''
+    page_size = 20
+
+
+class PostListDate(generics.ListAPIView):
+    '''Post List by date'''
+    filter_backends = [DjangoFilterBackend]
+    serializer_class = PostListSerializer
+    filter_backends = [SearchFilter, DjangoFilterBackend]
+    search_fields = ['title', 'description', 'sub']
+    filterset_fields = ['category', ]
+    queryset = Post.objects.all().order_by('-date_created')
+    pagination_class = PostListDatePagination
+
+
+class PostListHighlightPagination(Pagination):
+    '''Pagination for post list by date'''
+    page_size = 10
+
+
+class PostlistHighlight(generics.ListAPIView):
+    '''Post List by highlighted subscription'''
+    serializer_class = PostListSerializer
+    queryset = Post.objects.filter(subscription__choice='highlight').order_by('-date_created')
+    pagination_class = PostListHighlightPagination
+
+    # def get_queryset(self):
+    #     return Post.objects.filter(subscription__choice='highlight')
+        # return Post.objects.select_related('city', 'subcategory').filter(subscription__choice='highlight') ^ Post.objects.filter(subscription__choice='VIP')
+
+
+class MyPostList(generics.ListAPIView):
+    serializer_class = PostListSerializer
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
+
+    def get_queryset(self):
+        return Post.objects.filter(user=self.request.user.id)
+
+
+class ReviewCreateView(APIView):
+    '''Adding comment to the post'''
+    def post(self, request):
+        review = ReviewCreateSerializer(data=request.data)
+        if review.is_valid():
+            review.save()
+        return Response(status=201)
 
 
 # # Create your views here.
 # # Просмотр каталога и обьявления
 #
-# class CategoryAPIView(generics.ListAPIView):
-#     queryset = Category.objects.all()[0:9]
-#     serializer_class = CategorySerializer
+
 #
 #
 # # def get(self, request, pr):

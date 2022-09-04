@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Count
 from phonenumber_field.modelfields import PhoneNumberField
 
 from account.models import UserProfile
@@ -17,7 +18,7 @@ class Category(models.Model):
 
 
 class Subcategory(models.Model):
-    category = models.ForeignKey(Category, related_name='subcategory', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='categories', on_delete=models.CASCADE)
     title = models.CharField(max_length=100, verbose_name='Subcategory', unique=True)
 
     def __str__(self):
@@ -37,15 +38,14 @@ class City(models.Model):
 
 LIST = (
     ('VIP', 'VIP'),
-    ('highlight', 'highlight'),
     ('urgent', 'urgent'),
-    ('ordinary', 'ordinary')
-
+    ('ordinary', 'ordinary'),
+    ('highlight', 'highlight'),
 )
 
 
 class Subscription(models.Model):
-    choice = models.CharField(max_length=100, choices=LIST)
+    choice = models.CharField(max_length=100, choices=LIST, default=('ordinary', 'ordinary'))
     price = models.IntegerField(max_length=20, default=0)
     date_created = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField(auto_now_add=True)
@@ -54,7 +54,7 @@ class Subscription(models.Model):
         ordering = ['-id']
 
     def __str__(self):
-        return f'{self.choice} -- {self.price}'
+        return f'{self.id} {self.choice} -- {self.price}'
 
 
 STATUS = (
@@ -68,11 +68,11 @@ class Post(models.Model):
     category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
     subcategory = models.ForeignKey(Subcategory, related_name='posts', on_delete=models.CASCADE)
     city = models.ForeignKey(City, related_name='posts', on_delete=models.PROTECT)
-    subscription = models.ForeignKey(Subscription, related_name='posts', on_delete=models.CASCADE)
+    subscription = models.ManyToManyField(Subscription, related_name='posts')
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=300)
     from_price = models.DecimalField(max_digits=10, decimal_places=2)
-    to_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
+    to_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d', verbose_name='Фотография')
     date_created = models.DateTimeField(auto_now_add=True)
     email = models.EmailField(max_length=100)
@@ -92,18 +92,20 @@ class PostImages(models.Model):
     image = models.ImageField(upload_to='images', blank=True, verbose_name='Фотографии')
 
     def __str__(self):
-        return f'PostImage_ID {self.id} : {self.post.title}'
+        return f'PostImage_ID {self.id} : {self.post.title} ID: {self.post.id}'
 
     def delete(self, using=None, keep_parents=False):
         self.image.delete()
         return super().delete(using, keep_parents)
 
+
 class PostContacts(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='phone')
-    phone_number = PhoneNumberField()
+    add_number = PhoneNumberField()
 
     def __str__(self):
-        return self.phone_number
+        return f'Contact ID: {self.id}_ {str(self.add_number)} : {self.post.title} ID: {self.post.id}'
+
 
 class Views(models.Model):
     date = models.DateTimeField(auto_now_add=True)
@@ -126,3 +128,19 @@ class Transactions(models.Model):
 class Chat(models.Model):
     pass
 
+
+class ReviewPost(models.Model):
+    '''Comment to posts'''
+    email = models.EmailField()
+    title = models.CharField(max_length=100)
+    text = models.TextField(max_length=5000)
+    parent = models.ForeignKey('self', verbose_name='Parent', on_delete=models.SET_NULL, blank=True, null=True,
+                               related_name='children')
+    post = models.ForeignKey(Post, verbose_name='post', on_delete=models.CASCADE, related_name='reviews')
+
+    def __str__(self):
+        return f'{self.title} - {self.post}'
+
+    class Meta:
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'
