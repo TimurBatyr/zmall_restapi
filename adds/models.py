@@ -79,6 +79,7 @@ class Post(models.Model):
     phone_number = PhoneNumberField()
     wa_number = PhoneNumberField()
     is_activated = models.BooleanField()
+    # views = models.IntegerField(default=0)
     status = models.CharField(max_length=100, choices=STATUS, default=('in_progress', 'in_progress'))
 
 

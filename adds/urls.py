@@ -25,6 +25,7 @@ urlpatterns = [
 
     path('detailpost/<int:pk>', views.PostDetail.as_view()),
     path('detailcontacts/<int:pk>', views.PostContactsDetail.as_view()),
+    # path('view/<str:pk>', ViewNews.as_view()),
 
     path('postlist/', views.PostListHighlight.as_view()),
     path('postlistdate/', views.PostlistDate.as_view()),

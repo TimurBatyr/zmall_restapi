@@ -124,3 +124,16 @@ class PostListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('title', 'subscription', 'from_price', 'subcategory', 'image')
+
+
+# class AddPostSerializer(serializers.ModelSerializer):
+#     '''Watches of posts'''
+#     images = serializers.StringRelatedField(many=True)
+#
+#     class Meta:
+#         model = Post
+#         fields = ('id', 'category', 'subcategory',
+#                   'title', 'from_price', 'to_price',
+#                   'description', 'images', 'city',
+#                   'email', 'phone_number','views'
+#                   )

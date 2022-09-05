@@ -1,4 +1,5 @@
 from django.http import Http404, JsonResponse
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, viewsets, status, filters as f
 from rest_framework.filters import SearchFilter
@@ -174,6 +175,43 @@ class ReviewCreateView(APIView):
         if review.is_valid():
             review.save()
         return Response(status=201)
+
+
+
+# # Просмотр обьвления
+# def get_post(ip, title):
+#     data = redis.Redis()
+#     data_value = data.get(ip)
+#     if data_value is None or data_value.decode('utf-8') != title:
+#         data.mset({ip: title})
+#         return False
+#     else:
+#         return True
+# def get_client_ip(request):
+#     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+#     if x_forwarded_for:
+#         ip = x_forwarded_for.split(',')
+#     else:
+#         ip = request.META.get('REMOTE_ADDR')
+#     return ip
+# class ViewNews(APIView):
+#     def get(self, request, pk):
+#         posts = get_object_or_404(Post, title=pk)
+#         serializer = AddPostSerializer(posts, many=False).data
+#         title = Post.objects.values('title').filter(title=pk)
+#         title = title[0]['title']
+#         ip = get_client_ip(request)
+#         if not get_post(ip, title):
+#             posts.views += 1
+#             posts.save(update_fields=["views"])
+#             serializer = AddPostSerializer(posts, many=False).data
+#             context = {'IP': ip,
+#                        'add': serializer}
+#             return Response(context)
+#         else:
+#             return Response(serializer)
+
+
 
 
 
