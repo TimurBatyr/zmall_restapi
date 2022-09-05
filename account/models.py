@@ -33,8 +33,8 @@ class UserProfile(AbstractUser):
     username = None
     email = models.EmailField(unique=True)
     phone = PhoneNumberField()
-    # name = models.CharField('User name', max_length=50)
-    # last_name = models.CharField('User last name', max_length=50)
+    name = models.CharField('User name', max_length=50)
+    last_name = models.CharField('User last name', max_length=50)
 
     # is_active = models.BooleanField('Active', default=False)
     # is_staff = models.BooleanField('Admin', default=False)

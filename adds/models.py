@@ -46,7 +46,7 @@ LIST = (
 
 class Subscription(models.Model):
     choice = models.CharField(max_length=100, choices=LIST, default=('ordinary', 'ordinary'))
-    price = models.IntegerField(max_length=20, default=0)
+    price = models.DecimalField(max_digits=20, decimal_places=2, default=0)
     date_created = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField(auto_now_add=True)
 
@@ -71,8 +71,8 @@ class Post(models.Model):
     subscription = models.ManyToManyField(Subscription, related_name='posts')
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=300)
-    from_price = models.DecimalField(max_digits=10, decimal_places=2)
-    to_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    from_price = models.DecimalField(max_digits=20, decimal_places=2)
+    to_price = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d', verbose_name='Фотография', blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
     email = models.EmailField(max_length=100)

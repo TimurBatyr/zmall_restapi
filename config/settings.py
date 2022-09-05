@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 
     'account',
     'adds',
-    'others',
+    'info',
     'chat',
 ]
 
