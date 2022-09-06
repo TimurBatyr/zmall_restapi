@@ -13,19 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
 
-from adds.views import PostAddViewSet
+from .yasg import urlpatterns as doc_urls
 
-router = DefaultRouter()
-# router.register('adds/detailpost', DetailPostViewSet) #URL для товара +id
-router.register('adds/addpost', PostAddViewSet, 'Add') #URL для товара +id
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/account/', include('account.urls')),
     path('api/v1/adds/', include('adds.urls')),
-    path('api/v1/', include(router.urls)),
-]
+    path('api/v1/', include('chat.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += doc_urls
