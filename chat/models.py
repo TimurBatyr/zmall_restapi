@@ -1,11 +1,11 @@
+from django.conf import settings
 from django.db import models
-
-from account.models import UserProfile
+from django.conf import settings
 
 
 class Message(models.Model):
-    sender = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='sender')
-    receiver = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='receiver')
+    sender = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='sender')
+    receiver = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='receiver')
     message = models.CharField(max_length=1200)
     timestamp = models.DateTimeField(auto_now_add=True)
 
