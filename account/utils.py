@@ -2,6 +2,7 @@ from django.core.mail import send_mail
 from django.utils.crypto import get_random_string
 
 from account.models import UserProfile
+from config.celery import app
 
 
 def generate_activation_code():
@@ -35,3 +36,12 @@ def send_new_password(new_password, email):
     )
 
 
+@app.task
+def send_mail_new_post(new_products, email):
+    message = f'New products has been added: {new_products}'
+    send_mail(
+        'New products',
+        message,
+        'test@gmail.com',
+        [email]
+    )
