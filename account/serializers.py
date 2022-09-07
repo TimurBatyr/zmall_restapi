@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.utils.crypto import get_random_string
 from rest_framework import serializers
 
+from adds.models import Post
 from .utils import send_new_password, get_activation_code, send_activation_mail
 
 User = get_user_model()
@@ -100,13 +101,3 @@ class ForgotPasswordSerializer(serializers.Serializer):
         user.save()
         send_new_password(random_password, email)
 
-
-# class SendMailNewProducts(serializers.Serializer):
-#     email = serializers.EmailField()
-#
-#     def create_new_products(self, email):
-#         users = User.objects.all(emai=email)
-#         for user in users:
-#             mail_subject = f'Good day, {user.email}'
-#             message = f'We have announced new products {new_products} on our website. Visit our website!'
-#             to_email = user.email
