@@ -9,8 +9,8 @@ class MessageSerializer(serializers.ModelSerializer):
         model = Message
         fields = '__all__'
 
-    def create(self, validated_data):
-        message = Message.objects.create(**validated_data)
-        message.save()
-        self.message = message
-        return message
+    # def create(self, validated_data):
+    #     message = Message.objects.create(**validated_data)
+    #     message.save()
+    #     self.message = message
+    #     return message
