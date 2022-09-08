@@ -42,17 +42,18 @@ INSTALLED_APPS = [
     # apps
     'corsheaders',
     'django_filters',
+    'django_celery_beat',
     'drf_yasg',
 
     'phonenumber_field',
     'rest_framework',
     'rest_framework_simplejwt',
 
-
     'account',
     'adds',
     'info',
     'chat',
+    'social_auth',
 ]
 
 MIDDLEWARE = [

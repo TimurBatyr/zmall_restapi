@@ -1,17 +1,17 @@
 from django.core.mail import send_mail
 
 from account.models import UserProfile
+from adds.models import Post
 from config import settings
 from config.celery import app
 
 
 @app.task
-def send_mail_new_post(new_product):
-    # emails = UserProfile.objects.filter(is_active=True).values_list('email', flat=True)
+def send_mail_new_products():
+    products = list(Post.objects.filter(is_activated=True).values_list('title', flat=True)[0:10])
     for user in UserProfile.objects.filter(is_active=True):
         mail_subject = 'New Products'
-        message = f"""We have announced a new product.
-                      Please click the link: http://127.0.0.1:8000/api/v1/adds/detailpost/{new_product}"""
+        message = f"We have announced new products. Please see list:{'-'.join(products)}"
         send_mail(
             subject=mail_subject,
             message=message,
@@ -19,3 +19,5 @@ def send_mail_new_post(new_product):
             recipient_list=[user.email],
             fail_silently=True,
         )
+send_mail_new_products.delay()
+
