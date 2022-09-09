@@ -100,3 +100,5 @@ class ForgotPasswordSerializer(serializers.Serializer):
         user.set_password(random_password)
         user.save()
         send_new_password(random_password, email)
+
+

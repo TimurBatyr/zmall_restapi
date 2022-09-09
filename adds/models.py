@@ -8,7 +8,7 @@ from account.models import UserProfile
 class Category(models.Model):
     """Category for post"""
     title = models.CharField(max_length=100, unique=True)
-    icon_image = models.ImageField(max_length=100)
+    icon_image = models.ImageField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -30,7 +30,7 @@ class Subcategory(models.Model):
 
 
 class City(models.Model):
-    title = models.CharField(max_length=100, unique=True)
+    title = models.CharField(max_length=500, unique=True)
 
     def __str__(self):
         return self.title
@@ -67,18 +67,18 @@ class Post(models.Model):
     user = models.ForeignKey(UserProfile, related_name='posts', on_delete=models.CASCADE, blank=True, null=True)
     category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
     subcategory = models.ForeignKey(Subcategory, related_name='posts', on_delete=models.CASCADE)
-    city = models.ForeignKey(City, related_name='posts', on_delete=models.PROTECT)
-    subscription = models.ManyToManyField(Subscription, related_name='posts')
-    title = models.CharField(max_length=100)
-    description = models.TextField(max_length=300)
-    from_price = models.DecimalField(max_digits=20, decimal_places=2)
+    city = models.ForeignKey(City, related_name='posts', on_delete=models.PROTECT,blank=True,null=True)
+    subscription = models.ManyToManyField(Subscription, related_name='posts',blank=True,null=True)
+    title = models.CharField(max_length=1000)
+    description = models.TextField(max_length=100)
+    from_price = models.DecimalField(max_digits=100, decimal_places=2,blank=True,null=True)
     to_price = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d', verbose_name='Фотография', blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
-    email = models.EmailField(max_length=100)
-    phone_number = PhoneNumberField()
-    wa_number = PhoneNumberField()
-    is_activated = models.BooleanField()
+    email = models.EmailField(max_length=100,blank=True,null=True)
+    phone_number = models.CharField(max_length=100,blank=True,null=True)
+    wa_number = models.CharField(max_length=100,blank=True,null=True)
+    is_activated = models.BooleanField(blank=True,null=True)
     # views = models.IntegerField(default=0)
     status = models.CharField(max_length=100, choices=STATUS, default=('in_progress', 'in_progress'))
 

@@ -1,0 +1,34 @@
+1662628848151	geckodriver	INFO	Listening on 127.0.0.1:49437
+1662628848887	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "53919" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileVb8ycL"
+1662628882943	geckodriver	INFO	Listening on 127.0.0.1:51787
+1662628883635	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "53601" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileldHuM9"
+1662629030118	geckodriver	INFO	Listening on 127.0.0.1:55125
+1662629031273	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "37601" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileqLmHXL"
+1662629077500	geckodriver	INFO	Listening on 127.0.0.1:40287
+1662629078173	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "58521" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileIbKRqd"
+1662629116508	geckodriver	INFO	Listening on 127.0.0.1:41303
+1662629117182	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "49707" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile1CnAF0"
+1662629514224	geckodriver	INFO	Listening on 127.0.0.1:45841
+1662629515027	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "56925" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilebHYTGY"
+1662630695912	geckodriver	INFO	Listening on 127.0.0.1:55271
+1662630696266	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "39597" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileq6Uvma"
+1662630734297	geckodriver	INFO	Listening on 127.0.0.1:44711
+1662630734965	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "56397" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileL6HuC0"
+1662630768646	geckodriver	INFO	Listening on 127.0.0.1:33171
+1662630769322	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "56181" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileUzP2uU"
+1662631351631	geckodriver	INFO	Listening on 127.0.0.1:39511
+1662631352306	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "47957" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile2SDW4C"
+1662632834758	geckodriver	INFO	Listening on 127.0.0.1:41289
+1662632835906	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "38435" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilePpEoDS"
+1662633529203	geckodriver	INFO	Listening on 127.0.0.1:38281
+1662633529873	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "32787" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9aGu5I"
+error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+1662634639547	geckodriver	INFO	Listening on 127.0.0.1:56711
+1662634640267	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "44083" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8ngq9a"
+1662634945190	geckodriver	INFO	Listening on 127.0.0.1:39417
+1662634947526	mozrunner::runner	INFO	Running command: "/snap/bin/firefox" "--marionette" "--remote-debugging-port" "51805" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile7e3HyL"
