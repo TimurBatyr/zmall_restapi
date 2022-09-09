@@ -63,7 +63,7 @@ class PostContactsSerializer(serializers.ModelSerializer):
 
 class PostCreateSerializer(serializers.ModelSerializer):
     ''' Create Post '''
-    user = serializers.SlugRelatedField(slug_field='email', queryset=UserProfile.objects.all())
+    user = serializers.SlugRelatedField(slug_field='email', queryset=User.objects.all())
 
     class Meta:
         model = Post

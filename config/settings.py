@@ -13,6 +13,7 @@ import datetime
 import os
 from pathlib import Path
 
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-10^senp1jgf(0hq-t9$7%htw%7t@j06!p-s_jgxh$8944ttty$'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -94,11 +95,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'zmall_db',
+        # 'NAME': config('DB_NAME'),
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'zmall_db',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -167,14 +168,14 @@ SIMPLE_JWT = {
 }
 
 
-AUTH_USER_MODEL = 'account.UserProfile'
+AUTH_USER_MODEL = 'account.User'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'testovzmall@gmail.com'
-EMAIL_HOST_PASSWORD = 'sxvxfdmyvseydupx'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 
 CORS_ORIGIN_ALLOW_ALL = True

@@ -1,6 +1,10 @@
 from django.contrib import admin
 
-from account.models import UserProfile
+from account.models import User
 
 
-admin.site.register(UserProfile)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ['username', 'email', 'auth_provider']
+
+
+admin.site.register(User, UserAdmin)

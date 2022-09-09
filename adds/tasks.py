@@ -1,6 +1,6 @@
 from django.core.mail import send_mail
 
-from account.models import UserProfile
+from account.models import User
 from adds.models import Post
 from config import settings
 from config.celery import app
@@ -9,7 +9,7 @@ from config.celery import app
 @app.task
 def send_mail_new_products():
     products = list(Post.objects.filter(is_activated=True).values_list('title', flat=True)[0:10])
-    for user in UserProfile.objects.filter(is_active=True):
+    for user in User.objects.filter(is_active=True):
         mail_subject = 'New Products'
         message = f"We have announced new products. Please see list:{'-'.join(products)}"
         send_mail(

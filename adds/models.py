@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import Count
 from phonenumber_field.modelfields import PhoneNumberField
 
-from account.models import UserProfile
+from account.models import User
 
 
 class Category(models.Model):
@@ -64,7 +64,7 @@ STATUS = (
     )
 
 class Post(models.Model):
-    user = models.ForeignKey(UserProfile, related_name='posts', on_delete=models.CASCADE, blank=True, null=True)
+    user = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE, blank=True, null=True)
     category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
     subcategory = models.ForeignKey(Subcategory, related_name='posts', on_delete=models.CASCADE)
     city = models.ForeignKey(City, related_name='posts', on_delete=models.PROTECT)
@@ -116,7 +116,7 @@ class Views(models.Model):
 
 class Favorite(models.Model):
     post = models.ManyToManyField(Post, related_name='Favorite_Post')
-    user = models.ForeignKey(UserProfile, related_name='Favorite_User', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='Favorite_User', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.post
