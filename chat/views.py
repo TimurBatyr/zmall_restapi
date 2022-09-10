@@ -8,17 +8,19 @@ from .serializers import MessageSerializer
 
 
 class MessageAPIView(APIView):
+    '''Chat between seller and customer'''
     # permission_classes = [IsAuthenticated, ]
     permission_classes = [AllowAny, ]
 
     def post(self, request):
         serializer = MessageSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save()
-        message = serializer.message
-        pusher_client.trigger('zmall_chat', 'message', {
-            'sender': message.sender,
-            'receiver': message.receiver,
+        message = serializer.save()
+        chat = f'{message.id}'
+        # message = serializer.message
+        pusher_client.trigger(chat, 'message', {
+            'sender': message.sender.id,
+            'receiver': message.receiver.id,
             'message': message.message
         })
 

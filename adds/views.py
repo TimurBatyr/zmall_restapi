@@ -13,6 +13,7 @@ from .permissions import UserPermission
 from .serializers import *
 from django_filters import rest_framework as filters
 
+from .tasks import send_mail_new_products
 from .utils import multiple_images
 
 
@@ -77,6 +78,7 @@ class PostImagesView(APIView):
                 list_images.append(image_serializer.data)
             else:
                 flag = 0
+
         if flag == 1:
             return Response(list_images, status=status.HTTP_201_CREATED)
         else:
@@ -105,6 +107,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [AllowAny]
     lookup_field ='pk'
     queryset = Post.objects.all()
+
 
 class PostContactsDetail(generics.RetrieveUpdateDestroyAPIView):
     '''Contacts Update/delete/detail'''
@@ -138,7 +141,7 @@ class PostListHighlight(generics.ListAPIView):
     search_fields = ['title', 'description']
     # filterset_fields = ['category', ]
     ordering_fields = ['date_created', 'from_price']
-    queryset = Post.objects.filter(is_activated=True).order_by('-date_created')
+    queryset = Post.objects.filter(subscription__choice='highlight', is_activated=True)
     pagination_class = PostListHighlightPagination
     filterset_class = ProductFilter
 
@@ -151,12 +154,20 @@ class PostListDatePagination(Pagination):
 class PostlistDate(generics.ListAPIView):
     '''Post List by highlighted subscription'''
     serializer_class = PostListSerializer
-    queryset = Post.objects.filter(subscription__choice='highlight').order_by('-date_created')
+    queryset = Post.objects.filter(is_activated=True).order_by('-date_created')
     pagination_class = PostListDatePagination
 
     # def get_queryset(self):
     #     return Post.objects.filter(subscription__choice='highlight')
         # return Post.objects.select_related('city', 'subcategory').filter(subscription__choice='highlight') ^ Post.objects.filter(subscription__choice='VIP')
+
+    # '''Celery sending message about new product'''
+    # def list(self, request, *args, **kwargs):
+    #     serializer = self.get_serializer(data=request.data)
+    #     serializer.is_valid(raise_exception=True)
+    #     product = serializer.save()
+    #     send_mail_new_products.delay(product.id)
+    #     return Response('Sent new notification', status=status.HTTP_201_CREATED)
 
 
 class MyPostList(generics.ListAPIView):

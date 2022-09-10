@@ -1,7 +1,7 @@
 from django.core.mail import send_mail
 from django.utils.crypto import get_random_string
 
-from account.models import UserProfile
+from account.models import User
 
 
 def generate_activation_code():
@@ -11,7 +11,7 @@ def generate_activation_code():
 
 def get_activation_code():
     code = generate_activation_code()
-    if UserProfile.objects.filter(activation_code=code).exists():
+    if User.objects.filter(activation_code=code).exists():
         get_activation_code()
     return code
 
@@ -33,5 +33,3 @@ def send_new_password(new_password, email):
         'test@gmail.com',
         [email]
     )
-
-

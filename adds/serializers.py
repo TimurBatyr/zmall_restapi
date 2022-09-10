@@ -63,11 +63,11 @@ class PostContactsSerializer(serializers.ModelSerializer):
 
 class PostCreateSerializer(serializers.ModelSerializer):
     ''' Create Post '''
-    user = serializers.SlugRelatedField(slug_field='email', queryset=UserProfile.objects.all())
+    user = serializers.SlugRelatedField(slug_field='email', queryset=User.objects.all())
 
     class Meta:
         model = Post
-        fields = ('user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
+        fields = ('id', 'user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
                   'from_price', 'to_price', 'image', 'email', 'phone_number', 'wa_number',
                   'is_activated')
 
@@ -123,7 +123,7 @@ class PostListSerializer(serializers.ModelSerializer):
     subscription = SubscriptionSerializer(many=True, read_only=True)
     class Meta:
         model = Post
-        fields = ('title', 'subscription', 'from_price', 'subcategory', 'image')
+        fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'image')
 
 
 # class AddPostSerializer(serializers.ModelSerializer):

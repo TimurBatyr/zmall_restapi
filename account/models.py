@@ -2,6 +2,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from rest_framework_simplejwt.tokens import RefreshToken
 
 
 class UserManager(BaseUserManager):
@@ -26,15 +27,21 @@ class UserManager(BaseUserManager):
         return self._create(email, password, **kwargs)
 
 
-class UserProfile(AbstractUser):
+AUTH_PROVIDERS = {'facebook': 'facebook', 'google': 'google', 'email': 'email'}
+
+
+class User(AbstractUser):
     class Meta:
         verbose_name = 'User'
         verbose_name_plural = 'Users'
-    username = None
+    username = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     phone = PhoneNumberField()
-    name = models.CharField('User name', max_length=50)
-    last_name = models.CharField('User last name', max_length=50)
+    # name = models.CharField('User name', max_length=50)
+    # last_name = models.CharField('User last name', max_length=50)
+    auth_provider = models.CharField(
+        max_length=255, blank=False,
+        null=False, default=AUTH_PROVIDERS.get('email'))
 
     # is_active = models.BooleanField('Active', default=False)
     # is_staff = models.BooleanField('Admin', default=False)
@@ -45,14 +52,17 @@ class UserProfile(AbstractUser):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = [
-        'first_name',
-        'last_name',
-    ]
+    REQUIRED_FIELDS = ['username']
 
     def __str__(self):
         return f'{self.id} -- {self.email}'
 
+    def tokens(self):
+        refresh = RefreshToken.for_user(self)
+        return {
+            'refresh': str(refresh),
+            'access': str(refresh.access_token)
+        }
 
 
 

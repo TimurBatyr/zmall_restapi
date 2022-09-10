@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.utils.crypto import get_random_string
 from rest_framework import serializers
 
-
+from adds.models import Post
 from .utils import send_new_password, get_activation_code, send_activation_mail
 
 User = get_user_model()
@@ -15,7 +15,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('name', 'last_name', 'email', 'password', 'password_confirm',)
+        fields = ('username', 'email', 'password', 'password_confirm',)
 
     def validate_email(self, email):
         if User.objects.filter(email=email).exists():
@@ -100,3 +100,4 @@ class ForgotPasswordSerializer(serializers.Serializer):
         user.set_password(random_password)
         user.save()
         send_new_password(random_password, email)
+
