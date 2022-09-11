@@ -3,27 +3,31 @@ version: "3.9"
 services:
   db:
     image: postgres
+    container_name: postgres_zmall_tim
+    ports:
+      - 172.17.0.1:5432:5432
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      # env_file
-      # entrypoint
-      # context
-      # prune
+      - POSTGRES_DB=zmall_db
+      - POSTGRES_USER=zmall_user
+      - POSTGRES_PASSWORD=zmall_password
+    restart: always
   web:
     build: .
-    restart: on-failure
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/code/static
-    ports:
-      - "8000:8000"
+    container_name: zmall_restapi
     environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_NAME=zmall_db
+      - POSTGRES_USER=zmall_user
+      - POSTGRES_PASSWORD=zmall_password
+    restart: always
     depends_on:
       - db
+  nginx:
+    image: nginx
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - web
+    ports:
+      - 8000:80
