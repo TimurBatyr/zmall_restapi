@@ -18,7 +18,7 @@ class MessageAPIView(APIView):
         message = serializer.save()
         chat = f'{message.id}'
         # message = serializer.message
-        pusher_client.trigger(chat, 'message', {
+        pusher_client.trigger('message', 'message', {
             'sender': message.sender.id,
             'receiver': message.receiver.id,
             'message': message.message
