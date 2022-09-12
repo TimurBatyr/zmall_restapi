@@ -19,7 +19,7 @@ class Category(models.Model):
 
 class Subcategory(models.Model):
     category = models.ForeignKey(Category, related_name='categories', on_delete=models.CASCADE)
-    title = models.CharField(max_length=100, verbose_name='Subcategory', unique=True)
+    title = models.CharField(max_length=100, verbose_name='subcategory', unique=True)
 
     def __str__(self):
         return self.title + '--' + self.category.title
@@ -111,12 +111,12 @@ class PostContacts(models.Model):
 class Views(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     views = models.IntegerField()
-    post = models.ForeignKey(Post, related_name='Views_Post', on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, related_name='views_post', on_delete=models.CASCADE)
 
 
 class Favorite(models.Model):
-    post = models.ManyToManyField(Post, related_name='Favorite_Post')
-    user = models.ForeignKey(User, related_name='Favorite_User', on_delete=models.CASCADE)
+    post = models.ManyToManyField(Post, related_name='favorite_post')
+    user = models.ForeignKey(User, related_name='favorite_user', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.post
