@@ -1,3 +1,8 @@
-from django.test import TestCase
+from rest_framework.test import APITestCase
+from django.urls import reverse
 
-# Create your tests here.
+class TestSetUp(APITestCase):
+
+    def test_category(self):
+       pass
+
