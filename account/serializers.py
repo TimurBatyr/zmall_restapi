@@ -1,6 +1,9 @@
+from django.contrib import auth
 from django.contrib.auth import get_user_model
 from django.utils.crypto import get_random_string
+from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
+from rest_framework.exceptions import AuthenticationFailed
 
 from adds.models import Post
 from .utils import send_new_password, get_activation_code, send_activation_mail
@@ -60,7 +63,56 @@ class ActivationSerializer(serializers.Serializer):
         user.save()
 
 
+class LoginSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField(max_length=255, min_length=3)
+    password = serializers.CharField(
+        max_length=100, min_length=5, write_only=True)
+    username = serializers.CharField(
+        max_length=255, min_length=3, read_only=True)
+
+    tokens = serializers.SerializerMethodField()
+
+    def get_tokens(self, obj):
+        user = User.objects.get(email=obj['email'])
+
+        return {
+            'refresh': user.tokens()['refresh'],
+            'access': user.tokens()['access']
+        }
+
+    class Meta:
+        model = User
+        fields = ['email', 'password', 'username', 'tokens']
+
+    def validate(self, attrs):
+        email = attrs.get('email', '')
+        password = attrs.get('password', '')
+        filtered_user_by_email = User.objects.filter(email=email)
+        user = auth.authenticate(email=email, password=password)
+
+        if filtered_user_by_email.exists() and filtered_user_by_email[0].auth_provider != 'email':
+            raise AuthenticationFailed(
+                detail='Please continue your login using ' + filtered_user_by_email[0].auth_provider)
+
+        if not user:
+            raise AuthenticationFailed('Invalid credentials, try again')
+        if not user.is_active:
+            raise AuthenticationFailed('Account disabled, contact admin')
+
+        return {
+            'email': user.email,
+            'username': user.username,
+            'tokens': user.tokens
+        }
+
+        return super().validate(attrs)
+
+
 class ChangePasswordSerializer(serializers.Serializer):
+    username = serializers.CharField(
+        max_length=255, min_length=3, allow_blank=True)
+    email = serializers.EmailField(allow_blank=True)
+    phone = PhoneNumberField(allow_blank=True)
     old_password = serializers.CharField(required=True)
     new_password = serializers.CharField(required=True)
     password_confirm = serializers.CharField(required=True)

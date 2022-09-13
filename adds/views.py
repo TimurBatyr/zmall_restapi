@@ -1,3 +1,4 @@
+import django_filters
 from django.http import Http404, JsonResponse
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
@@ -127,10 +128,14 @@ class ProductFilter(filters.FilterSet):
     '''Setting filters from and to on prices and cities'''
     min_price = filters.NumberFilter(field_name="from_price", lookup_expr='gte')
     max_price = filters.NumberFilter(field_name="from_price", lookup_expr='lte')
+    city = django_filters.ModelMultipleChoiceFilter(field_name='city', queryset=City.objects.all())
+    image = django_filters.BooleanFilter(
+        lookup_expr="isnull", field_name="image"
+    )
 
     class Meta:
         model = Post
-        fields = ['category', 'city']
+        fields = ['category', 'city', 'image']
 
 
 class PostListHighlight(generics.ListAPIView):
