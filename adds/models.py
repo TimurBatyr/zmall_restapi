@@ -40,13 +40,12 @@ class City(models.Model):
 LIST = (
     ('VIP', 'VIP'),
     ('urgent', 'urgent'),
-    ('ordinary', 'ordinary'),
     ('highlight', 'highlight'),
 )
 
 
 class Subscription(models.Model):
-    choice = models.CharField(max_length=100, choices=LIST, default=('ordinary', 'ordinary'))
+    choice = models.CharField(max_length=100, choices=LIST, blank=True)
     price = models.DecimalField(max_digits=20, decimal_places=2, default=0)
     date_created = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField(auto_now_add=True)
@@ -69,7 +68,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
     subcategory = models.ForeignKey(Subcategory, related_name='posts', on_delete=models.CASCADE)
     city = models.ForeignKey(City, related_name='posts', on_delete=models.PROTECT)
-    subscription = models.ManyToManyField(Subscription, related_name='posts')
+    subscription = models.ForeignKey(Subscription, related_name='posts', on_delete=models.PROTECT)
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=300)
     from_price = models.DecimalField(max_digits=20, decimal_places=2)
@@ -82,8 +81,6 @@ class Post(models.Model):
     is_activated = models.BooleanField()
     # views = models.IntegerField(default=0)
     status = models.CharField(max_length=100, choices=STATUS, default=('in_progress', 'in_progress'))
-
-
 
     def __str__(self):
         return f'ID {self.id} : {self.title}'

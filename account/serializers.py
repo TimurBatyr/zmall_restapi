@@ -76,6 +76,8 @@ class LoginSerializer(serializers.ModelSerializer):
         user = User.objects.get(email=obj['email'])
 
         return {
+            'email': user.email,
+            'username': user.username,
             'refresh': user.tokens()['refresh'],
             'access': user.tokens()['access']
         }

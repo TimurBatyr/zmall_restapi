@@ -1,4 +1,5 @@
 import django_filters
+from django.db.models import Q
 from django.http import Http404, JsonResponse
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
@@ -146,7 +147,8 @@ class PostListHighlight(generics.ListAPIView):
     search_fields = ['title', 'description']
     # filterset_fields = ['category', ]
     ordering_fields = ['date_created', 'from_price']
-    queryset = Post.objects.filter(subscription__choice='highlight', is_activated=True)
+    queryset = Post.objects.filter(Q(subscription__choice='highlight') | Q(subscription__choice='VIP') |
+                                   Q(subscription__choice='urgent'), is_activated=True)
     pagination_class = PostListHighlightPagination
     filterset_class = ProductFilter
 
