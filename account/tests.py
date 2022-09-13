@@ -1,12 +1,9 @@
-import json
-
-from rest_framework import status
 from rest_framework.test import APITestCase
 from django.urls import reverse
 from .models import User
 
 
-class TestSetUp(APITestCase):
+class TestAccount(APITestCase):
 
     def setUp(self):
         self.register_url = reverse('register')
@@ -26,7 +23,7 @@ class TestSetUp(APITestCase):
         return super().tearDown()
 
 
-class TestViews(TestSetUp):
+class TestViews(TestAccount):
     def test_register_with_no_data(self):
         res = self.client.post(self.register_url)
         self.assertEqual(res.status_code, 400)
@@ -41,15 +38,25 @@ class TestViews(TestSetUp):
         res = self.client.post(self.login_url, self.user_data, format="json")
         self.assertEqual(res.status_code, 401)
 
-    def test_login_after_verification(self):
-        user = User.objects.create_user(email='email@email.com', password="adminemail")
-        user.is_active = True
-        user.save()
-        response = self.client.post(reverse('login'), {
-            'email': 'email@email.com',
-            'password': 'adminemail'})
-        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {response.data["access"]}')
-        self.assertEqual(response.status_code, 200)
+    # def test_login_after_verification(self):
+    #     user = User.objects.create_user(email='email@email.com', password="adminemail")
+    #     user.is_active = True
+    #     user.save()
+    #     response = self.client.post(reverse('login'), {
+    #         'email': 'email@email.com',
+    #         'password': 'adminemail'})
+    #     self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {response.data["access"]}')
+    #     self.assertEqual(response.status_code, 200)
+
+    # def test_user_can_login_after_verification(self):
+    #     response = self.client.post(
+    #         self.register_url, self.user_data, format="json")
+    #     email = response.data['email']
+    #     user = User.objects.get(email=email)
+    #     user.is_active = True
+    #     user.save()
+    #     res = self.client.post(self.login_url, self.user_data, format="json")
+    #     self.assertEqual(res.status_code, 200)
 
 
 

@@ -8,9 +8,9 @@ from .views import *
 
 urlpatterns = [
 
-    path("category/", CategoryAPIView.as_view()),
-    path("subcategory/", SubcategoryAPIView.as_view()),
-    path("city/", CityAPIView.as_view()),
+    path("category/", CategoryAPIView.as_view(), name="category"),
+    path("subcategory/", SubcategoryAPIView.as_view(), name="subcategory"),
+    path("city/", CityAPIView.as_view(), name="city"),
     path("subscription/", SubscriptionAPIView.as_view()),
 
     path('createpost/', views.PostCreate.as_view()),

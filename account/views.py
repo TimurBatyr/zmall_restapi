@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 
 
 from .serializers import RegistrationSerializer, ActivationSerializer, ForgotPasswordSerializer, \
-    ChangePasswordSerializer
+    ChangePasswordSerializer, LoginSerializer
 
 
 class RegistrationAPIView(generics.GenericAPIView):
@@ -26,6 +26,15 @@ class ActivateView(generics.GenericAPIView):
         serializer.is_valid(raise_exception=True)
         serializer.activate()
         return Response('Your account successfully activated!', status=status.HTTP_200_OK)
+
+
+class LoginAPIView(generics.GenericAPIView):
+    serializer_class = LoginSerializer
+
+    def post(self, request):
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class ChangePasswordView(APIView):
