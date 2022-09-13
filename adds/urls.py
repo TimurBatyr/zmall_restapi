@@ -11,7 +11,7 @@ urlpatterns = [
     path("category/", CategoryAPIView.as_view(), name="category"),
     path("subcategory/", SubcategoryAPIView.as_view(), name="subcategory"),
     path("city/", CityAPIView.as_view(), name="city"),
-    path("subscription/", SubscriptionAPIView.as_view()),
+    path("subscription/", SubscriptionAPIView.as_view(), name="subscription"),
 
     path('createpost/', views.PostCreate.as_view()),
     path('addimages/', views.PostImagesView.as_view()),
