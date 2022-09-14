@@ -39,7 +39,7 @@ class SubscriptionSerializer(serializers.ModelSerializer):
     '''List of subscriptions'''
     class Meta:
         model = Subscription
-        fields = ['choice', 'price']
+        fields = ['choice', 'price', 'icon_image']
 
 
 class PostImagesSerializer(serializers.ModelSerializer):

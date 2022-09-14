@@ -52,8 +52,8 @@ class SubscriptionAPIView(generics.ListAPIView):
 class PostCreate(generics.CreateAPIView):
     '''Create Post'''
     serializer_class = PostCreateSerializer
-    # permission_classes = [AllowAny]
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
+    # permission_classes = [IsAuthenticated]
 
 
 class PostImagesView(APIView):
@@ -164,17 +164,6 @@ class PostlistDate(generics.ListAPIView):
     queryset = Post.objects.filter(is_activated=True).order_by('-date_created')
     pagination_class = PostListDatePagination
 
-    # def get_queryset(self):
-    #     return Post.objects.filter(subscription__choice='highlight')
-        # return Post.objects.select_related('city', 'subcategory').filter(subscription__choice='highlight') ^ Post.objects.filter(subscription__choice='VIP')
-
-    # '''Celery sending message about new product'''
-    # def list(self, request, *args, **kwargs):
-    #     serializer = self.get_serializer(data=request.data)
-    #     serializer.is_valid(raise_exception=True)
-    #     product = serializer.save()
-    #     send_mail_new_products.delay(product.id)
-    #     return Response('Sent new notification', status=status.HTTP_201_CREATED)
 
 
 class MyPostList(generics.ListAPIView):

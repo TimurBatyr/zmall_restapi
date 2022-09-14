@@ -14,7 +14,7 @@ class TestAdds(APITestCase):
     def setUp(self):
 
         self.user_test = User.objects.create(email='test@test.com', password='qwerty12345')
-        self.user_token = Token.objects.create(user=self.user_1)
+        # self.user_token = Token.objects.create(user=self.user_1)
         self.category = Category.objects.create(title='Transport', icon_image='abc.png')
         self.subcategory = Subcategory.objects.create(category=self.category, title='Auto')
         self.subscription = Subscription.objects.create(choice='VIP', price=100)
@@ -89,7 +89,7 @@ class TestAdds(APITestCase):
     # def test_filtering_by_price(self):
     #     client = APIClient()
     #     url = reverse('postlist')
-    #     params = {'price_to': 8500}
+    #     params = {'price_from': 8500}
     #     response = client.get(url, params)
     #     self.assertEqual(response.status_code, 200)
     #     self.assertEqual(len(response.data['results']), 1)
