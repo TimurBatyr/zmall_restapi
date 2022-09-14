@@ -120,9 +120,9 @@ class PostEditSerializer(serializers.ModelSerializer):
 
 class PostListSerializer(serializers.ModelSerializer):
     ''' List of posts'''
-    subscription = SubscriptionSerializer(many=True, read_only=True)
+    subscription = SubscriptionSerializer(read_only=True)
     class Meta:
         model = Post
-        fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'image')
+        fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image')
 
 

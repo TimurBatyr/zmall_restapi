@@ -139,7 +139,7 @@ class ProductFilter(filters.FilterSet):
         fields = ['category', 'city', 'image']
 
 
-class PostListHighlight(generics.ListAPIView):
+class PostList(generics.ListAPIView):
     '''Post List by date'''
     filter_backends = [DjangoFilterBackend]
     serializer_class = PostListSerializer
