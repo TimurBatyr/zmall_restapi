@@ -17,4 +17,8 @@ app.conf.beat_schedule = {
         'task': 'adds.tasks.send_mail_new_products',
         'schedule': crontab(hour='*/24'),
     },
+    # 'catalog':{
+    #         'task':'adds.tasks.run_cat',
+    #         'schedule': crontab(minute='*/1'),
+    #     },
 }

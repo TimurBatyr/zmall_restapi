@@ -1,6 +1,8 @@
+from celery import shared_task
 from django.core.mail import send_mail
 
 from account.models import User
+from adds.management.commands.catalog import run_pars_catalog
 from adds.models import Post
 from config import settings
 from config.celery import app
@@ -20,4 +22,25 @@ def send_mail_new_products():
             fail_silently=True,
         )
 send_mail_new_products.delay()
+
+
+@shared_task
+def run_selexy():
+    # run_pars_selexy()
+    # time = timezone.now().strftime('%X')
+    print('selexy')
+
+@shared_task
+def run_cat():
+    run_pars_catalog()
+    # time = timezone.now().strftime('%X')
+    print('cat')
+
+
+@shared_task
+def run_dos():
+    # run_parser_doska()
+    # time = timezone.now().strftime('%X')
+    print('dos')
+
 
