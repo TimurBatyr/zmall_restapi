@@ -52,8 +52,8 @@ class SubscriptionAPIView(generics.ListAPIView):
 class PostCreate(generics.CreateAPIView):
     '''Create Post'''
     serializer_class = PostCreateSerializer
-    permission_classes = [AllowAny]
-    # permission_classes = [IsAuthenticated]
+    # permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
 
 class PostImagesView(APIView):
@@ -139,7 +139,7 @@ class ProductFilter(filters.FilterSet):
         fields = ['category', 'city', 'image']
 
 
-class PostListHighlight(generics.ListAPIView):
+class PostList(generics.ListAPIView):
     '''Post List by date'''
     filter_backends = [DjangoFilterBackend]
     serializer_class = PostListSerializer
