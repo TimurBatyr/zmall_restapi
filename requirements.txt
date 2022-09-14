@@ -14,6 +14,7 @@ click-repl==0.2.0
 coreapi==2.3.3
 coreschema==0.0.4
 cryptography==37.0.4
+decorator==5.1.1
 Deprecated==1.2.13
 dj-database-url==1.0.0
 Django==4.0.7
@@ -27,6 +28,7 @@ djangorestframework==3.13.1
 djangorestframework-simplejwt==5.2.0
 drf-yasg==1.21.3
 facebook-sdk==3.1.0
+Faker==14.2.0
 google-api-core==2.10.0
 google-api-python-client==2.60.0
 google-auth==2.11.0
@@ -38,7 +40,9 @@ idna==3.3
 inflection==0.5.1
 itypes==1.2.0
 Jinja2==3.1.2
+jsom==0.0.5
 kombu==5.2.4
+lark-parser==0.12.0
 MarkupSafe==2.1.1
 ndg-httpsclient==0.5.1
 packaging==21.3

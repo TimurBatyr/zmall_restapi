@@ -45,7 +45,7 @@ LIST = (
 
 
 class Subscription(models.Model):
-    choice = models.CharField(max_length=100, choices=LIST, blank=True)
+    choice = models.CharField(max_length=100, choices=LIST)
     price = models.DecimalField(max_digits=20, decimal_places=2, default=0)
     date_created = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField(auto_now_add=True)
@@ -68,7 +68,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
     subcategory = models.ForeignKey(Subcategory, related_name='posts', on_delete=models.CASCADE)
     city = models.ForeignKey(City, related_name='posts', on_delete=models.PROTECT)
-    subscription = models.ForeignKey(Subscription, related_name='posts', on_delete=models.PROTECT)
+    subscription = models.ForeignKey(Subscription, related_name='posts', on_delete=models.PROTECT, blank=True, null=True)
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=300)
     from_price = models.DecimalField(max_digits=20, decimal_places=2)
@@ -121,10 +121,6 @@ class Favorite(models.Model):
 
 
 class Transactions(models.Model):
-    pass
-
-
-class Chat(models.Model):
     pass
 
 
