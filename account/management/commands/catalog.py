@@ -1,13 +1,10 @@
-# from account.models import UserProfile
 import os
-
 import requests
+
 from bs4 import BeautifulSoup
 from django.utils import timezone
 from django.core.management import BaseCommand
-
 from account.models import UserProfile
-from account.parsing.doska import run_pars
 from adds.models import Post, Category, Subcategory
 
 headers = {
@@ -18,21 +15,18 @@ headers = {
 
 def get_subcategory(POSTSOUD):
     perl = POSTSOUD.find(class_='pathway').find_all('a')
-    print(perl[-1].text)
     return perl[-1].text
 
 
 def get_img(POSTSOUD):
     posts = POSTSOUD.find('div', class_='vacancy_item_block').find_all('img')
     if posts:
-        print("Изоб    ", 'http:' + posts[0]['src'])
         return 'http:' + posts[0]['src']
 
 
 def get_title(POSTSOUD):
     title = POSTSOUD.find(class_='con_heading')
     if title:
-        print('Название   ', title.text)
         return title.text
 
 
@@ -40,40 +34,24 @@ def get_town(POSTSOUD):
     town = POSTSOUD.find(class_='bd_item_city')
 
     if town:
-        print('Город   ', town.text)
         return town.tex
 
 
 def get_price(POSTSOUD):
     price = POSTSOUD.find(class_='price')
     if price:
-        print(price.text)
         return price.text.split()[1]
-
-
-def get_number(POSTSOUD):
-    number = POSTSOUD.find(class_='desc')
-
-    if number:
-        if len(number.text.strip().split()) >= 4:
-            print('Номер', *number.text.strip().split()[1:-2])
-            return "".join(number.text.strip().split()[1:-2])
-        else:
-            print('Номер', *number.text.strip().split()[1:])
-            return ''.join(number.text.strip().split()[1:])
 
 
 def get_email(POSTSOUD):
     email = POSTSOUD.find(class_='desc')
     if len(email.text.split()) >= 4 and email.text.split()[2] == 'Email:':
-        print('Email', email.text.split()[-1])
         return email.text.split()[-1]
 
 
 def get_descrition(POSTSOUD):
     desc = POSTSOUD.find_all(class_='bd_text_full')
     if desc:
-        print(desc[0].text)
         return desc[0].text
 
 
@@ -112,6 +90,7 @@ def run_pars_catalog():
 
 
         for i in list_post_links:
+
             post = requests.get(i, headers=headers)
             postsrc = post.text
             POSTSOUD = BeautifulSoup(postsrc, "lxml")
@@ -120,7 +99,6 @@ def run_pars_catalog():
             title = get_title(POSTSOUD)
             town = get_town(POSTSOUD)
             description = get_descrition(POSTSOUD)
-
             category_id = Category.objects.get(title='Работа')
 
             try:
@@ -149,7 +127,6 @@ def run_pars_catalog():
 
 
 class Command(BaseCommand):
-    kali = 'Sos'
 
     def handle(self, *args, **kwargs):
         time = timezone.now().strftime('%X')

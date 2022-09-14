@@ -1,4 +1,3 @@
-# from account.models import UserProfile
 import os
 
 import requests
@@ -18,21 +17,22 @@ headers = {
 
 def get_subcategory(POSTSOUD):
     perl = POSTSOUD.find(class_='kroshki').find_all('a')
-    # print(perl[1].text)
     return perl[1].text
 
 
 def get_img(POSTSOUD):
     posts = POSTSOUD.find('div', class_='vacancy_item_block').find_all('img')
     if posts:
-        # print("Изоб    ", 'http:' + posts[0]['src'])
+        img_data = requests.get('http:' + posts[0]['src']).content
+        with open('/home/oskon/PycharmProjects/pythonProject8/zmall_restapi/account/management/parsing/image_name.jpg',
+                  'wb') as handler:
+            handler.write(img_data)
         return 'http:' + posts[0]['src']
 
 
 def get_title(POSTSOUD):
     title = POSTSOUD.find(class_='title')
     if title:
-        # print('Название   ', title.text)
         return title.text
 
 
@@ -40,14 +40,12 @@ def get_town(POSTSOUD):
     town = POSTSOUD.find(class_='title').findNext()
 
     if town:
-        # print('Город   ', town.text)
         return town.tex
 
 
 def get_price(POSTSOUD):
     price = POSTSOUD.find(class_='price')
     if price:
-        # print(price.text)
         return price.text.split()[1]
 
 
@@ -56,24 +54,22 @@ def get_number(POSTSOUD):
 
     if number:
         if len(number.text.strip().split()) >= 4:
-            # print('Номер', *number.text.strip().split()[1:-2])
             return "".join(number.text.strip().split()[1:-2])
         else:
-            # print('Номер', *number.text.strip().split()[1:])
             return ''.join(number.text.strip().split()[1:])
 
 
 def get_email(POSTSOUD):
     email = POSTSOUD.find(class_='desc')
+
     if len(email.text.split()) >= 4 and email.text.split()[2] == 'Email:':
-        # print('Email', email.text.split()[-1])
         return email.text.split()[-1]
 
 
 def get_descrition(POSTSOUD):
     desc = POSTSOUD.find_all(class_='desc')
+
     if desc:
-        # print(desc[1].text)
         return desc[1].text
 
 
@@ -84,10 +80,7 @@ except:
     pass
 
 
-
-
-def run_pars():
-
+def run_parser_doska():
     count_post = 0
 
     for q in range(200):
@@ -96,7 +89,7 @@ def run_pars():
         post = requests.get(link_doska, headers=headers)
         postsrc = post.text
 
-        with open(f'account/management/parsing/{q}.html','w') as file:
+        with open(f'account/management/parsing/{q}.html', 'w') as file:
             file.write(postsrc)
 
         with open(f'account/management/parsing/{q}.html') as file:
@@ -135,7 +128,9 @@ def run_pars():
                 subcategory_id = Subcategory.objects.get(title=subcategory)
 
             try:
-                Post.objects.create(user=me, category=category_id, subcategory=subcategory_id, title=title, image=img,
+                Post.objects.create(user=me, category=category_id, subcategory=subcategory_id,
+                                    title=title,
+                                    image='/home/oskon/PycharmProjects/pythonProject8/zmall_restapi/account/management/parsing/image_name.jpg',
                                     city=town, from_price=price,
                                     phone_number=number, email=email, description=description)
                 count_post += 1
@@ -143,7 +138,7 @@ def run_pars():
                 pass
 
             print(count_post)
-            if count_post ==100:
+            if count_post == 100:
                 break
 
         os.remove(f'account/management/parsing/{q}.html')
@@ -152,10 +147,7 @@ def run_pars():
             break
 
 
-
 class Command(BaseCommand):
-    kali = 'Sos'
-
     def handle(self, *args, **kwargs):
         time = timezone.now().strftime('%X')
         self.stdout.write("It's now %s" % time)
