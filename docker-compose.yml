@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  db:
+  db_group_c:
     image: postgres
     container_name: postgres_zmall_tim
     volumes:
@@ -12,8 +12,9 @@ services:
       - POSTGRES_PASSWORD=admin
     restart: unless-stopped
     depends_on:
-      - redis
-  web:
+      - redis_group_c
+
+  web_group_c:
     build: .
     ports:
       - 8011:8000
@@ -28,20 +29,12 @@ services:
       - static_volume:/zmall_rest/staticfiles
     restart: unless-stopped
     depends_on:
-      - db
-      - redis
-  nginx:
-    image: nginx
-    volumes:
-      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
-      - static_volume:/zmall_rest/staticfiles
-    depends_on:
-      - celery
-    ports:
-      - 8011:80
-  redis:
+      - db_group_c
+      - redis_group_c
+
+  redis_group_c:
     image: redis:alpine
-  celery:
+  celery_group_c:
     restart: unless-stopped
     build:
       context: .
@@ -49,7 +42,7 @@ services:
     env_file:
       - ./.env
     depends_on:
-      - web
+      - web_group_c
 
 
 volumes:
