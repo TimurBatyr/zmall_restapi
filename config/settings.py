@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import datetime
 import os
 from pathlib import Path
-from celery import app
-from celery.schedules import crontab
+
+from pythonjsonlogger.jsonlogger import JsonFormatter
 
 from decouple import config
 
@@ -125,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Bishkek'
 
 USE_I18N = True
 
@@ -178,17 +178,33 @@ CELERY_RESULT_BACKEND = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 
-CELERY_BEAT_SCHEDULE = {
-    'catalog': {
-        'task': 'adds.tasks.run_cat',
-        'schedule': crontab(minute=0, hour='1,4,7,10,13,16,19,22'),
-    },
-    'doska': {
-        'task': 'adds.tasks.run_dos',
-        'schedule': crontab(minute=0, hour='2,5,8,11,14,17,20,23'),
-    },
-    'selexy': {
-        'task': 'adds.tasks.run_selexy',
-        'schedule': crontab(minute=0, hour='0,3,6,9,12,15,18,21'),
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': True,
+#
+#     'formatters': {
+#         'main_formatter': {
+#             '()' : JsonFormatter,
+#         },
+#     },
+#
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'main_formatter',
+#         },
+#         'file': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'info.log',
+#             'formatter': 'main_formatter',
+#         },
+#     },
+#     'loggers': {
+#         'main': {
+#             'handlers': ['file', 'console'],
+#             'propagate': True,
+#             'level': "INFO",
+#         },
+#     },
+# }
+#
