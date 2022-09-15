@@ -3,6 +3,8 @@ from django.core.mail import send_mail
 
 from account.models import User
 from adds.management.commands.catalog import run_pars_catalog
+from adds.management.commands.doska import run_parser_doska
+from adds.management.commands.selexy import run_pars_selexy
 from adds.models import Post
 from config import settings
 from config.celery import app
@@ -21,26 +23,23 @@ def send_mail_new_products():
             recipient_list=[user.email],
             fail_silently=True,
         )
+
 send_mail_new_products.delay()
 
 
 @shared_task
 def run_selexy():
-    # run_pars_selexy()
-    # time = timezone.now().strftime('%X')
-    print('selexy')
+    run_pars_selexy()
+
 
 @shared_task
-def run_cat():
+def run_catalog():
     run_pars_catalog()
-    # time = timezone.now().strftime('%X')
-    print('cat')
 
 
 @shared_task
-def run_dos():
-    # run_parser_doska()
-    # time = timezone.now().strftime('%X')
-    print('dos')
+def run_doska():
+    run_parser_doska()
+
 
 

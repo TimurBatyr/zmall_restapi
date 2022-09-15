@@ -4,7 +4,6 @@ import requests
 from bs4 import BeautifulSoup
 from django.utils import timezone
 from django.core.management import BaseCommand
-
 from account.models import User
 from adds.models import Post, Category, Subcategory
 
@@ -15,34 +14,34 @@ headers = {
 
 
 def get_subcategory(POSTSOUD):
-    perl = POSTSOUD.find(class_='pathway').find_all('a')
-    if perl:
-        return perl[-1].text
+    perl = POSTSOUD.find(class_='breadcrumb').find_all('span')
+    return perl[-1].text
 
 
 def get_img(POSTSOUD):
-    posts = POSTSOUD.find('div', class_='vacancy_item_block').find_all('img')
+    posts = POSTSOUD.find(class_='main-content full-on-1024').find_all('img')
+
     if posts:
-        return 'http:' + posts[0]['src']
+        return posts[0]['src']
 
 
 def get_title(POSTSOUD):
-    title = POSTSOUD.find(class_='con_heading')
+    title = POSTSOUD.find(class_='product-name')
     if title:
         return title.text
 
 
 def get_town(POSTSOUD):
-    town = POSTSOUD.find(class_='bd_item_city')
-
+    town = POSTSOUD.find(class_='column')
     if town:
         return town.tex
 
 
 def get_price(POSTSOUD):
-    price = POSTSOUD.find(class_='price')
+    price = POSTSOUD.find(class_='control-holder')
     if price:
         return price.text.split()[1]
+
 
 
 def get_email(POSTSOUD):
@@ -52,52 +51,55 @@ def get_email(POSTSOUD):
 
 
 def get_descrition(POSTSOUD):
-    desc = POSTSOUD.find_all(class_='bd_text_full')
+    desc = POSTSOUD.find_all(class_='description')
     if desc:
-        return desc[0].text
+        return desc[0].text.rstrip()
 
 
-def run_pars_catalog():
-    me = User.objects.get(pk=1)
-    try:
-        Category.objects.create(title='Работа')
-    except:
-        pass
+me = User.objects.get(pk=1)
+try:
+    сategory_work = Category.objects.create(title='Работа')
+except:
+    pass
 
+
+def run_pars_selexy():
     count_post = 0
 
-    for l in range(200):
+    for q in range(1,200):
 
-        link_catalog = f'https://www.catalog.kg/board/22-{l}'
-        post = requests.get(link_catalog, headers=headers)
+        link_doska = f'https://salexy.kg/bishkek/rabota/ishu_rabotu?page={q}'
+        post = requests.get(link_doska, headers=headers)
         postsrc = post.text
 
-        with open(f'adds/management/parsing/{l}.html','w') as file:
+        with open(f'adds/management/parsing/{q}.html','w') as file:
             file.write(postsrc)
 
-        with open(f'adds/management/parsing/{l}.html') as file:
+        with open(f'adds/management/parsing/{q}.html') as file:
             postsrc = file.read()
-
 
         POSTSOUD = BeautifulSoup(postsrc, "lxml")
         deteil_post_links = []
-        posts = POSTSOUD.find(class_="board_gallery").find_all("a")
+        posts = POSTSOUD.find(class_="product-list").find_all("a")
 
         for k in posts:
-            Iten_href1 = 'https://www.catalog.kg' + k.get("href")
+
+            Iten_href1 =  k.get("href")
             deteil_post_links.append(Iten_href1)
 
-        list_post_links = deteil_post_links[:-4]
+        anti_copy=[]
+        for i in deteil_post_links:
+            if i in anti_copy:
+                continue
 
-
-        for i in list_post_links:
-
+            anti_copy.append(i)
             post = requests.get(i, headers=headers)
             postsrc = post.text
             POSTSOUD = BeautifulSoup(postsrc, "lxml")
-
             subcategory = get_subcategory(POSTSOUD)
             title = get_title(POSTSOUD)
+            img = get_img(POSTSOUD)
+            price = get_price(POSTSOUD)
             town = get_town(POSTSOUD)
             description = get_descrition(POSTSOUD)
             category_id = Category.objects.get(title='Работа')
@@ -109,18 +111,22 @@ def run_pars_catalog():
                 subcategory_id = Subcategory.objects.get(title=subcategory)
 
             try:
+
                 Post.objects.create(user=me, category=category_id,
                                     subcategory=subcategory_id,
-                                    title=title,
-                                    city=town,
-                                   description=description)
+                                    title=title, image=img,
+                                    city=town, from_price=price,
+                                    description=description)
+
                 count_post += 1
-            except Exception as ex:
-                print(ex)
-            if count_post == 100:
+            except:
+                pass
+
+            print(count_post)
+            if count_post ==100:
                 break
 
-        os.remove(f'adds/management/parsing/{l}.html')
+        os.remove(f'adds/management/parsing/{q}.html')
 
         if count_post == 100:
             break
@@ -131,6 +137,6 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         time = timezone.now().strftime('%X')
         self.stdout.write("It's now %s" % time)
-        run_pars_catalog()
+        run_pars_selexy()
         time = timezone.now().strftime('%X')
         self.stdout.write("It's now %s" % time)

@@ -36,48 +36,48 @@ class TestAdds(APITestCase):
             'wa_number': '+996555999888', 'is_activated': True, 'status': 'in_progress'
         }
 
-    # def test_category(self):
-    #     self.test = Category.objects.create(title='RealEstate', icon_image='abc.png')
-    #     response = self.client.get(reverse('category'))
-    #     self.assertEqual(response.data['count'], 2)
-    #     self.assertEqual(response.status_code, 200)
-    #
-    # def test_subcategory(self):
-    #     self.test = Subcategory.objects.create(category=self.category, title='Tank')
-    #     response = self.client.get(reverse('subcategory'))
-    #     self.assertEqual(response.data['count'], 2)
-    #     self.assertEqual(response.status_code, 200)
-    #
-    # def test_subscription(self):
-    #     self.test = Subscription.objects.create(choice='urgent', price=500)
-    #     response = self.client.get(reverse('subscription'))
-    #     self.assertEqual(response.data['count'], 2)
-    #     self.assertEqual(response.status_code, 200)
-    #
-    # def test_city(self):
-    #     self.test = City.objects.create(title='Bishkek', slug='Bishkek')
-    #     response = self.client.get(reverse('city'))
-    #     self.assertEqual(response.data['count'], 2)
-    #     self.assertEqual(response.status_code, 200)
-    #
-    # def test_post_list(self):
-    #     response = self.client.get(reverse('postlist'))
-    #     self.assertEqual(response.status_code, 200)
-    #
-    # def test_post_listdate(self):
-    #     response = self.client.get(reverse('postlistdate'))
-    #     self.assertEqual(response.status_code, 200)
-    #
-    # def test_mypost(self):
-    #     response = self.client.get(reverse('mypost'))
-    #     self.assertEqual(response.status_code, 200)
-    #
-    # def test_review(self):
-    #     self.test = ReviewPost.objects.create(email='a@a.com', title='Mers', text='wow', post=self.post)
-    #     response = self.client.get(reverse('mypost'))
-    #     self.assertEqual(response.data['count'], 1)
-    #     self.assertEqual(response.status_code, 200)
-    #
+    def test_category(self):
+        self.test = Category.objects.create(title='RealEstate', icon_image='abc.png')
+        response = self.client.get(reverse('category'))
+        self.assertEqual(response.data['count'], 2)
+        self.assertEqual(response.status_code, 200)
+
+    def test_subcategory(self):
+        self.test = Subcategory.objects.create(category=self.category, title='Tank')
+        response = self.client.get(reverse('subcategory'))
+        self.assertEqual(response.data['count'], 2)
+        self.assertEqual(response.status_code, 200)
+
+    def test_subscription(self):
+        self.test = Subscription.objects.create(choice='urgent', price=500)
+        response = self.client.get(reverse('subscription'))
+        self.assertEqual(response.data['count'], 2)
+        self.assertEqual(response.status_code, 200)
+
+    def test_city(self):
+        self.test = City.objects.create(title='Bishkek', slug='Bishkek')
+        response = self.client.get(reverse('city'))
+        self.assertEqual(response.data['count'], 2)
+        self.assertEqual(response.status_code, 200)
+
+    def test_post_list(self):
+        response = self.client.get(reverse('postlist'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_post_listdate(self):
+        response = self.client.get(reverse('postlistdate'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_mypost(self):
+        response = self.client.get(reverse('mypost'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_review(self):
+        self.test = ReviewPost.objects.create(email='a@a.com', title='Mers', text='wow', post=self.post)
+        response = self.client.get(reverse('mypost'))
+        self.assertEqual(response.data['count'], 1)
+        self.assertEqual(response.status_code, 200)
+
     # def test_create_post_invalid_user(self):
     #     data = self.data.copy()
     #     client = APIClient()

@@ -15,7 +15,6 @@ from .permissions import UserPermission
 from .serializers import *
 from django_filters import rest_framework as filters
 
-from .tasks import send_mail_new_products
 from .utils import multiple_images
 
 
