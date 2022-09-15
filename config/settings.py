@@ -13,9 +13,10 @@ import datetime
 import os
 from pathlib import Path
 
-from pythonjsonlogger.jsonlogger import JsonFormatter
-
 from decouple import config
+
+from log.logging_formatters import CustomJsonFormatter
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'info',
     'chat',
     'social_auth',
+    'admin_rights',
 ]
 
 MIDDLEWARE = [
@@ -180,33 +182,41 @@ CELERY_RESULT_BACKEND = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': True,
-#
-#     'formatters': {
-#         'main_formatter': {
-#             '()' : JsonFormatter,
-#         },
-#     },
-#
-#     'handlers': {
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#             'formatter': 'main_formatter',
-#         },
-#         'file': {
-#             'class': 'logging.FileHandler',
-#             'filename': 'info.log',
-#             'formatter': 'main_formatter',
-#         },
-#     },
-#     'loggers': {
-#         'main': {
-#             'handlers': ['file', 'console'],
-#             'propagate': True,
-#             'level': "INFO",
-#         },
-#     },
-# }
-#
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'formatters': {
+        'main_formatter': {
+        '()': CustomJsonFormatter
+        },
+    },
+
+    'handlers': {
+        'debug': {
+            'class': 'logging.FileHandler',
+            'filename': 'log/django.log',
+            'formatter': 'main_formatter',
+            'level': 'DEBUG'
+        },
+        'error': {
+            'class': 'logging.FileHandler',
+            'filename': 'log/django.log',
+            'formatter': 'main_formatter',
+            'level': 'ERROR'
+        },
+        'info': {
+            'class': 'logging.FileHandler',
+            'filename': 'log/django.log',
+            'formatter': 'main_formatter',
+            'level': 'INFO'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': [ "error", "info", "info"],
+            'propagate': True,
+            "level": 1,
+        },
+    },
+}

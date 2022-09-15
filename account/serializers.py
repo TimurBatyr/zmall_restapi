@@ -18,7 +18,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password', 'password_confirm',)
+        fields = ('username', 'email', 'password', 'password_confirm', "phone")
 
     def validate_email(self, email):
         if User.objects.filter(email=email).exists():
@@ -69,24 +69,20 @@ class LoginSerializer(serializers.ModelSerializer):
         max_length=100, min_length=5, write_only=True)
     username = serializers.CharField(
         max_length=255, min_length=3, read_only=True)
-    phone = PhoneNumberField(read_only=True)
+    phone = PhoneNumberField(allow_blank=True)
     tokens = serializers.SerializerMethodField()
 
     def get_tokens(self, obj):
         user = User.objects.get(email=obj['email'])
 
         return {
-            'id': user.id,
-            'phone': user.phone,
-            'email': user.email,
-            'username': user.username,
             'refresh': user.tokens()['refresh'],
             'access': user.tokens()['access']
         }
 
     class Meta:
         model = User
-        fields = ['email', 'password', 'username', 'tokens', 'phone']
+        fields = ['id', 'email', 'phone', 'password', 'username', 'tokens']
 
     def validate(self, attrs):
         email = attrs.get('email', '')
@@ -104,6 +100,8 @@ class LoginSerializer(serializers.ModelSerializer):
             raise AuthenticationFailed('Account disabled, contact admin')
 
         return {
+            'id': user.id,
+            'phone': user.phone,
             'email': user.email,
             'username': user.username,
             'tokens': user.tokens
@@ -145,7 +143,7 @@ class ForgotPasswordSerializer(serializers.Serializer):
     email = serializers.EmailField()
 
     def validate_email(self, email):
-        if not User.objects.filter(email=email).exists():
+        if not User.objects.get(email=email).exists():
             raise serializers.ValidationError('User not found')
         return email
 
@@ -157,3 +155,8 @@ class ForgotPasswordSerializer(serializers.Serializer):
         user.save()
         send_new_password(random_password, email)
 
+
+class UserDetailSerializer(serializers.Serializer):
+    class Meta:
+        model = User
+        fields = ['username', 'phone', 'email']
