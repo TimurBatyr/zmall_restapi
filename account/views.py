@@ -3,9 +3,9 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-
+from .models import User
 from .serializers import RegistrationSerializer, ActivationSerializer, ForgotPasswordSerializer, \
-    ChangePasswordSerializer, LoginSerializer
+    ChangePasswordSerializer, LoginSerializer, UserDetailSerializer
 
 
 class RegistrationAPIView(generics.GenericAPIView):
@@ -35,6 +35,12 @@ class LoginAPIView(generics.GenericAPIView):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class UserView(generics.RetrieveAPIView):
+    '''User View'''
+    serializer_class = UserDetailSerializer
+    queryset = User.objects.all()
 
 
 class ChangePasswordView(APIView):

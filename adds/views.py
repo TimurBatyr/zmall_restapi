@@ -159,9 +159,14 @@ class PostListDatePagination(Pagination):
 
 class PostlistDate(generics.ListAPIView):
     '''Post List by highlighted subscription'''
+    filter_backends = [DjangoFilterBackend]
     serializer_class = PostListSerializer
+    filter_backends = [SearchFilter, DjangoFilterBackend, f.OrderingFilter]
+    search_fields = ['title', 'description']
+    ordering_fields = ['date_created', 'from_price']
     queryset = Post.objects.filter(is_activated=True).order_by('-date_created')
     pagination_class = PostListDatePagination
+    filterset_class = ProductFilter
 
 
 

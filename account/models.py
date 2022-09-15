@@ -37,8 +37,6 @@ class User(AbstractUser):
     username = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     phone = PhoneNumberField(blank=True)
-    # name = models.CharField('User name', max_length=50)
-    # last_name = models.CharField('User last name', max_length=50)
     auth_provider = models.CharField(
         max_length=255, blank=False,
         null=False, default=AUTH_PROVIDERS.get('email'))
