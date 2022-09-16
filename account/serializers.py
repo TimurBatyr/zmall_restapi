@@ -156,7 +156,7 @@ class ForgotPasswordSerializer(serializers.Serializer):
         send_new_password(random_password, email)
 
 
-class UserDetailSerializer(serializers.Serializer):
+class UserDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['username', 'phone', 'email']

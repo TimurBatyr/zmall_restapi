@@ -99,20 +99,20 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         list_serializer_class = FilterReviewListSerializer
         model = ReviewPost
-        fields = ('id', 'title', 'text', 'children')
+        fields = ('id', 'title', 'text', 'children', 'email')
 
 
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''
     images = PostImagesSerializer(many=True)
     phone = PostContactsSerializer(many=True)
-    subscription = SubscriptionSerializer(many=True, read_only=True)
+    subscription = SubscriptionSerializer(read_only=True)
     reviews = ReviewSerializer(many=True)
 
 
     class Meta:
         model = Post
-        fields = ('id', 'user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
+        fields = ('id', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
                   'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number', 'phone',
                   'is_activated', 'reviews')
         read_only_fields = ['user']

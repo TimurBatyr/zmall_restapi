@@ -43,6 +43,31 @@ class UserView(generics.RetrieveAPIView):
     queryset = User.objects.all()
 
 
+class UserAccount(generics.GenericAPIView):
+    serializer_class = UserDetailSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = User.objects.get(pk=self.request.user.id)
+        serializer = UserDetailSerializer(user)
+        if user:
+            return Response(serializer.data)
+        return Response(status=status.HTTP_401_UNAUTHORIZED)
+
+    def patch(self, request):
+        user = User.objects.get(pk=self.request.user.id)
+        serializer = UserDetailSerializer(user, data=request.data)
+        if user and serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request):
+        user = User.objects.get(pk=self.request.user.id)
+        user.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
 class ChangePasswordView(APIView):
     permission_classes = [IsAuthenticated]
     def post(self, request):
