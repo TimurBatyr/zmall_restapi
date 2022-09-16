@@ -114,11 +114,11 @@ class Views(models.Model):
 
 
 class Favorite(models.Model):
-    post = models.ForeignKey(Post, related_name='favorite_post')
+    post = models.ManyToManyField(Post, related_name='favorite_post')
     user = models.ForeignKey(User, related_name='favorite_user', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.post.title
+        return self.post
 
 
 class Transactions(models.Model):

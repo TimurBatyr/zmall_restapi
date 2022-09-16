@@ -68,14 +68,10 @@ def get_descrition(POSTSOUD):
         return desc[1].text
 
 
-me = User.objects.get(pk=1)
-try:
-    сategory_work = Category.objects.create(title='Работа')
-except:
-    pass
-
-
 def run_parser_doska():
+    me = User.objects.get_or_create(email='admin123@gmail.com', password='qwerty', is_superuser=True)[0]
+    Category.objects.get_or_create(title='Работа')
+
     count_post = 0
 
     for q in range(200):

@@ -58,11 +58,8 @@ def get_descrition(POSTSOUD):
 
 
 def run_pars_catalog():
-    me = User.objects.get(pk=1)
-    try:
-        Category.objects.create(title='Работа')
-    except:
-        pass
+    me = User.objects.get_or_create(email='admin123@gmail.com',password='qwerty', is_superuser=True)[0]
+    Category.objects.get_or_create(title='Работа')
 
     count_post = 0
 
