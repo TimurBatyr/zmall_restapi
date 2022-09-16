@@ -10,7 +10,6 @@ from admin_rights.serializers import UserDetailSerializer, CategorySerializer, S
 from chat.models import Message
 
 
-
 class UserViewSet(ModelViewSet):
     serializer_class = UserDetailSerializer
     queryset = User.objects.all()
@@ -23,7 +22,7 @@ class CategoryViewSet(ModelViewSet):
     permission_classes = [IsAdminUser]
 
 
-class SubCategoryViewSet(ModelViewSet):
+class SubcategoryViewSet(ModelViewSet):
     serializer_class = SubcategorySerializer
     queryset = Subcategory.objects.all()
     permission_classes = [IsAdminUser]
@@ -41,7 +40,7 @@ class SubscriptionViewSet(ModelViewSet):
     permission_classes = [IsAdminUser]
 
 
-class PostImageViewSet(ModelViewSet):
+class PostImagesViewSet(ModelViewSet):
     queryset = PostImages.objects.all()
     serializer_class = PostImagesSerializer
     permission_classes = [IsAdminUser]

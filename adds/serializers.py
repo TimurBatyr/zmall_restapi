@@ -125,4 +125,3 @@ class PostListSerializer(serializers.ModelSerializer):
         model = Post
         fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image')
 
-

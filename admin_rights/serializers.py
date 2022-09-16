@@ -1,5 +1,6 @@
+from rest_framework import serializers
+
 from account.models import User
-from adds import serializers
 from adds.models import Category, Subcategory, City, Subscription, PostImages, PostContacts, Post, ReviewPost, Views, \
     Favorite
 from chat.models import Message

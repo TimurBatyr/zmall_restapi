@@ -99,6 +99,7 @@ DATABASES = {
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
+        # 'HOST': 'localhost',
         'HOST': 'db_group_c',
         'PORT': '', # default 5432
     }
@@ -172,6 +173,7 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+# REDIS_HOST = "localhost"
 REDIS_HOST = "redis_group_c"
 REDIS_PORT = "6379"
 CELERY_BROKER_URL = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
