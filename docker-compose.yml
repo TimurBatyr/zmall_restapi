@@ -27,6 +27,7 @@ services:
     volumes:
       - media_volume:/zmall_rest/mediafiles
       - static_volume:/zmall_rest/staticfiles
+      - .:/zmall_rest
     restart: unless-stopped
     depends_on:
       - db_group_c
