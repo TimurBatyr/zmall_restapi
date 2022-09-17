@@ -118,7 +118,7 @@ class Favorite(models.Model):
     user = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.post.title
+        return f'{self.post} - {self.user}'
 
 
 class Transactions(models.Model):

@@ -189,17 +189,11 @@ class ReviewCreateView(APIView):
         return Response(status=201)
 
 
-class FavoriteViewSet(ModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = FavoritesSerializer
-    # permission_classes = [IsAuthenticated, UserPermission, ]
-    permission_classes = [AllowAny]
-
 # class FavoritesCreateView(generics.CreateAPIView):
 #     queryset = Favorite.objects.all()
-#     serializer_class = FavoritesSerializer
-#     # permission_classes = [IsAuthenticated, UserPermission, ]
-#     permission_classes = [AllowAny]
+#     serializer_class = FavoriteSerializer
+#     permission_classes = [IsAuthenticated, UserPermission, ]
+#     # permission_classes = [AllowAny]
 #
 #     def perform_create(self, serializer):
 #         serializer.save(user=self.request.user)
@@ -208,7 +202,7 @@ class FavoriteViewSet(ModelViewSet):
 #         qs = self.request.user
 #         queryset = Favorite.objects.filter(user=qs, favorites=True)
 #         return queryset
-#
+# #
 #
 # class FavoritesListView(generics.ListAPIView):
 #     queryset = Favorite.objects.all()

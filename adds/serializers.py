@@ -126,9 +126,10 @@ class PostListSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image', 'description')
 
 
-class FavoritesSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField(source='user.email')
+# class FavoriteSerializer(serializers.ModelSerializer):
+#     user = serializers.ReadOnlyField(source='user.email')
+#
+#     class Meta:
+#         model = Favorite
+#         fields =  ('id', 'post_id', 'user')
 
-    class Meta:
-        model = Favorite
-        fields = ('id', 'post', 'user',)
