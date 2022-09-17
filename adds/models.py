@@ -43,19 +43,27 @@ LIST = (
     ('highlight', 'highlight'),
 )
 
+PERIOD = (
+    ('5 days', '5 days'),
+    ('10 days', '10 days'),
+    ('15 days', '15 days'),
+    ('20 days', '20 days'),
+    ('25 days', '25 days'),
+    ('30 days', '30 days'),
+)
+
 
 class Subscription(models.Model):
     choice = models.CharField(max_length=100, choices=LIST)
     price = models.DecimalField(max_digits=20, decimal_places=2, default=0)
     icon_image = models.ImageField()
-    date_created = models.DateTimeField(auto_now_add=True)
-    end_date = models.DateTimeField(auto_now_add=True)
+    period = models.CharField(max_length=100, choices=PERIOD)
 
     class Meta:
         ordering = ['-id']
 
     def __str__(self):
-        return f'{self.id} {self.choice} -- {self.price}'
+        return f'{self.id} {self.choice} -- {self.price} soms -- {self.period}'
 
 
 STATUS = (
@@ -107,6 +115,23 @@ class PostContacts(models.Model):
         return f'Contact ID: {self.id}_ {str(self.add_number)} : {self.post.title} ID: {self.post.id}'
 
 
+class ReviewPost(models.Model):
+    '''Comment to posts'''
+    email = models.EmailField()
+    title = models.CharField(max_length=100)
+    text = models.TextField(max_length=5000)
+    parent = models.ForeignKey('self', verbose_name='Parent', on_delete=models.SET_NULL, blank=True, null=True,
+                               related_name='children')
+    post = models.ForeignKey(Post, verbose_name='post', on_delete=models.CASCADE, related_name='reviews')
+
+    def __str__(self):
+        return f'{self.title} - {self.post}'
+
+    class Meta:
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'
+
+
 class Views(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     views = models.IntegerField()
@@ -123,20 +148,3 @@ class Favorite(models.Model):
 
 class Transactions(models.Model):
     pass
-
-
-class ReviewPost(models.Model):
-    '''Comment to posts'''
-    email = models.EmailField()
-    title = models.CharField(max_length=100)
-    text = models.TextField(max_length=5000)
-    parent = models.ForeignKey('self', verbose_name='Parent', on_delete=models.SET_NULL, blank=True, null=True,
-                               related_name='children')
-    post = models.ForeignKey(Post, verbose_name='post', on_delete=models.CASCADE, related_name='reviews')
-
-    def __str__(self):
-        return f'{self.title} - {self.post}'
-
-    class Meta:
-        verbose_name = 'Review'
-        verbose_name_plural = 'Reviews'

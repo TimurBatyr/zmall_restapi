@@ -4117,3 +4117,922 @@ drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.Cate
 2022-09-17 19:21:37,427 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 21854
 2022-09-17 19:21:55,937 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/config/yasg.py changed, reloading.
 2022-09-17 19:21:56,985 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 00:37:50,167 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 00:38:16,194 [basehttp | INFO] "POST /api/v1/account/register/ HTTP/1.1" 201 54
+2022-09-18 00:38:50,612 [basehttp | INFO] "POST /api/v1/account/activate/ HTTP/1.1" 200 38
+2022-09-18 00:38:54,904 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 583
+2022-09-18 00:39:49,135 [basehttp | INFO] "GET /api/v1/account/userview/2 HTTP/1.1" 200 83
+2022-09-18 00:39:53,247 [basehttp | INFO] "GET /api/v1/account/userview/1 HTTP/1.1" 200 57
+2022-09-18 00:41:13,924 [basehttp | INFO] "GET /api/v1/account/usercrud/ HTTP/1.1" 200 83
+2022-09-18 00:41:46,520 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-18 00:41:49,325 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 00:41:51,814 [basehttp | INFO] "GET /api/v1/account/userview/1 HTTP/1.1" 200 64
+2022-09-18 00:41:55,563 [basehttp | INFO] "GET /api/v1/account/userview/2 HTTP/1.1" 200 90
+2022-09-18 00:41:59,114 [basehttp | INFO] "GET /api/v1/account/usercrud/ HTTP/1.1" 200 90
+2022-09-18 00:42:10,867 [basehttp | INFO] "PATCH /api/v1/account/usercrud/ HTTP/1.1" 200 90
+2022-09-18 00:43:45,262 [log | WARNING] Unauthorized: /api/v1/adds/createpost/
+2022-09-18 00:43:45,263 [basehttp | WARNING] "POST /api/v1/adds/createpost/ HTTP/1.1" 401 183
+2022-09-18 00:44:22,317 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 00:44:43,763 [basehttp | INFO] "GET /admin/ HTTP/1.1" 302 0
+2022-09-18 00:44:43,816 [basehttp | INFO] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2216
+2022-09-18 00:44:45,475 [basehttp | INFO] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2022-09-18 00:44:45,506 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 10996
+2022-09-18 00:44:46,763 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 12229
+2022-09-18 00:44:46,806 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 00:44:50,151 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 10147
+2022-09-18 00:44:50,174 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 00:44:51,968 [basehttp | INFO] "GET /admin/adds/post/add/ HTTP/1.1" 200 21362
+2022-09-18 00:44:51,993 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 00:45:02,253 [basehttp | INFO] "GET /admin/adds/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 3436
+2022-09-18 00:45:02,272 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 00:45:14,246 [basehttp | INFO] "POST /admin/adds/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 329
+2022-09-18 00:45:19,980 [basehttp | INFO] "GET /admin/adds/subcategory/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4082
+2022-09-18 00:45:19,998 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 00:45:27,506 [basehttp | INFO] "POST /admin/adds/subcategory/add/?_to_field=id&_popup=1 HTTP/1.1" 200 335
+2022-09-18 00:45:33,449 [basehttp | INFO] "GET /admin/adds/city/add/?_to_field=id&_popup=1 HTTP/1.1" 200 3374
+2022-09-18 00:45:33,477 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 00:45:48,627 [basehttp | INFO] "POST /admin/adds/city/add/?_to_field=id&_popup=1 HTTP/1.1" 200 323
+2022-09-18 00:45:52,613 [basehttp | INFO] "GET /admin/adds/subscription/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4066
+2022-09-18 00:45:52,631 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 00:46:00,807 [basehttp | INFO] "POST /admin/adds/subscription/add/?_to_field=id&_popup=1 HTTP/1.1" 200 332
+2022-09-18 00:46:45,602 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 00:46:49,236 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 00:46:50,071 [basehttp | INFO] "GET /admin/adds/subscription/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4066
+2022-09-18 00:46:50,091 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 00:47:02,347 [basehttp | INFO] "POST /admin/adds/subscription/add/?_to_field=id&_popup=1 HTTP/1.1" 200 332
+2022-09-18 00:47:39,580 [basehttp | INFO] "GET /api/v1/adds/subscription/ HTTP/1.1" 200 6427
+2022-09-18 00:59:40,274 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 00:59:43,443 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 00:59:54,900 [log | ERROR] Internal Server Error: /api/v1/adds/subscription/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1300, in to_representation
+    assert not isinstance(value, datetime.datetime), (
+AssertionError: Expected a `date`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2022-09-18 00:59:54,900 [log | ERROR] Internal Server Error: /api/v1/adds/subscription/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1300, in to_representation
+    assert not isinstance(value, datetime.datetime), (
+AssertionError: Expected a `date`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2022-09-18 00:59:54,902 [basehttp | ERROR] "GET /api/v1/adds/subscription/ HTTP/1.1" 500 123323 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 00:59:54,902 [basehttp | ERROR] "GET /api/v1/adds/subscription/ HTTP/1.1" 500 123323
+2022-09-18 01:00:37,596 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 12494
+2022-09-18 01:00:40,013 [basehttp | INFO] "GET /admin/adds/subscription/ HTTP/1.1" 200 11594
+2022-09-18 01:00:40,053 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:00:45,094 [basehttp | INFO] "POST /admin/adds/subscription/ HTTP/1.1" 200 10309
+2022-09-18 01:00:46,460 [basehttp | INFO] "POST /admin/adds/subscription/ HTTP/1.1" 302 0
+2022-09-18 01:00:46,511 [basehttp | INFO] "GET /admin/adds/subscription/ HTTP/1.1" 200 11516
+2022-09-18 01:00:46,538 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:00:47,885 [basehttp | INFO] "GET /admin/adds/subscription/1/change/ HTTP/1.1" 200 12385
+2022-09-18 01:00:47,920 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:01:03,911 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 01:01:07,521 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:01:09,819 [basehttp | INFO] "GET /admin/adds/subscription/1/change/ HTTP/1.1" 200 12385
+2022-09-18 01:01:09,841 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:04:36,768 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/admin.py changed, reloading.
+2022-09-18 01:04:39,506 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:05:46,895 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/admin.py changed, reloading.
+2022-09-18 01:05:49,309 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:05:49,892 [basehttp | INFO] "GET /admin/adds/subscription/ HTTP/1.1" 200 12270
+2022-09-18 01:06:45,340 [log | ERROR] Internal Server Error: /api/v1/adds/subscription/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1300, in to_representation
+    assert not isinstance(value, datetime.datetime), (
+AssertionError: Expected a `date`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2022-09-18 01:06:45,340 [log | ERROR] Internal Server Error: /api/v1/adds/subscription/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1300, in to_representation
+    assert not isinstance(value, datetime.datetime), (
+AssertionError: Expected a `date`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2022-09-18 01:06:45,343 [basehttp | ERROR] "GET /api/v1/adds/subscription/ HTTP/1.1" 500 122967 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 01:06:45,343 [basehttp | ERROR] "GET /api/v1/adds/subscription/ HTTP/1.1" 500 122967
+2022-09-18 01:08:45,325 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 12751
+2022-09-18 01:08:47,291 [basehttp | INFO] "GET /admin/adds/subscription/ HTTP/1.1" 200 12270
+2022-09-18 01:08:47,333 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:14:06,504 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/models.py changed, reloading.
+2022-09-18 01:14:09,262 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:17:31,541 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:17:45,381 [basehttp | INFO] "GET /admin/adds/subscription/ HTTP/1.1" 200 11374
+2022-09-18 01:17:45,415 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:17:51,476 [basehttp | INFO] "GET /admin/adds/subscription/1/change/ HTTP/1.1" 200 13133
+2022-09-18 01:17:51,497 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:17:58,443 [basehttp | INFO] "POST /admin/adds/subscription/1/change/ HTTP/1.1" 302 0
+2022-09-18 01:17:58,497 [basehttp | INFO] "GET /admin/adds/subscription/ HTTP/1.1" 200 11593
+2022-09-18 01:17:58,531 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:18:39,062 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/admin.py changed, reloading.
+2022-09-18 01:19:33,548 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:19:37,080 [basehttp | INFO] "GET /admin/adds/subscription/ HTTP/1.1" 200 11748
+2022-09-18 01:19:37,125 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:20:29,682 [log | ERROR] Internal Server Error: /api/v1/adds/subscription/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Subscription' object has no attribute 'date_created'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `date_created` on serializer `SubscriptionSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Subscription` instance.
+Original exception text was: 'Subscription' object has no attribute 'date_created'.
+2022-09-18 01:20:29,682 [log | ERROR] Internal Server Error: /api/v1/adds/subscription/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Subscription' object has no attribute 'date_created'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `date_created` on serializer `SubscriptionSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Subscription` instance.
+Original exception text was: 'Subscription' object has no attribute 'date_created'.
+2022-09-18 01:20:29,686 [basehttp | ERROR] "GET /api/v1/adds/subscription/ HTTP/1.1" 500 134358 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 01:20:29,686 [basehttp | ERROR] "GET /api/v1/adds/subscription/ HTTP/1.1" 500 134358
+2022-09-18 01:20:47,129 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 01:20:48,873 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:20:50,160 [basehttp | INFO] "GET /api/v1/adds/subscription/ HTTP/1.1" 200 5820
+2022-09-18 01:21:50,396 [log | WARNING] Method Not Allowed: /api/v1/adds/createpost/
+2022-09-18 01:21:50,396 [basehttp | WARNING] "GET /api/v1/adds/createpost/ HTTP/1.1" 405 11571
+2022-09-18 01:23:57,692 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 01:24:00,404 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:25:12,044 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 01:25:15,405 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:25:21,027 [log | WARNING] Method Not Allowed: /api/v1/adds/createpost/
+2022-09-18 01:25:21,028 [basehttp | WARNING] "GET /api/v1/adds/createpost/ HTTP/1.1" 405 11586
+2022-09-18 01:26:15,666 [basehttp | INFO] "POST /api/v1/adds/createpost/ HTTP/1.1" 201 12529
+2022-09-18 01:31:16,554 [basehttp | INFO] "POST /api/v1/adds/addimages/ HTTP/1.1" 201 426
+2022-09-18 01:32:55,670 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=8 HTTP/1.1" 204 0
+2022-09-18 01:37:49,066 [basehttp | INFO] "POST /api/v1/adds/addimages/ HTTP/1.1" 201 116
+2022-09-18 01:37:55,675 [basehttp | INFO] "GET /api/v1/adds/addimages/ HTTP/1.1" 200 527
+2022-09-18 01:40:48,102 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 01:40:51,458 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:40:58,189 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=9 HTTP/1.1" 204 0
+2022-09-18 01:41:01,528 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=10 HTTP/1.1" 204 0
+2022-09-18 01:41:05,078 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=1 HTTP/1.1" 204 0
+2022-09-18 01:41:07,616 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=2 HTTP/1.1" 204 0
+2022-09-18 01:41:10,274 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=3 HTTP/1.1" 204 0
+2022-09-18 01:41:13,918 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=4 HTTP/1.1" 204 0
+2022-09-18 01:41:17,102 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=5 HTTP/1.1" 204 0
+2022-09-18 01:41:20,601 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=6 HTTP/1.1" 204 0
+2022-09-18 01:41:24,094 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=7 HTTP/1.1" 204 0
+2022-09-18 01:41:27,867 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 91, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 01:41:27,867 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 91, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 01:41:27,869 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=8 HTTP/1.1" 500 95830 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 01:41:27,869 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=8 HTTP/1.1" 500 95830
+2022-09-18 01:41:56,738 [basehttp | INFO] "GET /api/v1/adds/addimages/ HTTP/1.1" 200 2
+2022-09-18 01:43:05,917 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 91, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 01:43:05,917 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 91, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 01:43:05,918 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=11 HTTP/1.1" 500 95846 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 01:43:05,918 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=11 HTTP/1.1" 500 95846
+2022-09-18 01:43:51,793 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 13057
+2022-09-18 01:43:55,918 [basehttp | INFO] "GET /admin/adds/postimages/ HTTP/1.1" 200 10194
+2022-09-18 01:43:55,962 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:43:57,705 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 11291
+2022-09-18 01:43:57,726 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:43:59,985 [basehttp | INFO] "GET /admin/adds/post/1/change/ HTTP/1.1" 200 22133
+2022-09-18 01:44:00,015 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:44:04,477 [basehttp | INFO] "GET /admin/adds/postimages/ HTTP/1.1" 200 10194
+2022-09-18 01:44:04,505 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:44:21,789 [basehttp | INFO] "GET /api/v1/adds/addimages/ HTTP/1.1" 200 2
+2022-09-18 01:44:30,054 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 11291
+2022-09-18 01:44:30,076 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 01:44:41,688 [basehttp | INFO] "GET /api/v1/adds/addimages/ HTTP/1.1" 200 2
+2022-09-18 01:44:42,850 [basehttp | INFO] "GET /api/v1/adds/addimages/ HTTP/1.1" 200 2
+2022-09-18 01:45:02,332 [basehttp | INFO] "POST /api/v1/adds/addimages/ HTTP/1.1" 201 434
+2022-09-18 01:45:21,361 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=11 HTTP/1.1" 204 0
+2022-09-18 01:45:25,462 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=12 HTTP/1.1" 204 0
+2022-09-18 01:45:31,913 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=13 HTTP/1.1" 204 0
+2022-09-18 01:45:34,590 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=14 HTTP/1.1" 204 0
+2022-09-18 01:45:37,236 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=15 HTTP/1.1" 204 0
+2022-09-18 01:45:39,869 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=16 HTTP/1.1" 204 0
+2022-09-18 01:45:42,602 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=17 HTTP/1.1" 204 0
+2022-09-18 01:45:45,912 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=18 HTTP/1.1" 204 0
+2022-09-18 01:45:49,359 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 91, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 01:45:49,359 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 91, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 01:45:49,360 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=19 HTTP/1.1" 500 95846 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 01:45:49,360 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=19 HTTP/1.1" 500 95846
+2022-09-18 01:46:40,591 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 01:46:43,451 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:46:48,222 [basehttp | INFO] "POST /api/v1/adds/addimages/ HTTP/1.1" 201 434
+2022-09-18 01:58:07,831 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 01:58:10,562 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:58:23,895 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 01:58:25,107 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 01:59:40,244 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 01:59:42,532 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:00:09,833 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=26&?pk=25 HTTP/1.1" 204 0
+2022-09-18 02:00:22,602 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=23&?pk=24 HTTP/1.1" 204 0
+2022-09-18 02:00:30,636 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=21&?pk=22 HTTP/1.1" 204 0
+2022-09-18 02:00:38,096 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=19&?pk=20 HTTP/1.1" 204 0
+2022-09-18 02:00:43,880 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 94, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 02:00:43,880 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 94, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 02:00:43,883 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=18 HTTP/1.1" 500 96048 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 02:00:43,883 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=18 HTTP/1.1" 500 96048
+2022-09-18 02:00:53,310 [basehttp | INFO] "GET /api/v1/adds/addimages/ HTTP/1.1" 200 239
+2022-09-18 02:01:07,711 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=25 HTTP/1.1" 204 0
+2022-09-18 02:01:10,256 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=24 HTTP/1.1" 204 0
+2022-09-18 02:01:21,431 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=22 HTTP/1.1" 204 0
+2022-09-18 02:01:24,591 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=20 HTTP/1.1" 204 0
+2022-09-18 02:01:27,614 [basehttp | INFO] "GET /api/v1/adds/addimages/ HTTP/1.1" 200 2
+2022-09-18 02:01:36,909 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 82, in post
+    raise Exception("Only three images allowed")
+Exception: Only three images allowed
+2022-09-18 02:01:36,909 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 82, in post
+    raise Exception("Only three images allowed")
+Exception: Only three images allowed
+2022-09-18 02:01:36,910 [basehttp | ERROR] "POST /api/v1/adds/addimages/ HTTP/1.1" 500 90730 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 02:01:36,910 [basehttp | ERROR] "POST /api/v1/adds/addimages/ HTTP/1.1" 500 90730
+2022-09-18 02:02:03,471 [log | WARNING] Bad Request: /api/v1/adds/addimages/
+2022-09-18 02:02:03,472 [basehttp | WARNING] "POST /api/v1/adds/addimages/ HTTP/1.1" 400 117
+2022-09-18 02:02:30,193 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 02:02:33,180 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:02:51,135 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=32 HTTP/1.1" 204 0
+2022-09-18 02:02:53,485 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=31 HTTP/1.1" 204 0
+2022-09-18 02:02:59,836 [basehttp | INFO] "GET /api/v1/adds/addimages/ HTTP/1.1" 200 224
+2022-09-18 02:03:18,260 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=27 HTTP/1.1" 204 0
+2022-09-18 02:03:21,629 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=28 HTTP/1.1" 204 0
+2022-09-18 02:03:24,211 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=29 HTTP/1.1" 204 0
+2022-09-18 02:03:36,954 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=30 HTTP/1.1" 204 0
+2022-09-18 02:04:04,402 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 02:04:07,224 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:04:13,460 [log | WARNING] Bad Request: /api/v1/adds/addimages/
+2022-09-18 02:04:13,462 [basehttp | WARNING] "POST /api/v1/adds/addimages/ HTTP/1.1" 400 151
+2022-09-18 02:04:36,011 [log | WARNING] Bad Request: /api/v1/adds/addimages/
+2022-09-18 02:04:36,012 [basehttp | WARNING] "POST /api/v1/adds/addimages/ HTTP/1.1" 400 175
+2022-09-18 02:05:33,146 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 02:05:35,508 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:05:47,117 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=38 HTTP/1.1" 204 0
+2022-09-18 02:05:49,876 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=37 HTTP/1.1" 204 0
+2022-09-18 02:05:52,255 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=36 HTTP/1.1" 204 0
+2022-09-18 02:05:54,605 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=35 HTTP/1.1" 204 0
+2022-09-18 02:05:57,349 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=34 HTTP/1.1" 204 0
+2022-09-18 02:05:59,839 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=33 HTTP/1.1" 204 0
+2022-09-18 02:06:02,620 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 95, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 02:06:02,620 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 95, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 02:06:02,622 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=32 HTTP/1.1" 500 95846 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 02:06:02,622 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=32 HTTP/1.1" 500 95846
+2022-09-18 02:06:21,305 [basehttp | INFO] "POST /api/v1/adds/addimages/ HTTP/1.1" 201 201
+2022-09-18 02:07:24,630 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 02:07:27,455 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:08:17,539 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 02:08:20,486 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:08:26,434 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 02:08:27,387 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:08:40,756 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=39 HTTP/1.1" 204 0
+2022-09-18 02:08:43,967 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=41 HTTP/1.1" 204 0
+2022-09-18 02:08:46,554 [basehttp | INFO] "DELETE /api/v1/adds/addimages/?pk=42 HTTP/1.1" 204 0
+2022-09-18 02:08:49,311 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 95, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 02:08:49,311 [log | ERROR] Internal Server Error: /api/v1/adds/addimages/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 95, in delete
+    image = PostImages.objects.get(id=pk)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
+2022-09-18 02:08:49,313 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=43 HTTP/1.1" 500 95895 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 02:08:49,313 [basehttp | ERROR] "DELETE /api/v1/adds/addimages/?pk=43 HTTP/1.1" 500 95895
+2022-09-18 02:08:54,807 [basehttp | INFO] "POST /api/v1/adds/addimages/ HTTP/1.1" 201 209
+2022-09-18 02:09:22,468 [basehttp | INFO] "POST /api/v1/adds/addimages/ HTTP/1.1" 201 233
+2022-09-18 02:09:48,268 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 02:09:50,940 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:09:51,855 [basehttp | INFO] "GET /admin/adds/postimages/ HTTP/1.1" 200 13242
+2022-09-18 02:09:51,907 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:09:59,573 [basehttp | INFO] "POST /admin/adds/postimages/ HTTP/1.1" 200 11485
+2022-09-18 02:10:00,979 [basehttp | INFO] "POST /admin/adds/postimages/ HTTP/1.1" 302 0
+2022-09-18 02:10:01,033 [basehttp | INFO] "GET /admin/adds/postimages/ HTTP/1.1" 200 11519
+2022-09-18 02:10:01,056 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:11:00,365 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-18 02:11:02,449 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:11:52,223 [log | WARNING] Not Found: /api/v1/account/addcontacts
+2022-09-18 02:11:52,224 [basehttp | WARNING] "GET /api/v1/account/addcontacts HTTP/1.1" 404 4521
+2022-09-18 02:11:59,719 [log | WARNING] Method Not Allowed: /api/v1/adds/addcontacts/
+2022-09-18 02:11:59,720 [basehttp | WARNING] "GET /api/v1/adds/addcontacts/ HTTP/1.1" 405 7702
+2022-09-18 02:12:05,809 [log | WARNING] Bad Request: /api/v1/adds/addcontacts/
+2022-09-18 02:12:05,810 [basehttp | WARNING] "POST /api/v1/adds/addcontacts/ HTTP/1.1" 400 7845
+2022-09-18 02:12:17,543 [basehttp | INFO] "POST /api/v1/adds/addcontacts/ HTTP/1.1" 201 7741
+2022-09-18 02:12:24,686 [basehttp | INFO] "POST /api/v1/adds/addcontacts/ HTTP/1.1" 201 7741
+2022-09-18 02:12:56,846 [log | WARNING] Not Found: /api/v1/adds/detailscontacts/1
+2022-09-18 02:12:56,847 [basehttp | WARNING] "GET /api/v1/adds/detailscontacts/1 HTTP/1.1" 404 5376
+2022-09-18 02:13:06,421 [basehttp | INFO] "GET /api/v1/adds/detailcontacts/1 HTTP/1.1" 200 10344
+2022-09-18 02:13:13,466 [basehttp | INFO] "GET /api/v1/adds/detailcontacts/2 HTTP/1.1" 200 10344
+2022-09-18 02:14:11,978 [log | WARNING] Method Not Allowed: /api/v1/adds/createpost/
+2022-09-18 02:14:11,979 [basehttp | WARNING] "GET /api/v1/adds/createpost/ HTTP/1.1" 405 11586
+2022-09-18 02:14:34,046 [basehttp | INFO] "POST /api/v1/adds/createpost/ HTTP/1.1" 201 12281
+2022-09-18 02:15:04,348 [basehttp | INFO] "GET /api/v1/adds/detailpost/1 HTTP/1.1" 200 659
+2022-09-18 02:15:30,400 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 425
+2022-09-18 02:15:50,395 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-18 02:15:53,148 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:15:58,497 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 10105
+2022-09-18 02:16:09,885 [basehttp | INFO] "GET /api/v1/adds/postlistdate/ HTTP/1.1" 200 10193
+2022-09-18 02:16:19,347 [basehttp | INFO] "GET /api/v1/adds/mypost/ HTTP/1.1" 200 5348
+2022-09-18 02:17:19,674 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 583
+2022-09-18 02:17:55,325 [basehttp | INFO] "GET /api/v1/adds/mypost HTTP/1.1" 301 0
+2022-09-18 02:17:55,336 [basehttp | INFO] "GET /api/v1/adds/mypost/ HTTP/1.1" 200 365
+2022-09-18 02:19:03,654 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 13752
+2022-09-18 02:19:06,322 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 11499
+2022-09-18 02:19:06,371 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:19:08,293 [basehttp | INFO] "GET /admin/adds/post/2/change/ HTTP/1.1" 200 21838
+2022-09-18 02:19:08,322 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:19:11,607 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 11499
+2022-09-18 02:19:11,638 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:19:12,870 [basehttp | INFO] "GET /admin/adds/post/1/change/ HTTP/1.1" 200 22133
+2022-09-18 02:19:12,891 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:19:43,984 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:20:59,018 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:21:12,988 [basehttp | INFO] "GET /admin/chat/message/ HTTP/1.1" 200 10168
+2022-09-18 02:21:13,039 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:26:07,010 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/models.py changed, reloading.
+2022-09-18 02:26:09,834 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:29:11,425 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:30:00,568 [log | WARNING] Method Not Allowed: /api/v1/adds/review/
+2022-09-18 02:30:00,569 [basehttp | WARNING] "GET /api/v1/adds/review/ HTTP/1.1" 405 5675
+2022-09-18 02:30:04,657 [basehttp | INFO] "GET /admin/chat/message/ HTTP/1.1" 200 10168
+2022-09-18 02:30:18,290 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:30:32,345 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:30:46,095 [basehttp | INFO] "GET /admin/chat/message/ HTTP/1.1" 200 10168
+2022-09-18 02:30:46,123 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:31:20,146 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/admin.py changed, reloading.
+2022-09-18 02:31:23,262 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:31:24,442 [basehttp | INFO] "GET /admin/chat/message/ HTTP/1.1" 200 10466
+2022-09-18 02:31:24,469 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:31:28,592 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 12516
+2022-09-18 02:31:28,619 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:31:31,343 [basehttp | INFO] "GET /admin/adds/reviewpost/5/change/ HTTP/1.1" 200 15181
+2022-09-18 02:31:31,371 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:32:32,545 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 12516
+2022-09-18 02:32:32,576 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:32:37,309 [basehttp | INFO] "POST /admin/adds/reviewpost/ HTTP/1.1" 200 11185
+2022-09-18 02:32:38,572 [basehttp | INFO] "POST /admin/adds/reviewpost/ HTTP/1.1" 302 0
+2022-09-18 02:32:38,626 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 10604
+2022-09-18 02:32:38,652 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:32:55,694 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:38:01,833 [log | WARNING] Method Not Allowed: /api/v1/adds/review/
+2022-09-18 02:38:01,838 [basehttp | WARNING] "GET /api/v1/adds/review/ HTTP/1.1" 405 40
+2022-09-18 02:38:23,168 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:38:27,844 [log | WARNING] Method Not Allowed: /api/v1/adds/review/
+2022-09-18 02:38:27,845 [basehttp | WARNING] "GET /api/v1/adds/review/ HTTP/1.1" 405 40
+2022-09-18 02:39:03,546 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:39:11,375 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:39:18,826 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:39:30,178 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 12295
+2022-09-18 02:39:30,232 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:39:32,299 [basehttp | INFO] "GET /admin/adds/reviewpost/8/change/ HTTP/1.1" 200 15131
+2022-09-18 02:39:32,342 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:45:45,035 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 12295
+2022-09-18 02:45:45,077 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:45:49,036 [basehttp | INFO] "GET /admin/adds/reviewpost/9/change/ HTTP/1.1" 200 15128
+2022-09-18 02:45:49,064 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:46:38,507 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 12295
+2022-09-18 02:46:38,542 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:46:45,579 [basehttp | INFO] "POST /admin/adds/reviewpost/ HTTP/1.1" 200 11035
+2022-09-18 02:46:47,240 [basehttp | INFO] "POST /admin/adds/reviewpost/ HTTP/1.1" 302 0
+2022-09-18 02:46:47,319 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 10604
+2022-09-18 02:46:47,342 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:48:07,002 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/admin.py changed, reloading.
+2022-09-18 02:48:10,351 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:48:29,086 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/admin.py changed, reloading.
+2022-09-18 02:48:31,666 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:50:08,460 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/admin.py changed, reloading.
+2022-09-18 02:50:10,874 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:53:35,328 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 02:53:38,959 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 14030
+2022-09-18 02:53:42,539 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 10467
+2022-09-18 02:53:42,593 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:53:56,861 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 11797
+2022-09-18 02:53:56,901 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:54:16,671 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:54:31,792 [basehttp | INFO] "GET /admin/adds/reviewpost/ HTTP/1.1" 200 12553
+2022-09-18 02:54:31,848 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:55:14,642 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 10105
+2022-09-18 02:56:03,481 [log | WARNING] Not Found: /api/v1/adds/detailpost/
+2022-09-18 02:56:03,482 [basehttp | WARNING] "GET /api/v1/adds/detailpost/ HTTP/1.1" 404 5358
+2022-09-18 02:56:06,937 [log | WARNING] Not Found: /api/v1/adds/detailpost/1/
+2022-09-18 02:56:06,938 [basehttp | WARNING] "GET /api/v1/adds/detailpost/1/ HTTP/1.1" 404 5364
+2022-09-18 02:56:11,577 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 16042
+2022-09-18 02:56:23,627 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 11797
+2022-09-18 02:56:23,660 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:56:27,436 [basehttp | INFO] "GET /admin/adds/post/2/change/ HTTP/1.1" 200 22136
+2022-09-18 02:56:27,466 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 02:56:42,257 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 501
+2022-09-18 02:56:56,052 [log | WARNING] Not Found: /api/v1/adds/detailpost/1/
+2022-09-18 02:56:56,052 [basehttp | WARNING] "GET /api/v1/adds/detailpost/1/ HTTP/1.1" 404 5364
+2022-09-18 02:57:02,845 [basehttp | INFO] "GET /api/v1/adds/detailpost/1 HTTP/1.1" 200 659
+2022-09-18 02:57:14,577 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 501
+2022-09-18 02:57:36,792 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:57:41,759 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 577
+2022-09-18 02:58:01,442 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:58:05,856 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 653
+2022-09-18 02:58:29,777 [basehttp | INFO] "POST /api/v1/adds/review/ HTTP/1.1" 201 0
+2022-09-18 02:58:33,432 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 730
+2022-09-18 02:59:30,916 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 02:59:30,971 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+2022-09-18 02:59:30,972 [basehttp | INFO] "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+2022-09-18 02:59:30,972 [basehttp | INFO] "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+2022-09-18 02:59:31,312 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 22252
+2022-09-18 03:00:52,991 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.

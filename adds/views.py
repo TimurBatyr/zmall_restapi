@@ -78,6 +78,7 @@ class PostImagesView(APIView):
             if image_serializer.is_valid():
                 image_serializer.save()
                 list_images.append(image_serializer.data)
+
             else:
                 flag = 0
 

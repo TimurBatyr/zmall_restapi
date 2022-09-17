@@ -18,11 +18,9 @@ urlpatterns = [
     path('createpost/', views.PostCreate.as_view(), name="createpost"), #no
     path('addimages/', views.PostImagesView.as_view()),
     path('addcontacts/', views.PostContactsCreate.as_view()),
+    path('detailcontacts/<int:pk>', views.PostContactsDetail.as_view()),
 
     path('detailpost/<int:pk>', views.PostDetail.as_view()),
-    path('detailcontacts/<int:pk>', views.PostContactsDetail.as_view()),
-    # path('view/<str:pk>', ViewNews.as_view()),
-
     path('postlist/', views.PostList.as_view(), name="postlist"),
     path('postlistdate/', views.PostlistDate.as_view(), name="postlistdate"),
     path('mypost/', views.MyPostList.as_view(), name="mypost"),

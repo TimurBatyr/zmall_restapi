@@ -159,5 +159,5 @@ class ForgotPasswordSerializer(serializers.Serializer):
 class UserDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['email', 'phone', 'username']
+        fields = ['id', 'email', 'phone', 'username']
 
