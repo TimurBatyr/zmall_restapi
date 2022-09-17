@@ -6,83 +6,83 @@ from adds.models import Category, Subcategory, City, Subscription, PostImages, P
 from chat.models import Message
 
 
-class UserDetailSerializer(serializers.ModelSerializer):
+class UserDetailSerializerAd(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class CategorySerializerAd(serializers.ModelSerializer):
     '''List of categories'''
     class Meta:
         model = Category
         fields = '__all__'
 
 
-class SubcategorySerializer(serializers.ModelSerializer):
+class SubcategorySerializerAd(serializers.ModelSerializer):
     '''List of subcategories'''
     class Meta:
         model = Subcategory
         fields = '__all__'
 
 
-class CitySerializer(serializers.ModelSerializer):
+class CitySerializerAd(serializers.ModelSerializer):
     '''List of cities'''
     class Meta:
         model = City
         fields = '__all__'
 
 
-class SubscriptionSerializer(serializers.ModelSerializer):
+class SubscriptionSerializerAd(serializers.ModelSerializer):
     '''List of subscriptions'''
     class Meta:
         model = Subscription
         fields = '__all__'
 
 
-class PostImagesSerializer(serializers.ModelSerializer):
+class PostImagesSerializerAd(serializers.ModelSerializer):
     ''' Create images for a post'''
     class Meta:
         model = PostImages
         fields = "__all__"
 
 
-class PostContactsSerializer(serializers.ModelSerializer):
+class PostContactsSerializerAd(serializers.ModelSerializer):
     ''' Adding images for a post'''
     class Meta:
         model = PostContacts
         fields = "__all__"
 
 
-class PostSerializer(serializers.ModelSerializer):
+class PostSerializerAd(serializers.ModelSerializer):
     ''' Create Post '''
     class Meta:
         model = Post
         fields = "__all__"
 
 
-class ReviewSerializer(serializers.ModelSerializer):
+class ReviewSerializerAd(serializers.ModelSerializer):
     '''Display reviews'''
     class Meta:
         model = ReviewPost
         fields = "__all__"
 
 
-class ViewsSerializer(serializers.ModelSerializer):
+class ViewsSerializerAd(serializers.ModelSerializer):
     '''Display reviews'''
     class Meta:
         model = Views
         fields = "__all__"
 
 
-class FavoriteSerializer(serializers.ModelSerializer):
+class FavoriteSerializerAd(serializers.ModelSerializer):
     '''Display reviews'''
     class Meta:
         model = Favorite
         fields = "__all__"
 
 
-class MessageSerializer(serializers.ModelSerializer):
+class MessageSerializerAd(serializers.ModelSerializer):
 
     class Meta:
         model = Message

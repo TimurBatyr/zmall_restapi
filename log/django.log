@@ -5036,3 +5036,1154 @@ adds.models.PostImages.DoesNotExist: PostImages matching query does not exist.
 2022-09-18 02:59:30,972 [basehttp | INFO] "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
 2022-09-18 02:59:31,312 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 22252
 2022-09-18 03:00:52,991 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 03:09:09,739 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:10:05,713 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 51
+2022-09-18 03:10:50,138 [log | WARNING] Not Found: /api/v1/adds/detailpost/1/
+2022-09-18 03:10:50,144 [basehttp | WARNING] "GET /api/v1/adds/detailpost/1/ HTTP/1.1" 404 5889
+2022-09-18 03:10:50,198 [log | WARNING] Not Found: /favicon.ico
+2022-09-18 03:10:50,202 [basehttp | WARNING] "GET /favicon.ico HTTP/1.1" 404 2995
+2022-09-18 03:10:54,620 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 18111
+2022-09-18 03:11:13,879 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 51
+2022-09-18 03:11:20,702 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 18111
+2022-09-18 03:11:23,050 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 18111
+2022-09-18 03:15:06,262 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 03:15:10,408 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:15:20,976 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 18115
+2022-09-18 03:15:22,259 [basehttp | INFO] "GET /api/v1/adds/detailpost/2 HTTP/1.1" 200 18115
+2022-09-18 03:15:32,480 [basehttp | INFO] "GET /api/v1/adds/mypost/ HTTP/1.1" 200 5348
+2022-09-18 03:15:42,218 [basehttp | INFO] "GET /api/v1/adds/mypost HTTP/1.1" 301 0
+2022-09-18 03:15:42,318 [basehttp | INFO] "GET /api/v1/adds/mypost/ HTTP/1.1" 200 365
+2022-09-18 03:15:58,167 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 51
+2022-09-18 03:16:01,863 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 51
+2022-09-18 03:18:44,321 [basehttp | INFO] "GET /api/v1/adds/mypost HTTP/1.1" 301 0
+2022-09-18 03:18:44,347 [basehttp | INFO] "GET /api/v1/adds/mypost/ HTTP/1.1" 200 365
+2022-09-18 03:19:11,003 [basehttp | INFO] "GET /admin/adds/post/2/change/ HTTP/1.1" 200 22136
+2022-09-18 03:19:11,039 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 03:19:14,206 [basehttp | INFO] "GET /admin/adds/favorite/ HTTP/1.1" 200 12373
+2022-09-18 03:19:14,228 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 03:19:17,905 [basehttp | INFO] "GET /admin/adds/favorite/1/change/ HTTP/1.1" 200 13311
+2022-09-18 03:19:17,939 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 03:19:24,567 [basehttp | INFO] "GET /admin/adds/favorite/1/delete/ HTTP/1.1" 200 10528
+2022-09-18 03:19:25,480 [basehttp | INFO] "POST /admin/adds/favorite/1/delete/ HTTP/1.1" 302 0
+2022-09-18 03:19:25,545 [basehttp | INFO] "GET /admin/adds/favorite/ HTTP/1.1" 200 12324
+2022-09-18 03:19:25,577 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 03:19:29,905 [basehttp | INFO] "POST /admin/adds/favorite/ HTTP/1.1" 200 10603
+2022-09-18 03:19:31,603 [basehttp | INFO] "POST /admin/adds/favorite/ HTTP/1.1" 302 0
+2022-09-18 03:19:31,662 [basehttp | INFO] "GET /admin/adds/favorite/ HTTP/1.1" 200 12033
+2022-09-18 03:19:31,693 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 03:19:37,226 [basehttp | INFO] "POST /admin/adds/favorite/ HTTP/1.1" 200 10773
+2022-09-18 03:19:38,486 [basehttp | INFO] "POST /admin/adds/favorite/ HTTP/1.1" 302 0
+2022-09-18 03:19:38,529 [basehttp | INFO] "GET /admin/adds/favorite/ HTTP/1.1" 200 10612
+2022-09-18 03:19:38,556 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 03:21:32,558 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 03:21:35,652 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:21:48,899 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 51
+2022-09-18 03:22:09,177 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 10105
+2022-09-18 03:24:29,897 [log | ERROR] Internal Server Error: /api/v1/adds/favorite @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/favorite/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-18 03:24:29,897 [log | ERROR] Internal Server Error: /api/v1/adds/favorite
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/favorite/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-18 03:24:29,898 [basehttp | ERROR] "POST /api/v1/adds/favorite HTTP/1.1" 500 67197 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:24:29,898 [basehttp | ERROR] "POST /api/v1/adds/favorite HTTP/1.1" 500 67197
+2022-09-18 03:24:40,046 [log | WARNING] Method Not Allowed: /api/v1/adds/favorite/
+2022-09-18 03:24:40,047 [basehttp | WARNING] "POST /api/v1/adds/favorite/ HTTP/1.1" 405 41
+2022-09-18 03:24:46,165 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 103
+2022-09-18 03:25:35,807 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 5569
+2022-09-18 03:25:52,645 [basehttp | INFO] "GET /api/v1/adds/favorite/5/ HTTP/1.1" 200 6655
+2022-09-18 03:26:07,429 [basehttp | INFO] "DELETE /api/v1/adds/favorite/5/ HTTP/1.1" 200 6510
+2022-09-18 03:26:14,402 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 52
+2022-09-18 03:26:28,369 [log | WARNING] Method Not Allowed: /api/v1/adds/favoritecreate/
+2022-09-18 03:26:28,370 [basehttp | WARNING] "GET /api/v1/adds/favoritecreate/ HTTP/1.1" 405 40
+2022-09-18 03:26:33,703 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 51
+2022-09-18 03:27:41,261 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 10105
+2022-09-18 03:27:58,346 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 51
+2022-09-18 03:28:02,653 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 10105
+2022-09-18 03:29:25,121 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 03:29:27,965 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:29:56,198 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 03:29:58,281 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:30:47,417 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 03:30:49,569 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:31:15,658 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 03:31:17,900 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:31:20,604 [log | ERROR] Internal Server Error: /api/v1/adds/postlist/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `favorite` is not valid for model `Post`.
+2022-09-18 03:31:20,604 [log | ERROR] Internal Server Error: /api/v1/adds/postlist/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `favorite` is not valid for model `Post`.
+2022-09-18 03:31:20,607 [basehttp | ERROR] "GET /api/v1/adds/postlist/ HTTP/1.1" 500 151705 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:31:20,607 [basehttp | ERROR] "GET /api/v1/adds/postlist/ HTTP/1.1" 500 151705
+2022-09-18 03:34:50,804 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-18 03:34:53,976 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:34:56,301 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 10105
+2022-09-18 03:35:10,565 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 5767
+2022-09-18 03:36:41,283 [basehttp | INFO] "DELETE /api/v1/adds/favorite/7 HTTP/1.1" 301 0
+2022-09-18 03:36:41,360 [basehttp | INFO] "GET /api/v1/adds/favorite/7/ HTTP/1.1" 200 51
+2022-09-18 03:36:45,161 [basehttp | INFO] "DELETE /api/v1/adds/favorite/7 HTTP/1.1" 301 0
+2022-09-18 03:36:45,171 [basehttp | INFO] "GET /api/v1/adds/favorite/7/ HTTP/1.1" 200 51
+2022-09-18 03:37:03,826 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 155
+2022-09-18 03:37:27,018 [basehttp | INFO] "DELETE /api/v1/adds/favorite/7 HTTP/1.1" 301 0
+2022-09-18 03:37:27,026 [basehttp | INFO] "GET /api/v1/adds/favorite/7/ HTTP/1.1" 200 51
+2022-09-18 03:37:31,833 [basehttp | INFO] "DELETE /api/v1/adds/favorite/7 HTTP/1.1" 301 0
+2022-09-18 03:37:31,848 [basehttp | INFO] "GET /api/v1/adds/favorite/7/ HTTP/1.1" 200 51
+2022-09-18 03:37:37,774 [basehttp | INFO] "DELETE /api/v1/adds/favorite/7 HTTP/1.1" 301 0
+2022-09-18 03:37:37,784 [basehttp | INFO] "GET /api/v1/adds/favorite/7/ HTTP/1.1" 200 51
+2022-09-18 03:37:45,562 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 155
+2022-09-18 03:40:09,875 [basehttp | INFO] "GET /api/v1/adds/favorite/7 HTTP/1.1" 301 0
+2022-09-18 03:40:09,912 [basehttp | INFO] "GET /api/v1/adds/favorite/7/ HTTP/1.1" 200 6655
+2022-09-18 03:40:14,581 [basehttp | INFO] "DELETE /api/v1/adds/favorite/7/ HTTP/1.1" 200 6510
+2022-09-18 03:40:19,569 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 5569
+2022-09-18 03:40:36,276 [log | WARNING] Method Not Allowed: /api/v1/adds/favorite/7/
+2022-09-18 03:40:36,277 [basehttp | WARNING] "POST /api/v1/adds/favorite/7/ HTTP/1.1" 405 41
+2022-09-18 03:40:42,841 [log | WARNING] Not Found: /api/v1/adds/favorite/7/
+2022-09-18 03:40:42,841 [basehttp | WARNING] "DELETE /api/v1/adds/favorite/7/ HTTP/1.1" 404 23
+2022-09-18 03:40:50,758 [basehttp | INFO] "DELETE /api/v1/adds/favorite/6/ HTTP/1.1" 204 0
+2022-09-18 03:40:55,225 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 5367
+2022-09-18 03:41:09,128 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:41:09,377 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 304 0
+2022-09-18 03:41:09,422 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 23981
+2022-09-18 03:41:10,567 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:41:10,763 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 23981
+2022-09-18 03:42:13,252 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/config/urls.py changed, reloading.
+2022-09-18 03:42:15,943 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:42:34,913 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/social_auth/urls.py changed, reloading.
+2022-09-18 03:42:37,357 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:42:55,184 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/social_auth/urls.py changed, reloading.
+2022-09-18 03:42:57,442 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:43:05,502 [basehttp | INFO] "GET /admin/adds/favorite/ HTTP/1.1" 200 10473
+2022-09-18 03:43:05,532 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 03:43:07,449 [basehttp | INFO] "GET /admin/adds/favorite/ HTTP/1.1" 200 10473
+2022-09-18 03:43:07,475 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 03:43:21,661 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:43:21,938 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 25162
+2022-09-18 03:43:40,072 [log | WARNING] Method Not Allowed: /api/v1/account/google/
+2022-09-18 03:43:40,072 [basehttp | WARNING] "GET /api/v1/account/google/ HTTP/1.1" 405 7287
+2022-09-18 03:43:44,552 [log | WARNING] Bad Request: /api/v1/account/google/
+2022-09-18 03:43:44,553 [basehttp | WARNING] "POST /api/v1/account/google/ HTTP/1.1" 400 7446
+2022-09-18 03:43:48,215 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:43:48,398 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 25162
+2022-09-18 03:44:14,834 [log | WARNING] Method Not Allowed: /api/v1/account/facebook/
+2022-09-18 03:44:14,835 [basehttp | WARNING] "GET /api/v1/account/facebook/ HTTP/1.1" 405 7309
+2022-09-18 03:44:22,137 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:44:22,286 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 25162
+2022-09-18 03:45:41,238 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/config/urls.py changed, reloading.
+2022-09-18 03:45:44,162 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:46:10,077 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:46:10,373 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.CategorySerializer'> would override distinct serializer <class 'admin_rights.serializers.CategorySerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:10,373 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.CategorySerializer'> would override distinct serializer <class 'admin_rights.serializers.CategorySerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:10,375 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 185110 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:46:10,375 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 185110
+2022-09-18 03:46:14,295 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:46:14,540 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.CategorySerializer'> would override distinct serializer <class 'admin_rights.serializers.CategorySerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:14,540 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.CategorySerializer'> would override distinct serializer <class 'admin_rights.serializers.CategorySerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:14,541 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 185110 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:46:14,541 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 185110
+2022-09-18 03:46:25,580 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/admin_rights/urls.py changed, reloading.
+2022-09-18 03:46:28,386 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:46:29,744 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:46:29,983 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:29,983 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:29,985 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:46:29,985 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946
+2022-09-18 03:46:31,194 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:46:31,431 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:31,431 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:31,432 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:46:31,432 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946
+2022-09-18 03:46:32,369 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:46:32,583 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:32,583 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:46:32,584 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:46:32,584 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946
+2022-09-18 03:46:39,887 [log | WARNING] Not Found: /api/v1/adds/detailpost/1/
+2022-09-18 03:46:39,888 [basehttp | WARNING] "GET /api/v1/adds/detailpost/1/ HTTP/1.1" 404 6164
+2022-09-18 03:47:03,361 [log | WARNING] Not Found: /api/v1/admin/favorite
+2022-09-18 03:47:03,362 [basehttp | WARNING] "GET /api/v1/admin/favorite HTTP/1.1" 404 4709
+2022-09-18 03:47:15,384 [log | WARNING] Unauthorized: /api/v1/admin/user/
+2022-09-18 03:47:15,385 [basehttp | WARNING] "GET /api/v1/admin/user/ HTTP/1.1" 401 5230
+2022-09-18 03:47:30,223 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:47:30,462 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:47:30,462 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:47:30,464 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:47:30,464 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946
+2022-09-18 03:47:40,352 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/admin_rights/urls.py changed, reloading.
+2022-09-18 03:47:43,007 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:47:44,684 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:47:44,996 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 25162
+2022-09-18 03:48:42,369 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/admin_rights/urls.py changed, reloading.
+2022-09-18 03:48:44,955 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:48:46,573 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:48:46,881 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:48:46,881 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'account.serializers.UserDetailSerializer'> would override distinct serializer <class 'admin_rights.serializers.UserDetailSerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:48:46,886 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:48:46,886 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 195946
+2022-09-18 03:56:30,526 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/admin_rights/urls.py changed, reloading.
+2022-09-18 03:56:32,843 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:56:47,522 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/admin_rights/urls.py changed, reloading.
+2022-09-18 03:56:50,127 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 03:57:12,352 [basehttp | INFO] "GET /api/v1/admin_user HTTP/1.1" 301 0
+2022-09-18 03:57:12,413 [log | WARNING] Unauthorized: /api/v1/admin_user/
+2022-09-18 03:57:12,414 [basehttp | WARNING] "GET /api/v1/admin_user/ HTTP/1.1" 401 5224
+2022-09-18 03:57:17,002 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:57:17,262 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.CategorySerializer'> would override distinct serializer <class 'admin_rights.serializers.CategorySerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:57:17,262 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.CategorySerializer'> would override distinct serializer <class 'admin_rights.serializers.CategorySerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:57:17,263 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 185091 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:57:17,263 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 185091
+2022-09-18 03:57:19,041 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 03:57:19,269 [log | ERROR] Internal Server Error: /swagger/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.CategorySerializer'> would override distinct serializer <class 'admin_rights.serializers.CategorySerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:57:19,269 [log | ERROR] Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 248, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 406, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 448, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 132, in field_to_swagger_object
+    raise SwaggerGenerationError(
+drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.CategorySerializer'> would override distinct serializer <class 'admin_rights.serializers.CategorySerializer'> because they implicitly share the same ref_name; explicitly set the ref_name attribute on both serializers' Meta classes
+2022-09-18 03:57:19,270 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 185091 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-18 03:57:19,270 [basehttp | ERROR] "GET /swagger/?format=openapi HTTP/1.1" 500 185091
+2022-09-18 03:57:20,844 [log | WARNING] Not Found: /api/v1/admin/user/
+2022-09-18 03:57:20,845 [basehttp | WARNING] "GET /api/v1/admin/user/ HTTP/1.1" 404 5754
+2022-09-18 03:57:21,949 [log | WARNING] Not Found: /api/v1/admin/user/
+2022-09-18 03:57:21,949 [basehttp | WARNING] "GET /api/v1/admin/user/ HTTP/1.1" 404 5754
+2022-09-18 03:57:23,391 [log | WARNING] Not Found: /api/v1/admin/user/
+2022-09-18 03:57:23,391 [basehttp | WARNING] "GET /api/v1/admin/user/ HTTP/1.1" 404 5754
+2022-09-18 03:57:24,390 [log | WARNING] Not Found: /api/v1/admin/user/
+2022-09-18 03:57:24,391 [basehttp | WARNING] "GET /api/v1/admin/user/ HTTP/1.1" 404 5754
+2022-09-18 03:57:24,746 [log | WARNING] Not Found: /api/v1/admin/user/
+2022-09-18 03:57:24,746 [basehttp | WARNING] "GET /api/v1/admin/user/ HTTP/1.1" 404 5754
+2022-09-18 03:57:24,932 [log | WARNING] Not Found: /api/v1/admin/user/
+2022-09-18 03:57:24,933 [basehttp | WARNING] "GET /api/v1/admin/user/ HTTP/1.1" 404 5754
+2022-09-18 03:57:25,106 [log | WARNING] Not Found: /api/v1/admin/user/
+2022-09-18 03:57:25,107 [basehttp | WARNING] "GET /api/v1/admin/user/ HTTP/1.1" 404 5754
+2022-09-18 04:01:45,730 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/admin_rights/serializers.py changed, reloading.
+2022-09-18 04:01:48,244 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 04:02:03,825 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 04:02:04,003 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 31804
+2022-09-18 04:02:24,531 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/admin_rights/urls.py changed, reloading.
+2022-09-18 04:02:27,599 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 04:02:29,181 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 04:02:29,382 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 57976

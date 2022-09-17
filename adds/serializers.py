@@ -102,6 +102,15 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'text', 'children', 'email')
 
 
+class FavoriteSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.email')
+
+    class Meta:
+        model = Favorite
+        fields = ['id', 'post', 'user']
+
+
+
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''
     images = PostImagesSerializer(many=True)
@@ -123,13 +132,9 @@ class PostListSerializer(serializers.ModelSerializer):
     subscription = SubscriptionSerializer(read_only=True)
     class Meta:
         model = Post
-        fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image', 'description')
+        fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image',
+                  'description')
 
 
-# class FavoriteSerializer(serializers.ModelSerializer):
-#     user = serializers.ReadOnlyField(source='user.email')
-#
-#     class Meta:
-#         model = Favorite
-#         fields =  ('id', 'post_id', 'user')
+
 

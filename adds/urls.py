@@ -5,8 +5,7 @@ from rest_framework.routers import DefaultRouter
 from . import views
 from .views import *
 
-# router = DefaultRouter()
-# router.register('favorite', FavoriteViewSet),
+
 
 urlpatterns = [
 
@@ -27,12 +26,8 @@ urlpatterns = [
 
     path("review/", views.ReviewCreateView.as_view(), name="review"),
 
-    # path('favoritecreate/', FavoritesCreateView.as_view()),
-    # path('favorite/', FavoritesListView.as_view()),
-    # path('favorite/<int:pk>/', FavoriteGetDeleteView.as_view()),
+    path('favoritecreate/', FavoriteCreateView.as_view()),
+    path('favorite/', FavoriteListView.as_view()),
+    path('favorite/<int:pk>/', FavoriteGetDeleteView.as_view()),
 
 ]
-#
-# urlpatterns = [
-#     path('', include(router.urls)),
-# ]
