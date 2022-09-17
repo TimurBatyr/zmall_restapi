@@ -143,7 +143,7 @@ class ForgotPasswordSerializer(serializers.Serializer):
     email = serializers.EmailField()
 
     def validate_email(self, email):
-        if not User.objects.get(email=email).exists():
+        if not User.objects.filter(email=email).exists():
             raise serializers.ValidationError('User not found')
         return email
 
@@ -159,4 +159,5 @@ class ForgotPasswordSerializer(serializers.Serializer):
 class UserDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'phone', 'email']
+        fields = ['email', 'phone', 'username']
+
