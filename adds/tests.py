@@ -78,6 +78,12 @@ class TestAdds(APITestCase):
         self.assertEqual(response.data['count'], 1)
         self.assertEqual(response.status_code, 200)
 
+
+
+
+
+
+
     # def test_create_post_invalid_user(self):
     #     data = self.data.copy()
     #     client = APIClient()
