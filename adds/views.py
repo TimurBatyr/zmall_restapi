@@ -1,4 +1,7 @@
+import datetime
+
 import django_filters
+import redis
 from django.db.models import Q
 from django.http import Http404, JsonResponse
 from django.shortcuts import get_object_or_404
@@ -246,4 +249,187 @@ class FavoriteViewSet(ModelViewSet):
     queryset = Favorite.objects.all()
     # permission_classes = [IsAuthenticated, UserPermission, ]
     permission_classes = [AllowAny]
+
+
+"""---Views---"""
+def get_post(client, title, pk):
+    data = redis.Redis()
+    data_value = data.get(str(client))
+    if data_value is None or data_value.decode('utf-8') != title:
+        data.mset({str(client): title})
+        date = datetime.datetime.now(tz=None)
+        today = date.date()
+        # today = datetime.date(year=2022, month=9, day=9)
+        post_object = Post.objects.get(pk=pk)  #4
+        view_object = Views.objects.filter(post=post_object).filter(date=today).exists()
+
+        if view_object == False:
+            Views.objects.create(post=post_object, date=today)
+
+        name = Views.objects.filter(post=post_object).filter(date=today).values('pk')
+        name = Views.objects.get(pk=name[0]['pk'])
+        name.date = today
+        name.save(update_fields=["date"])
+        name.views += 1
+        name.save(update_fields=["views"])
+
+        return False
+    else:
+        return True
+
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+
+    return ip
+
+
+class DetailPost(APIView):
+    def get(self, request, pk):
+        posts = get_object_or_404(Post, pk=pk)#1
+        title = Post.objects.values('title').filter(pk=pk)#2
+        title = title[0]['title']
+        ip = get_client_ip(request)
+
+        if request.user.is_authenticated:
+            if not get_post(request.user, title, pk):
+                posts.views += 1
+                posts.save(update_fields=["views"])
+        else:
+            if not get_post(ip, title, pk):
+                posts.views += 1
+                posts.save(update_fields=["views"])
+
+        post_object = Post.objects.get(pk=pk)#3
+        date = datetime.datetime.now(tz=None)
+        today = date.date()
+        view = Views.objects.filter(post=post_object).filter(date=today).exists()
+
+        if not view:
+            Views.objects.create(post=post_object, date=today)
+
+        view = Views.objects.filter(post=post_object).filter(date=today)
+        view = view[0]
+
+        serializer_view = ViewSerializer(view, many=False).data
+        serializer = AddPostSerializer(posts, many=False).data
+
+        context = {
+            'add': serializer,
+            'view': serializer_view
+        }
+        return Response(context)
+
+class StatistictsApi(APIView):
+    def get(self, requests, pk):
+        post = Post.objects.get(pk=pk)
+        serializer_post = StatisticsPostSerilizer(post, many=False).data
+        date = datetime.datetime.now(tz=None)
+        month = date.month
+        yaer = date.year
+        today = date.day
+
+        id_post = Post.objects.filter(pk=pk).values('pk')
+        view_every_day = Views.objects.filter(post=id_post[0]['pk']).filter(date__year=yaer, date__month=month)
+        serializer_view_every_day = StatisticsViewSerializer(view_every_day, many=True).data
+
+
+        view_today_id = Views.objects.filter(post=id_post[0]['pk']).filter(date__year=yaer,
+                                                                           date__month=month,
+                                                                           date__day=today).values('pk').exists()
+        object_post = Post.objects.get(pk=pk)
+
+        if view_today_id == False:
+            Views.objects.create(post=object_post, date=date)
+            view_today_id = Views.objects.filter(post=object_post).filter(date=date).values('pk')
+        else:
+            view_today_id = Views.objects.filter(post=object_post).filter(date=date).values('pk')
+
+        view_today = Views.objects.get(pk=view_today_id[0]['pk'])
+        serializer_view_today = TodaySerializer(view_today, many=False).data
+
+        post_object =Post.objects.get(pk=pk)
+        phone_object=PhoneNumber.objects.get(post_number=post_object)
+        view_contact_objects=ViewsContact.objects.get(phone=phone_object)
+        serializer_view_number = StaticsNumberSerializer(phone_object, many=False).data
+
+        context = {
+            'common post view': serializer_post,
+            'view post today': serializer_view_today,
+            'common view number of contacts': serializer_view_number,
+            'view post every day': serializer_view_every_day,
+
+        }
+
+        return Response(context)
+
+def get_post_number(client, number, pk):
+    data = redis.Redis()
+    data_value = data.get(str(client))
+    client = str(client)
+    print(number)
+
+    if data_value is None or data_value.decode('utf-8') != number[0]['phone_number']:
+        data.mset({client: number[0]['phone_number']})
+
+        date = datetime.datetime.now(tz=None)
+        today = date.date()
+
+
+
+
+        post_object = Post.objects.get(pk=pk)
+        number = PhoneNumber.objects.get(post_number=post_object)
+        viewscontact_object = ViewsContact.objects.filter(phone=number).filter(date=today).exists()
+        print('ooooooooooooooooooo')
+        if viewscontact_object ==False:
+            object_view=Views.objects.get(post=post_object)
+            ViewsContact.objects.create(phone=number,date=today,view_key=object_view)
+
+
+        name = ViewsContact.objects.filter(phone=number).filter(date=today).values('pk')
+        name = ViewsContact.objects.get(pk=name[0]['pk'])
+        name.date = today
+        name.save(update_fields=["date"])
+        name.views += 1
+        name.save(update_fields=["views"])
+
+        return False
+    else:
+        return True
+
+
+
+class Contacts(APIView):
+    def get(self, request, pk):
+
+
+        post_object = Post.objects.get(pk=pk)
+        number = PhoneNumber.objects.get(post_number=post_object)
+
+        print(number,"<<<<<<<<<<<<<<<<<www")
+
+        value_number = PhoneNumber.objects.filter(post_number=post_object).values('phone_number')
+        ip = get_client_ip(request)
+        print('<<<<<<<<<<<<<<<<')
+        if request.user.is_authenticated:
+            if not get_post_number(request.user, value_number, pk):
+                number.view += 1
+                number.save(update_fields=["view"])
+        else:
+            if not get_post_number(ip, value_number, pk):
+                number.view += 1
+                number.save(update_fields=["view"])
+        print('-------------------------')
+
+        post_object=Post.objects.get(pk=pk)
+        object=PhoneNumber.objects.get(post_number=post_object)
+        queryset = object
+        serializer = ContactSerializer(queryset, many=False).data
+
+        return Response(serializer)
 

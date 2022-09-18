@@ -138,6 +138,54 @@ class PostListSerializer(serializers.ModelSerializer):
 
 
 
+"""---Views---"""
+
+class AddPostSerializer(serializers.ModelSerializer):
+    images = serializers.StringRelatedField(many=True)
+
+    class Meta:
+        model = Post
+        fields = ('id', 'category', 'subcategory',
+                  'title', 'from_price', 'to_price',
+                  'description', 'images', 'city',
+                  'email', 'views'
+                  )
+
+class ViewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Views
+        fields = ['date','views']
 
 
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PhoneNumber
+        fields = ('id','phone_number', 'view')
 
+
+# Статистика просмотров
+class StatisticsPostSerilizer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ['views']
+
+class ContactViewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ViewsContact
+        fields = ['views']
+class StatisticsViewSerializer(serializers.ModelSerializer):
+    view_contact = ContactViewSerializer(many=True,read_only=True)
+    class Meta:
+        model = Views
+        fields = ['views', 'date','view_contact']
+
+
+class StaticsNumberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PhoneNumber
+        fields = ['view']
+
+class TodaySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Views
+        fields =['views','date']

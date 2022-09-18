@@ -20,3 +20,6 @@ class SubscirptionAdmin(admin.ModelAdmin):
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ["title", "email", 'text', "parent", "post", "id"]
     readonly_fields = ("title", "email")
+
+admin.site.register(PhoneNumber)
+admin.site.register(ViewsContact)

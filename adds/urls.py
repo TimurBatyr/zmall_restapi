@@ -27,4 +27,10 @@ urlpatterns = [
     path('favorite/', FavoriteListView.as_view()),
     path('favorite/<int:pk>/', FavoriteGetDeleteView.as_view()),
 
+    #views
+    path('view/<int:pk>', DetailPost.as_view()),
+    path('statistica/<int:pk>', StatistictsApi.as_view()),
+    path('contact/<int:pk>', Contacts.as_view()),
+
+
 ]

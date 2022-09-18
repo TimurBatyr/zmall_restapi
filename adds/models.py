@@ -88,7 +88,7 @@ class Post(models.Model):
     phone_number = PhoneNumberField(default='No number')
     wa_number = PhoneNumberField(default='No number')
     is_activated = models.BooleanField(default=True)
-    # views = models.IntegerField(default=0)
+    views = models.IntegerField(default=0)
     status = models.CharField(max_length=100, choices=STATUS, default=('in_progress', 'in_progress'))
 
     def __str__(self):
@@ -114,6 +114,14 @@ class PostContacts(models.Model):
     def __str__(self):
         return f'Contact ID: {self.id}_ {str(self.add_number)} : {self.post.title} ID: {self.post.id}'
 
+#views
+class PhoneNumber(models.Model):
+    phone_number= models.CharField(max_length=10,default=500000000)
+    view = models.IntegerField(default=0)
+    post_number = models.ForeignKey(Post, related_name='phone_post', on_delete=models.CASCADE)
+    def __str__(self):
+        return self.phone_number
+
 
 class ReviewPost(models.Model):
     '''Comment to posts'''
@@ -133,9 +141,16 @@ class ReviewPost(models.Model):
 
 
 class Views(models.Model):
-    date = models.DateTimeField(auto_now_add=True)
-    views = models.IntegerField()
-    post = models.ForeignKey(Post, related_name='views_post', on_delete=models.CASCADE)
+    user = models.CharField(max_length=100,null=True,blank=True)
+    date = models.DateField(blank=True,null=True)
+    views = models.IntegerField(default=0,blank=True,null=True)
+    post = models.ForeignKey(Post, related_name='Views_Post', on_delete=models.CASCADE)
+
+class ViewsContact(models.Model):
+    date = models.DateField(blank=True, null=True)
+    views = models.IntegerField(default=0, blank=True, null=True)
+    phone = models.ForeignKey(PhoneNumber, related_name='contact', on_delete=models.CASCADE)
+    view_key = models.ForeignKey(Views, related_name='view_contact', on_delete=models.CASCADE)
 
 
 class Favorite(models.Model):

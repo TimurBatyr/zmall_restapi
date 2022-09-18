@@ -10893,3 +10893,59 @@ AttributeError: 'Help' object has no attribute 'issue__title'
 2022-09-18 20:27:10,302 [basehttp | INFO] "GET /api/v1/info/detailhelp/4 HTTP/1.1" 200 86
 2022-09-18 20:27:16,976 [basehttp | INFO] "GET /api/v1/info/detailhelp/1 HTTP/1.1" 200 105
 2022-09-18 20:57:12,943 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/info/views.py changed, reloading.
+2022-09-18 21:25:29,609 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 21:25:48,874 [log | WARNING] Method Not Allowed: /api/v1/adds/createpost/
+2022-09-18 21:25:48,875 [basehttp | WARNING] "GET /api/v1/adds/createpost/ HTTP/1.1" 405 11497
+2022-09-18 21:26:01,681 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 21:26:01,731 [basehttp | INFO] "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+2022-09-18 21:26:01,733 [basehttp | INFO] "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+2022-09-18 21:26:01,747 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+2022-09-18 21:26:01,762 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1086481
+2022-09-18 21:26:02,113 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 63126
+2022-09-18 21:26:17,971 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 16395
+2022-09-18 21:26:21,452 [basehttp | INFO] "GET /admin/adds/category/ HTTP/1.1" 200 13024
+2022-09-18 21:26:21,510 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:26:22,972 [basehttp | INFO] "GET /admin/adds/city/ HTTP/1.1" 200 11843
+2022-09-18 21:26:22,996 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:26:24,645 [basehttp | INFO] "GET /admin/adds/city/add/ HTTP/1.1" 200 12994
+2022-09-18 21:26:24,691 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:26:33,033 [basehttp | INFO] "POST /admin/adds/city/add/ HTTP/1.1" 302 0
+2022-09-18 21:26:33,073 [basehttp | INFO] "GET /admin/adds/city/ HTTP/1.1" 200 13167
+2022-09-18 21:26:33,101 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:27:21,998 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/models.py changed, reloading.
+2022-09-18 21:27:24,981 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 21:27:33,376 [basehttp | INFO] "GET /admin/adds/subcategory/add/ HTTP/1.1" 200 13723
+2022-09-18 21:27:33,411 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:27:39,454 [basehttp | INFO] "POST /admin/adds/subcategory/add/ HTTP/1.1" 200 13905
+2022-09-18 21:27:39,475 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:27:50,925 [basehttp | INFO] "POST /admin/adds/subcategory/add/ HTTP/1.1" 200 13905
+2022-09-18 21:27:50,952 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:27:53,353 [basehttp | INFO] "POST /admin/adds/subcategory/add/ HTTP/1.1" 200 13905
+2022-09-18 21:27:53,374 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:27:53,846 [basehttp | INFO] "POST /admin/adds/subcategory/add/ HTTP/1.1" 200 13905
+2022-09-18 21:27:53,872 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:28:02,511 [basehttp | INFO] "POST /admin/adds/subcategory/add/ HTTP/1.1" 302 0
+2022-09-18 21:28:02,578 [basehttp | INFO] "GET /admin/adds/subcategory/ HTTP/1.1" 200 13724
+2022-09-18 21:28:02,604 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:28:04,658 [basehttp | INFO] "GET /admin/adds/subscription/add/ HTTP/1.1" 200 14467
+2022-09-18 21:28:04,686 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:28:24,252 [basehttp | INFO] "POST /admin/adds/subscription/add/ HTTP/1.1" 302 0
+2022-09-18 21:28:24,331 [basehttp | INFO] "GET /admin/adds/subscription/ HTTP/1.1" 200 13675
+2022-09-18 21:28:24,379 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:28:30,469 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 11843
+2022-09-18 21:28:30,494 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:28:31,968 [basehttp | INFO] "GET /admin/adds/post/add/ HTTP/1.1" 200 23338
+2022-09-18 21:28:31,989 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:29:21,592 [basehttp | INFO] "POST /admin/adds/post/add/ HTTP/1.1" 302 0
+2022-09-18 21:29:21,670 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 13185
+2022-09-18 21:29:21,713 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:29:28,044 [basehttp | INFO] "GET /admin/adds/phonenumber/add/ HTTP/1.1" 200 14253
+2022-09-18 21:29:28,087 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:29:47,906 [basehttp | INFO] "POST /admin/adds/phonenumber/add/ HTTP/1.1" 302 0
+2022-09-18 21:29:47,959 [basehttp | INFO] "GET /admin/adds/phonenumber/ HTTP/1.1" 200 13273
+2022-09-18 21:29:47,987 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 21:30:10,000 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/models.py changed, reloading.
+2022-09-18 21:30:33,419 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 21:31:06,768 [basehttp | INFO] "GET /api/v1/adds/view/1 HTTP/1.1" 200 5848
+2022-09-18 21:32:28,350 [basehttp | INFO] "GET /api/v1/adds/contact/1 HTTP/1.1" 200 5319
+2022-09-18 21:32:44,192 [basehttp | INFO] "GET /api/v1/adds/statistica/1 HTTP/1.1" 200 5847
