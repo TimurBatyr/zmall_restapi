@@ -218,3 +218,5 @@ class FavoriteGetDeleteView(generics.RetrieveDestroyAPIView):
     # permission_classes = [IsAuthenticated, UserPermission, ]
     permission_classes = [AllowAny]
 
+
+

@@ -6187,3 +6187,15 @@ drf_yasg.errors.SwaggerGenerationError: Schema for <class 'adds.serializers.Cate
 2022-09-18 04:02:27,599 [autoreload | INFO] Watching for file changes with StatReloader
 2022-09-18 04:02:29,181 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
 2022-09-18 04:02:29,382 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 57976
+2022-09-18 12:10:57,794 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 12:11:06,398 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 12:11:07,374 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 57976
+2022-09-18 12:22:47,667 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 12:23:10,725 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 12:23:12,052 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 12:23:22,392 [basehttp | INFO] "GET /api/v1/adds/postlist HTTP/1.1" 301 0
+2022-09-18 12:23:22,447 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 802
+2022-09-18 12:24:18,700 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 12:24:21,471 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 12:25:53,641 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-18 12:25:55,779 [autoreload | INFO] Watching for file changes with StatReloader

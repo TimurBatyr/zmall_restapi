@@ -123,17 +123,20 @@ class PostEditSerializer(serializers.ModelSerializer):
         model = Post
         fields = ('id', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
                   'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number', 'phone',
-                  'is_activated', 'reviews')
+                  'is_activated', 'reviews', 'date_created')
         read_only_fields = ['user']
 
 
 class PostListSerializer(serializers.ModelSerializer):
     ''' List of posts'''
     subscription = SubscriptionSerializer(read_only=True)
+    city = CitySerializer(read_only=True)
     class Meta:
         model = Post
         fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image',
-                  'description')
+                  'description', 'date_created', 'city')
+
+
 
 
 
