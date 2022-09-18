@@ -137,7 +137,7 @@ class ProductFilter(filters.FilterSet):
 
     class Meta:
         model = Post
-        fields = ['category', 'city', 'image']
+        fields = ['category', 'subcategory', 'city', 'image']
 
 
 class PostList(generics.ListAPIView):
@@ -160,7 +160,7 @@ class PostListDatePagination(Pagination):
 
 
 class PostlistDate(generics.ListAPIView):
-    '''Post List by highlighted subscription'''
+    '''Post List by date subscription'''
     filter_backends = [DjangoFilterBackend]
     serializer_class = PostListSerializer
     filter_backends = [SearchFilter, DjangoFilterBackend, f.OrderingFilter]
@@ -179,6 +179,18 @@ class MyPostList(generics.ListAPIView):
 
     def get_queryset(self):
         return Post.objects.filter(user=self.request.user.id)
+
+    '''Post Filter'''
+    filter_backends = [DjangoFilterBackend]
+    serializer_class = PostListSerializer
+    filter_backends = [SearchFilter, DjangoFilterBackend, f.OrderingFilter]
+    search_fields = ['title', 'description']
+    # filterset_fields = ['category', ]
+    ordering_fields = ['date_created', 'from_price']
+    queryset = Post.objects.filter(Q(subscription__choice='highlight') | Q(subscription__choice='VIP') |
+                                   Q(subscription__choice='urgent'), is_activated=True)
+    pagination_class = PostListHighlightPagination
+    filterset_class = ProductFilter
 
 
 class ReviewCreateView(APIView):

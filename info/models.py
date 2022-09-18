@@ -15,4 +15,4 @@ class Help(models.Model):
     description = models.TextField()
 
     def __str__(self):
-        return f'ID {self.id} : {self.title}'
+        return f'ID - {self.id} : Issue - {self.issue.title} : {self.title}'
