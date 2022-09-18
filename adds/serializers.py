@@ -39,26 +39,7 @@ class SubscriptionSerializer(serializers.ModelSerializer):
     '''List of subscriptions'''
     class Meta:
         model = Subscription
-        fields = ['choice', 'price', 'icon_image']
-
-
-class PostImagesSerializer(serializers.ModelSerializer):
-    ''' Create images for a post'''
-    class Meta:
-        model = PostImages
-        fields = "__all__"
-
-    def validate(self, attrs):
-        if PostImages.objects.filter(post=attrs['post']).count() > 8:
-            raise ValidationError('Number of images should not exceed 7')
-        return attrs
-
-
-class PostContactsSerializer(serializers.ModelSerializer):
-    ''' Adding images for a post'''
-    class Meta:
-        model = PostContacts
-        fields = "__all__"
+        fields = '__all__'
 
 
 class PostCreateSerializer(serializers.ModelSerializer):
@@ -70,6 +51,25 @@ class PostCreateSerializer(serializers.ModelSerializer):
         fields = ('id', 'user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
                   'from_price', 'to_price', 'image', 'email', 'phone_number', 'wa_number',
                   'is_activated')
+
+
+class PostImagesSerializer(serializers.ModelSerializer):
+    ''' Create images for a post'''
+    class Meta:
+        model = PostImages
+        fields = "__all__"
+
+    def validate(self, attrs):
+        if PostImages.objects.filter(image=attrs['image']).count() > 8:
+            raise ValidationError('Number of images should not exceed 7')
+        return attrs
+
+
+class PostContactsSerializer(serializers.ModelSerializer):
+    ''' Adding images for a post'''
+    class Meta:
+        model = PostContacts
+        fields = "__all__"
 
 
 class FilterReviewListSerializer(serializers.ListSerializer):
@@ -102,6 +102,15 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'text', 'children', 'email')
 
 
+class FavoriteSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.email')
+
+    class Meta:
+        model = Favorite
+        fields = ['id', 'post', 'user']
+
+
+
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''
     images = PostImagesSerializer(many=True)
@@ -114,14 +123,21 @@ class PostEditSerializer(serializers.ModelSerializer):
         model = Post
         fields = ('id', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
                   'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number', 'phone',
-                  'is_activated', 'reviews')
+                  'is_activated', 'reviews', 'date_created')
         read_only_fields = ['user']
 
 
 class PostListSerializer(serializers.ModelSerializer):
     ''' List of posts'''
     subscription = SubscriptionSerializer(read_only=True)
+    city = CitySerializer(read_only=True)
     class Meta:
         model = Post
-        fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image')
+        fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image',
+                  'description', 'date_created', 'city')
+
+
+
+
+
 

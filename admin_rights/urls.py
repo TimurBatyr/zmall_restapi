@@ -15,8 +15,8 @@ router.register('postcontacts', PostContactsViewSet),
 router.register('post', PostViewSet),
 router.register('review', ReviewViewSet),
 router.register('views', ViewsViewSet),
+router.register('message', MessageViewSet),
 router.register('favorite', FavoriteViewSet),
-router.register('message', MessageViewSet)
 
 urlpatterns = [
     path('admin/', include(router.urls)),

@@ -10,6 +10,7 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
 
 from .permissions import UserPermission
 from .serializers import *
@@ -77,6 +78,7 @@ class PostImagesView(APIView):
             if image_serializer.is_valid():
                 image_serializer.save()
                 list_images.append(image_serializer.data)
+
             else:
                 flag = 0
 
@@ -188,63 +190,33 @@ class ReviewCreateView(APIView):
         return Response(status=201)
 
 
+class FavoriteCreateView(generics.CreateAPIView):
+    queryset = Favorite.objects.all()
+    serializer_class = FavoriteSerializer
+    permission_classes = [IsAuthenticated, UserPermission, ]
+    # permission_classes = [AllowAny]
 
-# # Просмотр обьвления
-# def get_post(ip, title):
-#     data = redis.Redis()
-#     data_value = data.get(ip)
-#     if data_value is None or data_value.decode('utf-8') != title:
-#         data.mset({ip: title})
-#         return False
-#     else:
-#         return True
-# def get_client_ip(request):
-#     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-#     if x_forwarded_for:
-#         ip = x_forwarded_for.split(',')
-#     else:
-#         ip = request.META.get('REMOTE_ADDR')
-#     return ip
-# class ViewNews(APIView):
-#     def get(self, request, pk):
-#         posts = get_object_or_404(Post, title=pk)
-#         serializer = AddPostSerializer(posts, many=False).data
-#         title = Post.objects.values('title').filter(title=pk)
-#         title = title[0]['title']
-#         ip = get_client_ip(request)
-#         if not get_post(ip, title):
-#             posts.views += 1
-#             posts.save(update_fields=["views"])
-#             serializer = AddPostSerializer(posts, many=False).data
-#             context = {'IP': ip,
-#                        'add': serializer}
-#             return Response(context)
-#         else:
-#             return Response(serializer)
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+    def get_queryset(self):
+        qs = self.request.user
+        queryset = Favorite.objects.filter(user=qs, favorites=True)
+        return queryset
+
+
+class FavoriteListView(generics.ListAPIView):
+    queryset = Favorite.objects.all()
+    serializer_class = FavoriteSerializer
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
+
+
+class FavoriteGetDeleteView(generics.RetrieveDestroyAPIView):
+    queryset = Favorite.objects.all()
+    serializer_class = FavoriteSerializer
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
 
 
 
-
-
-
-# # Фильтры
-# class FilterAPIView(generics.ListAPIView):
-#     queryset = Post.objects.all()
-#     serializer_class = SearchSerializer
-#     filter_backends = [f.OrderingFilter]
-#     ordering_fields = ['date_created', 'from_price']
-#
-#
-# class ProductFilter(filters.FilterSet):
-#     min_price = filters.NumberFilter(field_name="from_price", lookup_expr='gte')
-#     max_price = filters.NumberFilter(field_name="from_price", lookup_expr='lte')
-#
-#     class Meta:
-#         model = Post
-#         fields = ['category', 'city']
-
-# class ProductList(generics.ListAPIView):
-#     queryset = Post.objects.all()
-#     serializer_class = SearchSerializer
-#     filter_backends = (filters.DjangoFilterBackend,)
-#     filterset_class = ProductFilter

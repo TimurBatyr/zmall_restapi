@@ -37,15 +37,33 @@ class LoginAPIView(generics.GenericAPIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
+class ChangePasswordView(APIView):
+    permission_classes = [IsAuthenticated]
+    def post(self, request):
+        data = request.data
+        serializer = ChangePasswordSerializer(data=data, context={'request': request})
+        if serializer.is_valid(raise_exception=True):
+            serializer.set_new_password()
+            return Response('You have successfully updated your password')
+
+
+class ForgotPasswordView(APIView):
+    def post(self, request):
+        data = request.data
+        serializer = ForgotPasswordSerializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        serializer.create_new_password(serializer.data['email'])
+        return Response('New password has been sent to your email')
+
+
 class UserView(generics.RetrieveAPIView):
-    '''User View'''
     serializer_class = UserDetailSerializer
     queryset = User.objects.all()
 
 
 class UserAccount(generics.GenericAPIView):
     serializer_class = UserDetailSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, ]
 
     def get(self, request):
         user = User.objects.get(pk=self.request.user.id)
@@ -66,22 +84,3 @@ class UserAccount(generics.GenericAPIView):
         user = User.objects.get(pk=self.request.user.id)
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-
-class ChangePasswordView(APIView):
-    permission_classes = [IsAuthenticated]
-    def post(self, request):
-        data = request.data
-        serializer = ChangePasswordSerializer(data=data, context={'request': request})
-        if serializer.is_valid(raise_exception=True):
-            serializer.set_new_password()
-            return Response('You have successfully updated your password')
-
-
-class ForgotPasswordView(APIView):
-    def post(self, request):
-        data = request.data
-        serializer = ForgotPasswordSerializer(data=data)
-        serializer.is_valid(raise_exception=True)
-        serializer.create_new_password(serializer.data['email'])
-        return Response('New password has been sent to your email')

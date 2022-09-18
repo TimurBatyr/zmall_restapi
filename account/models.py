@@ -41,10 +41,6 @@ class User(AbstractUser):
         max_length=255, blank=False,
         null=False, default=AUTH_PROVIDERS.get('email'))
 
-    # is_active = models.BooleanField('Active', default=False)
-    # is_staff = models.BooleanField('Admin', default=False)
-    # is_superuser = models.BooleanField('Superuser', default=False)
-
     activation_code = models.CharField(max_length=8, blank=True)
 
     objects = UserManager()
@@ -61,6 +57,3 @@ class User(AbstractUser):
             'refresh': str(refresh),
             'access': str(refresh.access_token)
         }
-
-
-

@@ -43,19 +43,27 @@ LIST = (
     ('highlight', 'highlight'),
 )
 
+PERIOD = (
+    ('5 days', '5 days'),
+    ('10 days', '10 days'),
+    ('15 days', '15 days'),
+    ('20 days', '20 days'),
+    ('25 days', '25 days'),
+    ('30 days', '30 days'),
+)
+
 
 class Subscription(models.Model):
     choice = models.CharField(max_length=100, choices=LIST)
     price = models.DecimalField(max_digits=20, decimal_places=2, default=0)
     icon_image = models.ImageField()
-    date_created = models.DateTimeField(auto_now_add=True)
-    end_date = models.DateTimeField(auto_now_add=True)
+    period = models.CharField(max_length=100, choices=PERIOD)
 
     class Meta:
         ordering = ['-id']
 
     def __str__(self):
-        return f'{self.id} {self.choice} -- {self.price}'
+        return f'{self.id} {self.choice} -- {self.price} soms -- {self.period}'
 
 
 STATUS = (
@@ -107,24 +115,6 @@ class PostContacts(models.Model):
         return f'Contact ID: {self.id}_ {str(self.add_number)} : {self.post.title} ID: {self.post.id}'
 
 
-class Views(models.Model):
-    date = models.DateTimeField(auto_now_add=True)
-    views = models.IntegerField()
-    post = models.ForeignKey(Post, related_name='views_post', on_delete=models.CASCADE)
-
-
-class Favorite(models.Model):
-    post = models.ManyToManyField(Post, related_name='favorite_post')
-    user = models.ForeignKey(User, related_name='favorite_user', on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.post
-
-
-class Transactions(models.Model):
-    pass
-
-
 class ReviewPost(models.Model):
     '''Comment to posts'''
     email = models.EmailField()
@@ -140,3 +130,21 @@ class ReviewPost(models.Model):
     class Meta:
         verbose_name = 'Review'
         verbose_name_plural = 'Reviews'
+
+
+class Views(models.Model):
+    date = models.DateTimeField(auto_now_add=True)
+    views = models.IntegerField()
+    post = models.ForeignKey(Post, related_name='views_post', on_delete=models.CASCADE)
+
+
+class Favorite(models.Model):
+    post = models.ManyToManyField(Post, related_name='post')
+    user = models.OneToOneField(User, related_name='user', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.post} - {self.user}'
+
+
+class Transactions(models.Model):
+    pass
