@@ -8982,3 +8982,51 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2022-09-18 17:03:56,707 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 2022-09-18 17:03:58,484 [basehttp | INFO] "GET /admin/adds/post/2/change/ HTTP/1.1" 200 22904
 2022-09-18 17:03:58,516 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:39:00,261 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 17:39:07,709 [basehttp | INFO] "GET /admin/adds/post/2/change/ HTTP/1.1" 200 22904
+2022-09-18 17:39:07,762 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:39:11,366 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 14512
+2022-09-18 17:39:15,289 [basehttp | INFO] "GET /admin/info/help/ HTTP/1.1" 200 11225
+2022-09-18 17:39:15,350 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:39:19,612 [basehttp | INFO] "GET /admin/info/help/add/ HTTP/1.1" 200 13012
+2022-09-18 17:39:19,660 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:39:25,284 [basehttp | INFO] "GET /admin/info/issue/add/?_to_field=id&_popup=1 HTTP/1.1" 200 2906
+2022-09-18 17:39:25,308 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:39:52,185 [basehttp | INFO] "POST /admin/info/issue/add/?_to_field=id&_popup=1 HTTP/1.1" 200 324
+2022-09-18 17:40:24,242 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/info/models.py changed, reloading.
+2022-09-18 17:40:26,862 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 17:43:31,436 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 17:43:39,147 [basehttp | INFO] "GET /admin/info/help/add/ HTTP/1.1" 200 13525
+2022-09-18 17:43:39,185 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:44:10,180 [basehttp | INFO] "POST /admin/info/help/add/ HTTP/1.1" 302 0
+2022-09-18 17:44:10,262 [basehttp | INFO] "GET /admin/info/help/ HTTP/1.1" 200 12573
+2022-09-18 17:44:10,322 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:45:11,396 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/info/models.py changed, reloading.
+2022-09-18 17:45:14,004 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 17:45:19,329 [basehttp | INFO] - Broken pipe from ('127.0.0.1', 55554)
+
+2022-09-18 17:45:22,867 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 15077
+2022-09-18 17:45:28,894 [basehttp | INFO] "GET /admin/info/help/ HTTP/1.1" 200 12403
+2022-09-18 17:45:28,931 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:46:16,055 [basehttp | INFO] "GET /admin/info/issue/ HTTP/1.1" 200 12378
+2022-09-18 17:46:16,096 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:55:26,481 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-18 17:55:29,415 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 17:55:38,059 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 13307
+2022-09-18 17:55:38,112 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:55:44,075 [basehttp | INFO] "POST /admin/account/user/ HTTP/1.1" 200 11706
+2022-09-18 17:55:45,787 [basehttp | INFO] "POST /admin/account/user/ HTTP/1.1" 302 0
+2022-09-18 17:55:45,837 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 13109
+2022-09-18 17:55:45,863 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:56:00,144 [basehttp | INFO] "POST /api/v1/account/register/ HTTP/1.1" 201 54
+2022-09-18 17:56:22,913 [log | WARNING] Bad Request: /api/v1/account/register/
+2022-09-18 17:56:22,914 [basehttp | WARNING] "POST /api/v1/account/register/ HTTP/1.1" 400 42
+2022-09-18 17:58:32,489 [basehttp | INFO] "POST /api/v1/account/activate/ HTTP/1.1" 200 38
+2022-09-18 17:58:42,304 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 13307
+2022-09-18 17:58:42,350 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:58:46,076 [basehttp | INFO] "POST /admin/account/user/ HTTP/1.1" 200 11355
+2022-09-18 17:58:47,184 [basehttp | INFO] "POST /admin/account/user/ HTTP/1.1" 302 0
+2022-09-18 17:58:47,227 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 13109
+2022-09-18 17:58:47,256 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:58:56,367 [basehttp | INFO] "POST /api/v1/account/register/ HTTP/1.1" 201 54
+2022-09-18 17:59:53,516 [basehttp | INFO] "POST /api/v1/account/activate/ HTTP/1.1" 200 38

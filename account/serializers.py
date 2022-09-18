@@ -69,7 +69,7 @@ class LoginSerializer(serializers.ModelSerializer):
         max_length=100, min_length=5, write_only=True)
     username = serializers.CharField(
         max_length=255, min_length=3, read_only=True)
-    phone = PhoneNumberField(allow_blank=True)
+    phone = PhoneNumberField(allow_blank=True, allow_null=True)
     tokens = serializers.SerializerMethodField()
 
     def get_tokens(self, obj):
