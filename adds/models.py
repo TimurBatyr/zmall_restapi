@@ -139,8 +139,8 @@ class Views(models.Model):
 
 
 class Favorite(models.Model):
-    post = models.ForeignKey(Post, related_name='post', on_delete=models.CASCADE)
-    user = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE)
+    post = models.ManyToManyField(Post, related_name='post')
+    user = models.OneToOneField(User, related_name='user', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.post} - {self.user}'
