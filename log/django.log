@@ -8967,3 +8967,18 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2022-09-18 16:23:17,547 [basehttp | INFO] "PATCH /api/v1/adds/favoriteupdate/4/ HTTP/1.1" 200 53
 2022-09-18 16:23:31,288 [basehttp | INFO] "PATCH /api/v1/adds/favoriteupdate/4/ HTTP/1.1" 200 55
 2022-09-18 16:23:41,738 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 107
+2022-09-18 16:24:51,982 [log | WARNING] Bad Request: /api/v1/account/login/
+2022-09-18 16:24:52,247 [log | WARNING] Bad Request: /api/v1/account/login/
+2022-09-18 16:24:52,392 [log | WARNING] Bad Request: /api/v1/account/register/
+2022-09-18 16:25:29,681 [log | WARNING] Bad Request: /api/v1/account/login/
+2022-09-18 16:25:29,812 [log | WARNING] Bad Request: /api/v1/account/login/
+2022-09-18 16:25:29,953 [log | WARNING] Bad Request: /api/v1/account/register/
+2022-09-18 16:28:45,293 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 16:28:52,073 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-18 16:28:52,520 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 59061
+2022-09-18 17:02:19,072 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-18 17:02:26,383 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 14512
+2022-09-18 17:03:56,668 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 12784
+2022-09-18 17:03:56,707 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-18 17:03:58,484 [basehttp | INFO] "GET /admin/adds/post/2/change/ HTTP/1.1" 200 22904
+2022-09-18 17:03:58,516 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
