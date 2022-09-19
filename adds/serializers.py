@@ -59,14 +59,15 @@ class PostImagesSerializer(serializers.ModelSerializer):
         model = PostImages
         fields = "__all__"
 
-    def validate(self, attrs):
-        if PostImages.objects.filter(image=attrs['image']).count() > 8:
+    def validate(self, attrs,pk):
+        # post=PostImages.objects.filter(post=pk).values('pk')
+        # post=Post.objects.get(pk=post[0]['pk'])
+        if PostImages.objects.filter(post='post.id').count() > 8:
             raise ValidationError('Number of images should not exceed 7')
         return attrs
 
 
-class PostContactsSerializer(serializers.ModelSerializer):
-    ''' Adding images for a post'''
+class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = PostContacts
         fields = "__all__"
@@ -114,17 +115,18 @@ class FavoriteSerializer(serializers.ModelSerializer):
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''
     images = PostImagesSerializer(many=True)
-    phone = PostContactsSerializer(many=True)
+    phone = ContactSerializer(many=True)
     subscription = SubscriptionSerializer(read_only=True)
     reviews = ReviewSerializer(many=True)
 
 
     class Meta:
         model = Post
-        fields = ('id', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
+        fields = ('id','user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
                   'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number', 'phone',
                   'is_activated', 'reviews', 'date_created')
-        read_only_fields = ['user']
+        # read_only_fields = ['user']
+
 
 
 class PostListSerializer(serializers.ModelSerializer):
@@ -138,6 +140,50 @@ class PostListSerializer(serializers.ModelSerializer):
 
 
 
+class PostComplaintSerializer(serializers.ModelSerializer):
+    '''List complaints'''
+    class Meta:
+        model = PostComplaint
+        fields = '__all__'
 
+
+#Views
+class ViewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Views
+        fields = ['date', 'views']
+
+
+
+# Статистика просмотров
+class StatisticsPostSerilizer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ['views']
+
+
+class ContactViewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ViewsContact
+        fields = ['views']
+
+
+class StatisticsViewSerializer(serializers.ModelSerializer):
+    view_contact = ContactViewSerializer(many=True,read_only=True)
+    class Meta:
+        model = Views
+        fields = ['views', 'date', 'view_contact']
+
+
+class StaticsNumberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PostContacts
+        fields = ['view']
+
+
+class TodaySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Views
+        fields =['views', 'date']
 
 

@@ -6,11 +6,13 @@ from .models import *
 admin.site.register(Category)
 admin.site.register(Subcategory)
 admin.site.register(City)
+admin.site.register(Views)
+admin.site.register(ViewsContact)
 admin.site.register(PostContacts)
 admin.site.register(Post)
-admin.site.register(Views)
 admin.site.register(PostImages)
 admin.site.register(Favorite)
+admin.site.register(PostComplaint)
 
 @admin.register(Subscription)
 class SubscirptionAdmin(admin.ModelAdmin):

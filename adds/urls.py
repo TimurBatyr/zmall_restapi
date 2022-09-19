@@ -1,6 +1,4 @@
-from django.urls import path, include
-from rest_framework import routers
-from rest_framework.routers import DefaultRouter
+from django.urls import path
 
 from . import views
 from .views import *
@@ -29,4 +27,10 @@ urlpatterns = [
     path('favorite/', FavoriteListView.as_view()),
     path('favorite/<int:pk>/', FavoriteGetDeleteView.as_view()),
 
+    path('postcomplain/', PostComplaintView.as_view()),
+
+#views
+    path('view/<int:pk>', DetailPost.as_view()),
+    path('viewstatistics/<int:pk>', StatistictsApi.as_view()),
+    path('viewcontact/<int:pk>', Contacts.as_view()),
 ]
