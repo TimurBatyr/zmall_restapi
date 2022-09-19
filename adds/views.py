@@ -81,7 +81,6 @@ class PostImagesView(APIView):
             if image_serializer.is_valid():
                 image_serializer.save()
                 list_images.append(image_serializer.data)
-
             else:
                 flag = 0
 
@@ -286,7 +285,8 @@ def get_client_ip(request):
 
 class DetailPost(APIView):
     def get(self, request, pk):
-        posts = get_object_or_404(Post, pk=pk)#1
+        posts = Post.objects.select_related('category').select_related('subcategory').get(pk=pk)
+        # posts = get_object_or_404(Post, pk=pk)#1
         title = Post.objects.values('title').filter(pk=pk)#2
         title = title[0]['title']
         ip = get_client_ip(request)
@@ -315,7 +315,8 @@ class DetailPost(APIView):
         serializer = PostEditSerializer(posts, many=False).data
 
         context = {
-            'add': serializer,
+            'add': {**serializer, 'category': posts.category.title,
+                'subcategory':posts.subcategory.title},
             'view': serializer_view
         }
         return Response(context)
