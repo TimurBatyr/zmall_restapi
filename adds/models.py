@@ -88,7 +88,7 @@ class Post(models.Model):
     phone_number = PhoneNumberField(default='No number')
     wa_number = PhoneNumberField(default='No number')
     is_activated = models.BooleanField(default=True)
-    # views = models.IntegerField(default=0)
+    views = models.IntegerField(default=0)
     status = models.CharField(max_length=100, choices=STATUS, default=('in_progress', 'in_progress'))
 
     def __str__(self):
@@ -108,11 +108,27 @@ class PostImages(models.Model):
 
 
 class PostContacts(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='phone')
-    add_number = PhoneNumberField()
+    post_number = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='phone')
+    phone_number = PhoneNumberField()
+    view = models.IntegerField(default=0)
 
     def __str__(self):
-        return f'Contact ID: {self.id}_ {str(self.add_number)} : {self.post.title} ID: {self.post.id}'
+        return f'Contact ID: {self.id}_ {str(self.phone_number)} : {self.post_number.title} ID: {self.post_number.id}'
+
+
+#views
+class Views(models.Model):
+    user = models.CharField(max_length=100,null=True,blank=True)
+    date = models.DateField(blank=True,null=True)
+    views = models.IntegerField(default=0,blank=True,null=True)
+    post = models.ForeignKey(Post, related_name='views_post', on_delete=models.CASCADE)
+
+
+class ViewsContact(models.Model):
+    date = models.DateField(blank=True, null=True)
+    views = models.IntegerField(default=0, blank=True, null=True)
+    phone = models.ForeignKey(PostContacts, related_name='contact', on_delete=models.CASCADE)
+    view_key = models.ForeignKey(Views, related_name='view_contact', on_delete=models.CASCADE)
 
 
 class ReviewPost(models.Model):
@@ -132,18 +148,38 @@ class ReviewPost(models.Model):
         verbose_name_plural = 'Reviews'
 
 
-class Views(models.Model):
-    date = models.DateTimeField(auto_now_add=True)
-    views = models.IntegerField()
-    post = models.ForeignKey(Post, related_name='views_post', on_delete=models.CASCADE)
-
-
 class Favorite(models.Model):
     post = models.ManyToManyField(Post, related_name='post')
     user = models.OneToOneField(User, related_name='user', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.post} - {self.user}'
+
+
+
+
+
+COMPLAIN_LIST = (
+    ('Неверная рубрика', 'Неверная рубрика'),
+    ('Запрещенный товар', 'Запрещенный товар'),
+    ('Объявление не актуально', 'Объявление не актуально'),
+    ('Неверный адрес', 'Неверный адрес'),
+    ('Другое', 'Другое'),
+    ('', ''),
+)
+
+
+class PostComplaint(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="post_complain")
+    reason_message = models.CharField(max_length=100)
+    choice = models.CharField(max_length=100, choices=COMPLAIN_LIST, default=('', ''), null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
+
+    def __str__(self):
+        return f'{self.id} {self.post} -- {self.choice}'
+
 
 
 class Transactions(models.Model):
