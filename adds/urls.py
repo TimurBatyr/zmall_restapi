@@ -25,7 +25,9 @@ urlpatterns = [
     path('postlistdate/', views.PostlistDate.as_view(), name="postlistdate"),
     path('mypost/', views.MyPostList.as_view(), name="mypost"),
 
-    path("review/", views.ReviewCreateView.as_view(), name="review")
+    path("review/", views.ReviewCreateView.as_view(), name="review"),
+
+    path('laba',Laba.as_view()),
 
 
 ]

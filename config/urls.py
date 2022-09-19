@@ -28,6 +28,8 @@ urlpatterns = [
     path('api/v1/adds/', include('adds.urls')),
     path('api/v1/', include('chat.urls')),
     path('api/v1/', include('admin_rights.urls')),
+
+    path('__debug__/', include('debug_toolbar.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += doc_urls

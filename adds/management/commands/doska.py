@@ -16,7 +16,8 @@ headers = {
 
 def get_subcategory(POSTSOUD):
     perl = POSTSOUD.find(class_='kroshki').find_all('a')
-    return perl[1].text
+    if perl:
+        return perl[1].text
 
 
 def get_img(POSTSOUD):

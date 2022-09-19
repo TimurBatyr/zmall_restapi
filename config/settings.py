@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'chat',
     'social_auth',
     'admin_rights',
+
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware", # Debager
+    'adds.middleware.FirstMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -95,13 +99,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
-        # 'HOST': 'localhost',
-        'HOST': 'db_group_c',
-        'PORT': '', # default 5432
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -220,3 +223,10 @@ LOGGING = {
         },
     },
 }
+
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]

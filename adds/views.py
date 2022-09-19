@@ -1,3 +1,7 @@
+import datetime
+
+from django.utils import timezone
+
 import django_filters
 from django.db.models import Q
 from django.http import Http404, JsonResponse
@@ -187,6 +191,24 @@ class ReviewCreateView(APIView):
             review.save()
         return Response(status=201)
 
+
+
+class Laba(APIView):
+    def get(self,request):
+        time  = datetime.datetime.now(tz=None)
+        print(time)
+        # queryset = Post.objects.select_related('category')
+        queryset = Post.objects.select_related('subcategory').select_related('category')
+        # queryset=Post.objects.all()
+        for i in queryset:
+            temp=i.subcategory
+            tecna = i.category
+        time = datetime.datetime.now(tz=None)
+        print(time)
+        serializers =PostEditSerializer(queryset, many=True).data
+
+
+        return Response(serializers)
 
 
 # # Просмотр обьвления
