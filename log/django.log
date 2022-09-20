@@ -18255,3 +18255,296 @@ account.models.User.DoesNotExist: User matching query does not exist.
 2022-09-20 13:20:41,377 [runserver | INFO] WebSocket DISCONNECT /ws/chat/admin/ [127.0.0.1:60476]
 2022-09-20 13:20:51,500 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/chat/consumers.py changed, reloading.
 2022-09-20 13:20:53,710 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:06:37,473 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:07:46,246 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/chat/models.py changed, reloading.
+2022-09-20 18:07:51,970 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:08:13,048 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:08:24,208 [runserver | INFO] [mHTTP GET /chat/admin/ 200 [0.09, 127.0.0.1:63469][0m
+2022-09-20 18:08:24,277 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/admin/ [127.0.0.1:63472]
+2022-09-20 18:08:25,298 [runserver | INFO] WebSocket DISCONNECT /ws/chat/admin/ [127.0.0.1:63472]
+2022-09-20 18:09:08,521 [log | ERROR] Internal Server Error: /chat/test/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 31, in get
+    context = self.get_context_data(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 25, in get_context_data
+    context['thread'] = self.get_object()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 16, in get_object
+    self.other_user = get_user_model().objects.get(username=other_username)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+account.models.User.DoesNotExist: User matching query does not exist.
+2022-09-20 18:09:08,521 [log | ERROR] Internal Server Error: /chat/test/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 31, in get
+    context = self.get_context_data(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 25, in get_context_data
+    context['thread'] = self.get_object()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 16, in get_object
+    self.other_user = get_user_model().objects.get(username=other_username)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+account.models.User.DoesNotExist: User matching query does not exist.
+2022-09-20 18:09:08,523 [runserver | ERROR] [35;1mHTTP GET /chat/test/ 500 [0.19, 127.0.0.1:63483][0m @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/channels/management/commands/runserver.py : 160 : log_action
+2022-09-20 18:09:08,523 [runserver | ERROR] [35;1mHTTP GET /chat/test/ 500 [0.19, 127.0.0.1:63483][0m
+2022-09-20 18:09:24,459 [runserver | INFO] [mHTTP GET /admin/ 200 [0.17, 127.0.0.1:63484][0m
+2022-09-20 18:09:30,991 [runserver | INFO] [mHTTP GET /admin/account/user/ 200 [0.10, 127.0.0.1:63484][0m
+2022-09-20 18:09:31,033 [runserver | INFO] [mHTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:63484][0m
+2022-09-20 18:09:45,179 [runserver | INFO] [mHTTP POST /admin/account/user/ 200 [0.09, 127.0.0.1:63484][0m
+2022-09-20 18:09:46,647 [runserver | INFO] [32mHTTP POST /admin/account/user/ 302 [0.08, 127.0.0.1:63484][0m
+2022-09-20 18:09:46,695 [runserver | INFO] [mHTTP GET /admin/account/user/ 200 [0.05, 127.0.0.1:63484][0m
+2022-09-20 18:09:46,724 [runserver | INFO] [mHTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:63484][0m
+2022-09-20 18:10:54,366 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:10:58,934 [runserver | INFO] [mHTTP GET /admin/account/user/ 200 [0.20, 127.0.0.1:63493][0m
+2022-09-20 18:10:58,989 [runserver | INFO] [mHTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:63493][0m
+2022-09-20 18:11:13,040 [log | ERROR] Internal Server Error: /chat/test/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 1988, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 31, in get
+    context = self.get_context_data(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 25, in get_context_data
+    context['thread'] = self.get_object()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 17, in get_object
+    obj = Thread.objects.get_or_create_personal_thread(self.request.user, self.other_user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/managers.py", line 8, in get_or_create_personal_thread
+    threads = threads.filter(users__in=[user1, user2]).distinct()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1448, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1273, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 77, in get_prep_lookup
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 77, in <listcomp>
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x1103bcd60>>.
+2022-09-20 18:11:13,040 [log | ERROR] Internal Server Error: /chat/test/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 1988, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 31, in get
+    context = self.get_context_data(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 25, in get_context_data
+    context['thread'] = self.get_object()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py", line 17, in get_object
+    obj = Thread.objects.get_or_create_personal_thread(self.request.user, self.other_user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/chat/managers.py", line 8, in get_or_create_personal_thread
+    threads = threads.filter(users__in=[user1, user2]).distinct()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1448, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1273, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 77, in get_prep_lookup
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 77, in <listcomp>
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x1103bcd60>>.
+2022-09-20 18:11:13,043 [runserver | ERROR] [35;1mHTTP GET /chat/test/ 500 [0.11, 127.0.0.1:63495][0m @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/channels/management/commands/runserver.py : 160 : log_action
+2022-09-20 18:11:13,043 [runserver | ERROR] [35;1mHTTP GET /chat/test/ 500 [0.11, 127.0.0.1:63495][0m
+2022-09-20 18:11:31,092 [runserver | INFO] [32mHTTP GET /admin/ 302 [0.02, 127.0.0.1:63495][0m
+2022-09-20 18:11:31,151 [runserver | INFO] [mHTTP GET /admin/login/?next=/admin/ 200 [0.03, 127.0.0.1:63495][0m
+2022-09-20 18:11:31,162 [runserver | INFO] [36mHTTP GET /static/admin/css/login.css 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:31,206 [runserver | INFO] [36mHTTP GET /static/admin/css/base.css 304 [0.00, 127.0.0.1:63495][0m
+2022-09-20 18:11:31,209 [runserver | INFO] [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:63497][0m
+2022-09-20 18:11:31,212 [runserver | INFO] [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:63498][0m
+2022-09-20 18:11:31,215 [runserver | INFO] [36mHTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:63499][0m
+2022-09-20 18:11:31,218 [runserver | INFO] [36mHTTP GET /static/admin/css/fonts.css 304 [0.00, 127.0.0.1:63495][0m
+2022-09-20 18:11:31,261 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Regular-webfont.woff 304 [0.00, 127.0.0.1:63495][0m
+2022-09-20 18:11:31,275 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Light-webfont.woff 304 [0.00, 127.0.0.1:63495][0m
+2022-09-20 18:11:31,984 [runserver | INFO] [32mHTTP GET /admin/ 302 [0.00, 127.0.0.1:63495][0m
+2022-09-20 18:11:32,007 [runserver | INFO] [mHTTP GET /admin/login/?next=/admin/ 200 [0.02, 127.0.0.1:63495][0m
+2022-09-20 18:11:32,010 [runserver | INFO] [36mHTTP GET /static/admin/css/login.css 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:32,044 [runserver | INFO] [36mHTTP GET /static/admin/css/base.css 304 [0.00, 127.0.0.1:63495][0m
+2022-09-20 18:11:32,047 [runserver | INFO] [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:63497][0m
+2022-09-20 18:11:32,051 [runserver | INFO] [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.01, 127.0.0.1:63498][0m
+2022-09-20 18:11:32,054 [runserver | INFO] [36mHTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:63499][0m
+2022-09-20 18:11:32,059 [runserver | INFO] [36mHTTP GET /static/admin/css/fonts.css 304 [0.01, 127.0.0.1:63495][0m
+2022-09-20 18:11:32,076 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Regular-webfont.woff 304 [0.00, 127.0.0.1:63495][0m
+2022-09-20 18:11:32,091 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Light-webfont.woff 304 [0.00, 127.0.0.1:63495][0m
+2022-09-20 18:11:32,097 [runserver | INFO] [32mHTTP GET /admin/ 302 [0.01, 127.0.0.1:63496][0m
+2022-09-20 18:11:32,137 [runserver | INFO] [mHTTP GET /admin/login/?next=/admin/ 200 [0.03, 127.0.0.1:63496][0m
+2022-09-20 18:11:32,142 [runserver | INFO] [36mHTTP GET /static/admin/css/login.css 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:32,254 [runserver | INFO] [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:32,257 [runserver | INFO] [36mHTTP GET /static/admin/css/base.css 304 [0.01, 127.0.0.1:63500][0m
+2022-09-20 18:11:32,260 [runserver | INFO] [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.01, 127.0.0.1:63501][0m
+2022-09-20 18:11:32,264 [runserver | INFO] [36mHTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:63502][0m
+2022-09-20 18:11:32,266 [runserver | INFO] [36mHTTP GET /static/admin/css/fonts.css 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:32,275 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Regular-webfont.woff 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:32,291 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Light-webfont.woff 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:45,376 [runserver | INFO] [32mHTTP POST /admin/login/?next=/admin/ 302 [0.16, 127.0.0.1:63496][0m
+2022-09-20 18:11:45,415 [runserver | INFO] [mHTTP GET /admin/ 200 [0.03, 127.0.0.1:63496][0m
+2022-09-20 18:11:45,429 [runserver | INFO] [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:45,438 [runserver | INFO] [36mHTTP GET /static/admin/css/base.css 304 [0.01, 127.0.0.1:63500][0m
+2022-09-20 18:11:45,442 [runserver | INFO] [36mHTTP GET /static/admin/css/dashboard.css 304 [0.02, 127.0.0.1:63501][0m
+2022-09-20 18:11:45,445 [runserver | INFO] [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.02, 127.0.0.1:63502][0m
+2022-09-20 18:11:45,448 [runserver | INFO] [36mHTTP GET /static/admin/css/responsive.css 304 [0.02, 127.0.0.1:63503][0m
+2022-09-20 18:11:45,451 [runserver | INFO] [36mHTTP GET /static/admin/css/fonts.css 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:45,463 [runserver | INFO] [36mHTTP GET /static/admin/img/icon-addlink.svg 304 [0.00, 127.0.0.1:63496][0m
+2022-09-20 18:11:45,465 [runserver | INFO] [36mHTTP GET /static/admin/img/icon-changelink.svg 304 [0.00, 127.0.0.1:63500][0m
+2022-09-20 18:11:45,492 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Bold-webfont.woff 304 [0.02, 127.0.0.1:63496][0m
+2022-09-20 18:11:45,497 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Regular-webfont.woff 304 [0.01, 127.0.0.1:63500][0m
+2022-09-20 18:11:45,502 [runserver | INFO] [36mHTTP GET /static/admin/fonts/Roboto-Light-webfont.woff 304 [0.02, 127.0.0.1:63501][0m
+2022-09-20 18:12:00,655 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.05, 127.0.0.1:63496][0m
+2022-09-20 18:12:00,689 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/test/ [127.0.0.1:63505]
+2022-09-20 18:12:00,992 [runserver | INFO] WebSocket DISCONNECT /ws/chat/test/ [127.0.0.1:63505]
+2022-09-20 18:12:10,141 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.06, 127.0.0.1:63506][0m
+2022-09-20 18:12:10,205 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/test/ [127.0.0.1:63509]
+2022-09-20 18:12:11,004 [runserver | INFO] WebSocket DISCONNECT /ws/chat/test/ [127.0.0.1:63509]
+2022-09-20 18:13:21,462 [runserver | INFO] WebSocket HANDSHAKING /chat/test/ [127.0.0.1:63517]
+2022-09-20 18:13:22,098 [runserver | INFO] WebSocket DISCONNECT /chat/test/ [127.0.0.1:63517]
+2022-09-20 18:13:49,740 [runserver | INFO] WebSocket HANDSHAKING /chat/ [127.0.0.1:63518]
+2022-09-20 18:13:50,128 [runserver | INFO] WebSocket DISCONNECT /chat/ [127.0.0.1:63518]
+2022-09-20 18:14:28,750 [runserver | INFO] WebSocket HANDSHAKING /chat/ [127.0.0.1:63521]
+2022-09-20 18:14:29,166 [runserver | INFO] WebSocket DISCONNECT /chat/ [127.0.0.1:63521]
+2022-09-20 18:14:48,343 [runserver | INFO] WebSocket HANDSHAKING /chat/ [127.0.0.1:63522]
+2022-09-20 18:14:49,193 [runserver | INFO] WebSocket DISCONNECT /chat/ [127.0.0.1:63522]
+2022-09-20 18:15:13,856 [runserver | INFO] WebSocket HANDSHAKING /chat/admin/ [127.0.0.1:63524]
+2022-09-20 18:15:14,295 [runserver | INFO] WebSocket DISCONNECT /chat/admin/ [127.0.0.1:63524]
+2022-09-20 18:15:51,886 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/config/settings.py changed, reloading.
+2022-09-20 18:15:58,529 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:16:02,191 [runserver | INFO] WebSocket HANDSHAKING /chat/admin/ [127.0.0.1:63528]
+2022-09-20 18:16:03,107 [runserver | INFO] WebSocket DISCONNECT /chat/admin/ [127.0.0.1:63528]
+2022-09-20 18:16:11,256 [runserver | INFO] WebSocket HANDSHAKING /chat/ [127.0.0.1:63529]
+2022-09-20 18:16:12,117 [runserver | INFO] WebSocket DISCONNECT /chat/ [127.0.0.1:63529]
+2022-09-20 18:16:19,708 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/config/settings.py changed, reloading.
+2022-09-20 18:16:26,124 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:16:30,658 [runserver | INFO] WebSocket HANDSHAKING /chat/ [127.0.0.1:63532]
+2022-09-20 18:16:31,615 [runserver | INFO] WebSocket DISCONNECT /chat/ [127.0.0.1:63532]
+2022-09-20 18:17:52,464 [runserver | INFO] WebSocket HANDSHAKING /chat/ [127.0.0.1:63543]
+2022-09-20 18:17:52,725 [runserver | INFO] WebSocket DISCONNECT /chat/ [127.0.0.1:63543]
+2022-09-20 18:18:14,962 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:63546]
+2022-09-20 18:18:15,752 [runserver | INFO] WebSocket DISCONNECT /ws/chat/ [127.0.0.1:63546]
+2022-09-20 18:19:29,990 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:63548]
+2022-09-20 18:19:30,847 [runserver | INFO] WebSocket DISCONNECT /ws/chat/ [127.0.0.1:63548]
+2022-09-20 18:25:42,215 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.59, 127.0.0.1:63605][0m
+2022-09-20 18:25:42,465 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/test/ [127.0.0.1:63608]
+2022-09-20 18:25:43,220 [runserver | INFO] WebSocket DISCONNECT /ws/chat/test/ [127.0.0.1:63608]
+2022-09-20 18:27:59,996 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/config/routing.py changed, reloading.
+2022-09-20 18:28:03,891 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:28:08,426 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:63801]
+2022-09-20 18:28:08,461 [runserver | INFO] WebSocket CONNECT /ws/chat/ [127.0.0.1:63801]
+2022-09-20 18:28:47,150 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.07, 127.0.0.1:63804][0m
+2022-09-20 18:28:47,224 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/test/ [127.0.0.1:63806]
+2022-09-20 18:28:47,555 [runserver | INFO] WebSocket DISCONNECT /ws/chat/test/ [127.0.0.1:63806]
+2022-09-20 18:28:48,038 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.04, 127.0.0.1:63804][0m
+2022-09-20 18:28:48,058 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/test/ [127.0.0.1:63808]
+2022-09-20 18:28:48,363 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.04, 127.0.0.1:63804][0m
+2022-09-20 18:28:48,384 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/test/ [127.0.0.1:63809]
+2022-09-20 18:28:48,589 [runserver | INFO] WebSocket DISCONNECT /ws/chat/test/ [127.0.0.1:63808]
+2022-09-20 18:28:48,590 [runserver | INFO] WebSocket DISCONNECT /ws/chat/test/ [127.0.0.1:63809]
+2022-09-20 18:28:49,842 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.04, 127.0.0.1:63804][0m
+2022-09-20 18:28:49,865 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/test/ [127.0.0.1:63811]
+2022-09-20 18:28:50,600 [runserver | INFO] WebSocket DISCONNECT /ws/chat/test/ [127.0.0.1:63811]
+2022-09-20 18:29:18,316 [runserver | INFO] [mHTTP GET /chat/admin/ 200 [0.13, 127.0.0.1:63813][0m
+2022-09-20 18:29:18,405 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/admin/ [127.0.0.1:63816]
+2022-09-20 18:29:18,641 [runserver | INFO] WebSocket DISCONNECT /ws/chat/admin/ [127.0.0.1:63816]
+2022-09-20 18:30:05,647 [runserver | INFO] [mHTTP GET /admin/ 200 [0.39, 127.0.0.1:63813][0m
+2022-09-20 18:30:13,151 [runserver | INFO] [mHTTP GET /admin/chat/thread/ 200 [0.13, 127.0.0.1:63813][0m
+2022-09-20 18:30:13,190 [runserver | INFO] [mHTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:63813][0m
+2022-09-20 18:30:17,397 [runserver | INFO] [mHTTP GET /admin/chat/thread/5/change/ 200 [0.12, 127.0.0.1:63813][0m
+2022-09-20 18:30:17,428 [runserver | INFO] [mHTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:63813][0m
+2022-09-20 18:30:32,222 [runserver | INFO] [mHTTP GET /admin/chat/thread/ 200 [0.11, 127.0.0.1:63813][0m
+2022-09-20 18:30:35,861 [runserver | INFO] [mHTTP GET /admin/chat/thread/5/change/ 200 [0.10, 127.0.0.1:63813][0m
+2022-09-20 18:30:35,883 [runserver | INFO] [mHTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:63813][0m
+2022-09-20 18:30:49,036 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.05, 127.0.0.1:63820][0m
+2022-09-20 18:30:50,988 [runserver | INFO] [mHTTP GET /chat/admin/ 200 [0.03, 127.0.0.1:63821][0m
+2022-09-20 18:30:51,414 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/admin/ [127.0.0.1:63823]
+2022-09-20 18:30:51,755 [runserver | INFO] WebSocket DISCONNECT /ws/chat/admin/ [127.0.0.1:63823]
+2022-09-20 18:31:47,091 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/chat/views.py changed, reloading.
+2022-09-20 18:31:50,761 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:32:32,620 [runserver | INFO] [mHTTP GET /chat/test/ 200 [0.07, 127.0.0.1:63825][0m
+2022-09-20 18:32:32,674 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/test/ [127.0.0.1:63828]
+2022-09-20 18:32:33,437 [runserver | INFO] WebSocket DISCONNECT /ws/chat/test/ [127.0.0.1:63828]
+2022-09-20 18:33:39,115 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/chat/models.py changed, reloading.
+2022-09-20 18:33:43,314 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:34:39,682 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/chat/models.py changed, reloading.
+2022-09-20 18:34:48,071 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:34:56,866 [runserver | INFO] [mHTTP GET /chat/admin/ 200 [0.04, 127.0.0.1:63836][0m
+2022-09-20 18:34:56,940 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/admin/ [127.0.0.1:63838]
+2022-09-20 18:34:57,792 [runserver | INFO] WebSocket DISCONNECT /ws/chat/admin/ [127.0.0.1:63838]
+2022-09-20 18:39:16,218 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/chat/consumers.py changed, reloading.
+2022-09-20 18:39:21,915 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:39:25,016 [runserver | INFO] WebSocket HANDSHAKING /we/chat/ [127.0.0.1:63843]
+2022-09-20 18:39:25,479 [runserver | INFO] WebSocket DISCONNECT /we/chat/ [127.0.0.1:63843]
+2022-09-20 18:39:28,115 [runserver | INFO] WebSocket HANDSHAKING /wes/chat/ [127.0.0.1:63844]
+2022-09-20 18:39:28,485 [runserver | INFO] WebSocket DISCONNECT /wes/chat/ [127.0.0.1:63844]
+2022-09-20 18:39:31,124 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:63845]
+2022-09-20 18:39:31,202 [runserver | INFO] WebSocket CONNECT /ws/chat/ [127.0.0.1:63845]
+2022-09-20 18:40:16,535 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/chat/consumers.py changed, reloading.
+2022-09-20 18:40:25,062 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 18:40:26,930 [runserver | INFO] WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:63852]
+2022-09-20 18:40:26,972 [runserver | INFO] WebSocket CONNECT /ws/chat/ [127.0.0.1:63852]
+2022-09-20 18:45:38,520 [autoreload | INFO] Watching for file changes with StatReloader

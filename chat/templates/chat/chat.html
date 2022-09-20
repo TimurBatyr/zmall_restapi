@@ -18,9 +18,10 @@
 {% block custom_javascript %}
 <script>
     const url = 'ws://localhost:8000/ws' + window.location.pathname;
-    console.log(url)
     const ws = new WebSocket(url)
     ws.onopen = function(event) {
+        console.log(url)
+
         console.log("Connection is opened");
     }
 
@@ -37,6 +38,8 @@
     }
 
     ws.onclose = function(event) {
+        console.log(url)
+
         console.log("Connection is closed");
     }
 

@@ -2,6 +2,8 @@ from account.models import User
 from chat.managers import ThreadManager
 from django.db import models
 
+
+
 class TrackingModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -24,6 +26,7 @@ class Thread(TrackingModel):
     def __str__(self) -> str:
         if self.thread_type == 'personal' and self.users.count() == 2:
             return f'{self.users.first()} and {self.users.last()}'
+
         return f'{self.name}'
 
 class Message(TrackingModel):

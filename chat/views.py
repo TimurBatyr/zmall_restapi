@@ -13,6 +13,7 @@ class ThreadView(View):
 
     def get_object(self):
         other_username  = self.kwargs.get("username")
+        print(other_username)
         self.other_user = get_user_model().objects.get(username=other_username)
         obj = Thread.objects.get_or_create_personal_thread(self.request.user, self.other_user)
         if obj == None:
@@ -39,5 +40,4 @@ class ThreadView(View):
         text = data.get("message")
         Message.objects.create(sender=user, thread=thread, text=text)
         context = self.get_context_data(**kwargs)
-        print(context)
         return render(request, self.template_name, context=context)
