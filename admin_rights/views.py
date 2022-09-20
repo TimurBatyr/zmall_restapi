@@ -1,13 +1,20 @@
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAdminUser
 
 from account.models import User
 from adds.models import Category, Subcategory, Subscription, PostImages, PostContacts, Post, ReviewPost, Views, \
-    Favorite, City
+    Favorite, City, PostComplaint
 from admin_rights.serializers import UserDetailSerializerAd, CategorySerializerAd, SubscriptionSerializerAd, \
     PostImagesSerializerAd, PostContactsSerializerAd, SubcategorySerializerAd, PostSerializerAd, ReviewSerializerAd, \
-    ViewsSerializerAd, FavoriteSerializerAd, MessageSerializerAd, CitySerializerAd
+    ViewsSerializerAd, FavoriteSerializerAd, MessageSerializerAd, CitySerializerAd, PostComplaintSerializerAd
 from chat.models import Message
+
+
+class Pagination(PageNumberPagination):
+    '''Pagination for all'''
+    def get_paginated_response(self, data):
+        return super().get_paginated_response(data)
 
 
 class UserViewSet(ModelViewSet):
@@ -80,5 +87,13 @@ class MessageViewSet(ModelViewSet):
     serializer_class = MessageSerializerAd
     queryset = Message.objects.all()
     permission_classes = [IsAdminUser]
+
+
+class PostComplaintViewSet(ModelViewSet):
+    serializer_class = PostComplaintSerializerAd
+    queryset = PostComplaint.objects.all()
+    permission_classes = [IsAdminUser]
+
+
 
 

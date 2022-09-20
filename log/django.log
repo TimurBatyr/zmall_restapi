@@ -17931,3 +17931,4 @@ django.core.exceptions.ImproperlyConfigured: Field name `user_email` is not vali
 2022-09-20 17:47:37,021 [basehttp | WARNING] "POST /api/v1/adds/detailpost/1 HTTP/1.1" 405 41
 2022-09-20 17:47:40,203 [basehttp | INFO] "GET /api/v1/adds/detailpost/1 HTTP/1.1" 200 967
 2022-09-20 17:48:47,897 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/models.py changed, reloading.
+2022-09-20 20:23:26,385 [autoreload | INFO] Watching for file changes with StatReloader

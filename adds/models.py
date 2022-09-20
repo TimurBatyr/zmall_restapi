@@ -68,9 +68,9 @@ class Subscription(models.Model):
 
 
 STATUS = (
-        ('in_progress', 'in_progress'),
-        ('verified', 'verified'),
-        ('rejected', 'rejected')
+        ('in_progress', 'в рассмотрении'),
+        ('verified', 'одобрено'),
+        ('rejected', 'отклонено')
     )
 
 class Post(models.Model):

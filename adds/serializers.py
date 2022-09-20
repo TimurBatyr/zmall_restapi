@@ -160,7 +160,7 @@ class PostListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image',
-                  'description', 'date_created', 'city')
+                  'description', 'date_created', 'city', 'is_activated', 'status')
 
 
 

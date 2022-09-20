@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from account.models import User
 from adds.models import Category, Subcategory, City, Subscription, PostImages, PostContacts, Post, ReviewPost, Views, \
-    Favorite
+    Favorite, PostComplaint
 from chat.models import Message
 
 
@@ -86,4 +86,11 @@ class MessageSerializerAd(serializers.ModelSerializer):
 
     class Meta:
         model = Message
+        fields = '__all__'
+
+
+class PostComplaintSerializerAd(serializers.ModelSerializer):
+    '''List complaints'''
+    class Meta:
+        model = PostComplaint
         fields = '__all__'
