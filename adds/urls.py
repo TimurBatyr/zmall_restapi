@@ -16,6 +16,7 @@ urlpatterns = [
     path('detailcontacts/<int:pk>', views.PostContactsDetail.as_view()),
 
     path('detailpost/<int:pk>', views.PostDetail.as_view()),
+    path('editpost/<int:pk>', views.PostEdit.as_view()),
     path('postlist/', views.PostList.as_view(), name="postlist"),
     path('postlistdate/', views.PostlistDate.as_view(), name="postlistdate"),
     path('mypost/', views.MyPostList.as_view(), name="mypost"),

@@ -58,6 +58,21 @@ class PostCreate(generics.CreateAPIView):
     permission_classes = [AllowAny]
     # permission_classes = [IsAuthenticated]
 
+    # def create(self, request, *args, **kwargs):
+    #     images = request.FILES.getlist('images')
+    #     data = request.data
+    #
+    #     context_data = {
+    #         'images': images,
+    #         'user': request.user
+    #     }
+    #
+    #     serializer = self.get_serializer(data=data, context=context_data)
+    #     serializer.is_valid(raise_exception=True)
+    #     serializer.save()
+    #
+    #     return Response(serializer.data, status=status.HTTP_201_CREATED)
+
 
 class PostImagesView(APIView):
     '''Adding images to post'''
@@ -104,10 +119,20 @@ class PostContactsCreate(generics.CreateAPIView):
     # permission_classes = [IsAuthenticated]
 
 
-class PostDetail(generics.RetrieveUpdateDestroyAPIView):
+class PostDetail(generics.RetrieveDestroyAPIView):
     '''Post Update/delete/detail'''
 
     serializer_class = PostEditSerializer
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
+    lookup_field ='pk'
+    queryset = Post.objects.all()
+
+
+class PostEdit(generics.RetrieveUpdateAPIView):
+    '''Post Update/delete/detail'''
+
+    serializer_class = PostDetailSerializer
     # permission_classes = [IsAuthenticated, UserPermission, ]
     permission_classes = [AllowAny]
     lookup_field ='pk'

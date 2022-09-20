@@ -52,35 +52,32 @@ class PostCreateSerializer(serializers.ModelSerializer):
                   'from_price', 'to_price', 'image', 'email', 'phone_number', 'wa_number',
                   'is_activated')
 
+    # def validate(self, data):
+    #
+    #     images = self.context.get('images')
+    #     user = self.context.get('user')
+    #     if len(images) > 8:
+    #         raise serializers.ValidationError({'images': 'Images can not be more than 8'})
+    #     data['user'] = user
+    #
+    #     return data
+    #
+    # def create(self, validated_data):
+    #     instance = super(PostCreateSerializer, self).create(validated_data)
+    #     instance.save()
+    #     images = self.context.get('images')
+    #
+    #     for image in images:
+    #         PostImages.objects.create(advertisement=instance, image=image)
+    #
+    #     return instance
+
 
 class PostImagesSerializer(serializers.ModelSerializer):
     ''' Create images for a post'''
     class Meta:
         model = PostImages
         fields = "__all__"
-
-    def validate(self, attrs,pk):
-        # post=PostImages.objects.filter(post=pk).values('pk')
-        # post=Post.objects.get(pk=post[0]['pk'])
-        if PostImages.objects.filter(post='post.id').count() > 8:
-            raise ValidationError('Number of images should not exceed 7')
-        return attrs
-
-
-# class AdsImage(models.Model):
-#     image = CloudinaryField('Фотография')
-#     advertisement = models.ForeignKey(Advertisement, on_delete=models.CASCADE, verbose_name='Объявление',
-#                                       help_text='Объявления с фото получают в среднем в 3-5 раз больше '
-#                                                 'откликов. Вы можете загрузить до 8 фотографий',
-#                                       related_name='images')
-#
-#     def __str__(self):
-#         return self.image.url
-#
-#     class Meta:
-#         verbose_name = 'Изображение объявления'
-#         verbose_name_plural = 'Изображения объявлений'
-
 
 
 class ContactSerializer(serializers.ModelSerializer):
@@ -145,6 +142,15 @@ class PostEditSerializer(serializers.ModelSerializer):
                   'is_activated', 'reviews', 'date_created', 'status')
         # read_only_fields = ['user']
 
+
+class PostDetailSerializer(serializers.ModelSerializer):
+    ''' Editing(detail, delete, update(just for post) post'''
+
+    class Meta:
+        model = Post
+        # fields = '__all__'
+        exclude =['image']
+        # read_only_fields = ['user']
 
 
 class PostListSerializer(serializers.ModelSerializer):
