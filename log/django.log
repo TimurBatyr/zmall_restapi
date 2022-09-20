@@ -1,1 +1,11 @@
 2022-09-20 19:09:14,324 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 19:12:51,046 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 19:13:53,360 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-20 19:13:53,462 [basehttp | INFO] "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+2022-09-20 19:13:53,492 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+2022-09-20 19:13:53,514 [basehttp | INFO] "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 304 0
+2022-09-20 19:13:53,526 [basehttp | INFO] "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+2022-09-20 19:13:53,566 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 143858
+2022-09-20 19:13:53,579 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 324275
+2022-09-20 19:13:53,626 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1086481
+2022-09-20 19:13:54,725 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 71592
