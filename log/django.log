@@ -1,1 +1,5 @@
 2022-09-20 20:33:31,926 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 20:38:15,790 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 20:40:36,066 [autoreload | INFO] /zmall_rest/adds/migrations/0003_alter_post_status_alter_postcomplaint_choice.py changed, reloading.
+2022-09-20 20:40:38,707 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 20:41:17,014 [autoreload | INFO] Watching for file changes with StatReloader
