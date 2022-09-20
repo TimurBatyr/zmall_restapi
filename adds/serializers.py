@@ -67,6 +67,22 @@ class PostImagesSerializer(serializers.ModelSerializer):
         return attrs
 
 
+# class AdsImage(models.Model):
+#     image = CloudinaryField('Фотография')
+#     advertisement = models.ForeignKey(Advertisement, on_delete=models.CASCADE, verbose_name='Объявление',
+#                                       help_text='Объявления с фото получают в среднем в 3-5 раз больше '
+#                                                 'откликов. Вы можете загрузить до 8 фотографий',
+#                                       related_name='images')
+#
+#     def __str__(self):
+#         return self.image.url
+#
+#     class Meta:
+#         verbose_name = 'Изображение объявления'
+#         verbose_name_plural = 'Изображения объявлений'
+
+
+
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = PostContacts
@@ -118,13 +134,15 @@ class PostEditSerializer(serializers.ModelSerializer):
     phone = ContactSerializer(many=True)
     subscription = SubscriptionSerializer(read_only=True)
     reviews = ReviewSerializer(many=True)
+    user_email = serializers.ReadOnlyField(source='user.email')
+    user_username = serializers.ReadOnlyField(source='user.username')
 
 
     class Meta:
         model = Post
-        fields = ('id','user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
+        fields = ('id', 'user_email', 'user_username', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
                   'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number', 'phone',
-                  'is_activated', 'reviews', 'date_created')
+                  'is_activated', 'reviews', 'date_created', 'status')
         # read_only_fields = ['user']
 
 
