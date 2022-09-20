@@ -1,6 +1,15 @@
 from django.contrib import admin
+from chat.models import Message, Thread
 
-from .models import Message
+
+class MessageInline(admin.StackedInline):
+    model = Message
+    fields = ('sender', 'text')
+    readonly_fields = ('sender', 'text')
 
 
-admin.site.register(Message)
+class ThreadAdmin(admin.ModelAdmin):
+    model = Thread
+    inlines = (MessageInline,)
+
+admin.site.register(Thread, ThreadAdmin)

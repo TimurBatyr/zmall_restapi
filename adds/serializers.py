@@ -59,12 +59,12 @@ class PostImagesSerializer(serializers.ModelSerializer):
         model = PostImages
         fields = "__all__"
 
-    def validate(self, attrs,pk):
-        # post=PostImages.objects.filter(post=pk).values('pk')
-        # post=Post.objects.get(pk=post[0]['pk'])
-        if PostImages.objects.filter(post='post.id').count() > 8:
-            raise ValidationError('Number of images should not exceed 7')
-        return attrs
+    # def validate(self, attrs):
+    #     # post=PostImages.objects.filter(post=pk).values('pk')
+    #     # post=Post.objects.get(pk=post[0]['pk'])
+    #     if PostImages.objects.filter(post='post.id').count() > 8:
+    #         raise ValidationError('Number of images should not exceed 7')
+    #     return attrs
 
 
 class ContactSerializer(serializers.ModelSerializer):

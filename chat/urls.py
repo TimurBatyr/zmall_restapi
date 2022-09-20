@@ -1,7 +1,6 @@
-from django.urls import path
-
-from .views import MessageAPIView
+from django.urls import path, include
+from chat.views import ThreadView
 
 urlpatterns = [
-    path('chat/', MessageAPIView.as_view()),
+    path('<str:username>/', ThreadView.as_view())
 ]
