@@ -52,19 +52,32 @@ class PostCreateSerializer(serializers.ModelSerializer):
                   'from_price', 'to_price', 'image', 'email', 'phone_number', 'wa_number',
                   'is_activated')
 
+    # def validate(self, data):
+    #
+    #     images = self.context.get('images')
+    #     user = self.context.get('user')
+    #     if len(images) > 8:
+    #         raise serializers.ValidationError({'images': 'Images can not be more than 8'})
+    #     data['user'] = user
+    #
+    #     return data
+    #
+    # def create(self, validated_data):
+    #     instance = super(PostCreateSerializer, self).create(validated_data)
+    #     instance.save()
+    #     images = self.context.get('images')
+    #
+    #     for image in images:
+    #         PostImages.objects.create(advertisement=instance, image=image)
+    #
+    #     return instance
+
 
 class PostImagesSerializer(serializers.ModelSerializer):
     ''' Create images for a post'''
     class Meta:
         model = PostImages
         fields = "__all__"
-
-    def validate(self, attrs,pk):
-        # post=PostImages.objects.filter(post=pk).values('pk')
-        # post=Post.objects.get(pk=post[0]['pk'])
-        if PostImages.objects.filter(post='post.id').count() > 8:
-            raise ValidationError('Number of images should not exceed 7')
-        return attrs
 
 
 class ContactSerializer(serializers.ModelSerializer):
@@ -118,15 +131,26 @@ class PostEditSerializer(serializers.ModelSerializer):
     phone = ContactSerializer(many=True)
     subscription = SubscriptionSerializer(read_only=True)
     reviews = ReviewSerializer(many=True)
+    user_email = serializers.ReadOnlyField(source='user.email')
+    user_username = serializers.ReadOnlyField(source='user.username')
 
 
     class Meta:
         model = Post
-        fields = ('id','user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
+        fields = ('id', 'user_email', 'user_username', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
                   'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number', 'phone',
-                  'is_activated', 'reviews', 'date_created')
+                  'is_activated', 'reviews', 'date_created', 'status')
         # read_only_fields = ['user']
 
+
+class PostDetailSerializer(serializers.ModelSerializer):
+    ''' Editing(detail, delete, update(just for post) post'''
+
+    class Meta:
+        model = Post
+        # fields = '__all__'
+        exclude =['image']
+        # read_only_fields = ['user']
 
 
 class PostListSerializer(serializers.ModelSerializer):

@@ -39,23 +39,24 @@ class City(models.Model):
 
 LIST = (
     ('VIP', 'VIP'),
-    ('urgent', 'urgent'),
-    ('highlight', 'highlight'),
+    ('urgent', 'Добавить стикер "Срочно"'),
+    ('highlight', 'Выделить цветом'),
 )
 
 PERIOD = (
-    ('5 days', '5 days'),
-    ('10 days', '10 days'),
-    ('15 days', '15 days'),
-    ('20 days', '20 days'),
-    ('25 days', '25 days'),
-    ('30 days', '30 days'),
+    ('5 days', '5'),
+    ('10 days', '10'),
+    ('15 days', '15'),
+    ('20 days', '20'),
+    ('25 days', '25'),
+    ('30 days', '30'),
 )
 
 
 class Subscription(models.Model):
     choice = models.CharField(max_length=100, choices=LIST)
     price = models.DecimalField(max_digits=20, decimal_places=2, default=0)
+    text = models.CharField(max_length=100)
     icon_image = models.ImageField()
     period = models.CharField(max_length=100, choices=PERIOD)
 
@@ -89,7 +90,7 @@ class Post(models.Model):
     wa_number = PhoneNumberField(default='No number')
     is_activated = models.BooleanField(default=True)
     views = models.IntegerField(default=0)
-    status = models.CharField(max_length=100, choices=STATUS, default=('in_progress', 'in_progress'))
+    status = models.CharField(max_length=100, choices=STATUS, default='in_progress')
 
     def __str__(self):
         return f'ID {self.id} : {self.title}'
@@ -160,19 +161,19 @@ class Favorite(models.Model):
 
 
 COMPLAIN_LIST = (
-    ('Неверная рубрика', 'Неверная рубрика'),
-    ('Запрещенный товар', 'Запрещенный товар'),
-    ('Объявление не актуально', 'Объявление не актуально'),
-    ('Неверный адрес', 'Неверный адрес'),
-    ('Другое', 'Другое'),
+    ('wrong', 'Неверная рубрика'),
+    ('forbidden', 'Запрещенный товар'),
+    ('not_relevant', 'Объявление не актуально'),
+    ('wrong_address', 'Неверный адрес'),
+    ('other', 'Другое'),
     ('', ''),
 )
 
 
 class PostComplaint(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="post_complain")
-    reason_message = models.CharField(max_length=100)
-    choice = models.CharField(max_length=100, choices=COMPLAIN_LIST, default=('', ''), null=True, blank=True)
+    reason_message = models.CharField(max_length=100, blank=True, null=True)
+    choice = models.CharField(max_length=100, choices=COMPLAIN_LIST, default=(''), null=True, blank=True)
 
     class Meta:
         ordering = ['-id']
