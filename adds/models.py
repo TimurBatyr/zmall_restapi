@@ -150,14 +150,11 @@ class ReviewPost(models.Model):
 
 
 class Favorite(models.Model):
-    post = models.ManyToManyField(Post, related_name='post')
+    post = models.ManyToManyField(Post, related_name='favorite_post')
     user = models.OneToOneField(User, related_name='user', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.post} - {self.user}'
-
-
-
 
 
 COMPLAIN_LIST = (

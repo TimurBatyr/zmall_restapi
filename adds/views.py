@@ -3,10 +3,9 @@ import datetime
 import django_filters
 import redis
 from django.db.models import Q
-from django.http import Http404, JsonResponse
-from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import generics, viewsets, status, filters as f
+from rest_framework import generics, status, filters as f
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.parsers import MultiPartParser, FormParser
@@ -46,10 +45,12 @@ class CityAPIView(generics.ListAPIView):
     serializer_class = CitySerializer
 
 
-class SubscriptionAPIView(generics.ListAPIView):
+class SubscriptionViewSet(ModelViewSet):
     '''List of subscriptions'''
     queryset = Subscription.objects.all()
     serializer_class = SubscriptionSerializer
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
 
 
 class PostCreate(generics.CreateAPIView):
@@ -58,20 +59,6 @@ class PostCreate(generics.CreateAPIView):
     permission_classes = [AllowAny]
     # permission_classes = [IsAuthenticated]
 
-    # def create(self, request, *args, **kwargs):
-    #     images = request.FILES.getlist('images')
-    #     data = request.data
-    #
-    #     context_data = {
-    #         'images': images,
-    #         'user': request.user
-    #     }
-    #
-    #     serializer = self.get_serializer(data=data, context=context_data)
-    #     serializer.is_valid(raise_exception=True)
-    #     serializer.save()
-    #
-    #     return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 class PostImagesView(APIView):
@@ -119,6 +106,15 @@ class PostContactsCreate(generics.CreateAPIView):
     # permission_classes = [IsAuthenticated]
 
 
+class ContactsEdit(generics.RetrieveUpdateDestroyAPIView):
+    '''Contacts Update/delete/detail'''
+    serializer_class = ContactSerializer
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
+    lookup_field = 'pk'
+    queryset = PostContacts.objects.all()
+
+
 class PostDetail(generics.RetrieveDestroyAPIView):
     '''Post Update/delete/detail'''
 
@@ -137,15 +133,6 @@ class PostEdit(generics.RetrieveUpdateAPIView):
     permission_classes = [AllowAny]
     lookup_field ='pk'
     queryset = Post.objects.all()
-
-
-class PostContactsDetail(generics.RetrieveUpdateDestroyAPIView):
-    '''Contacts Update/delete/detail'''
-    serializer_class = ContactSerializer
-    # permission_classes = [IsAuthenticated, UserPermission, ]
-    permission_classes = [AllowAny]
-    lookup_field = 'pk'
-    queryset = PostContacts.objects.all()
 
 
 class PostListHighlightPagination(Pagination):
@@ -173,7 +160,6 @@ class PostList(generics.ListAPIView):
     serializer_class = PostListSerializer
     filter_backends = [SearchFilter, DjangoFilterBackend, f.OrderingFilter]
     search_fields = ['title', 'description']
-    # filterset_fields = ['category', ]
     ordering_fields = ['date_created', 'from_price']
     queryset = Post.objects.filter(Q(subscription__choice='highlight') | Q(subscription__choice='VIP') |
                                    Q(subscription__choice='urgent'), is_activated=True)
@@ -198,14 +184,12 @@ class PostlistDate(generics.ListAPIView):
     filterset_class = ProductFilter
 
 
-
 class MyPostList(generics.ListAPIView):
     '''Post Filter'''
     filter_backends = [DjangoFilterBackend]
     serializer_class = PostListSerializer
     filter_backends = [SearchFilter, DjangoFilterBackend, f.OrderingFilter]
     search_fields = ['title', 'description']
-    # filterset_fields = ['category', ]
     ordering_fields = ['date_created', 'from_price']
     queryset = Post.objects.filter(Q(subscription__choice='highlight') | Q(subscription__choice='VIP') |
                                    Q(subscription__choice='urgent'), is_activated=True)
@@ -230,8 +214,8 @@ class ReviewCreateView(APIView):
 class FavoriteCreateView(generics.CreateAPIView):
     queryset = Favorite.objects.all()
     serializer_class = FavoriteSerializer
-    permission_classes = [IsAuthenticated, UserPermission, ]
-    # permission_classes = [AllowAny]
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -248,7 +232,7 @@ class FavoriteUpdateView(generics.UpdateAPIView):
     permission_classes = [IsAuthenticated, UserPermission, ]
     # permission_classes = [AllowAny]
 
-    def perform_create(self, serializer):
+    def patch(self, serializer):
         serializer.save(user=self.request.user)
 
 
@@ -264,6 +248,15 @@ class FavoriteGetDeleteView(generics.RetrieveDestroyAPIView):
     serializer_class = FavoriteSerializer
     # permission_classes = [IsAuthenticated, UserPermission, ]
     permission_classes = [AllowAny]
+
+
+class FavoriteViewSet(ModelViewSet):
+    '''Favorite posts'''
+    queryset = Favorite.objects.all()
+    serializer_class = FavoriteSerializer
+    # permission_classes = [IsAuthenticated, UserPermission, ]
+    permission_classes = [AllowAny]
+
 
 
 class PostComplaintView(generics.CreateAPIView):

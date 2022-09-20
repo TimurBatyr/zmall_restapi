@@ -1,4 +1,5 @@
 import os
+import urllib.request
 
 import requests
 from bs4 import BeautifulSoup
@@ -22,7 +23,12 @@ def get_subcategory(POSTSOUD):
 def get_img(POSTSOUD):
     posts = POSTSOUD.find('div', class_='vacancy_item_block').find_all('img')
     if posts:
-        return 'http:' + posts[0]['src']
+        img_link = 'http:' + posts[0]['src']
+        if not os.path.exists('media/images'):
+            os.mkdir('media/images')
+        img = img_link.split('/')
+        urllib.request.urlretrieve(img_link, f'media/images/{img[-1]}')
+        return f'images/{img[-1]}'
 
 
 def get_title(POSTSOUD):
@@ -59,7 +65,8 @@ def get_email(POSTSOUD):
 
     if len(email.text.split()) >= 4 and email.text.split()[2] == 'Email:':
         return email.text.split()[-1]
-
+    else:
+        return 'no@noemail.com'
 
 def get_descrition(POSTSOUD):
     desc = POSTSOUD.find_all(class_='desc')

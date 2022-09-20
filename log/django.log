@@ -17932,3 +17932,1842 @@ django.core.exceptions.ImproperlyConfigured: Field name `user_email` is not vali
 2022-09-20 17:47:40,203 [basehttp | INFO] "GET /api/v1/adds/detailpost/1 HTTP/1.1" 200 967
 2022-09-20 17:48:47,897 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/models.py changed, reloading.
 2022-09-20 20:23:26,385 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 21:28:47,191 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 21:29:19,374 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 16550
+2022-09-20 21:29:19,473 [basehttp | INFO] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2022-09-20 21:29:19,636 [basehttp | INFO] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2022-09-20 21:29:22,810 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 43280
+2022-09-20 21:29:22,860 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-20 21:29:35,816 [basehttp | INFO] "GET /admin/adds/post/200/change/ HTTP/1.1" 200 27842
+2022-09-20 21:29:35,860 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-20 21:29:42,376 [basehttp | INFO] "GET /media/images/1663563968.500.jpg HTTP/1.1" 200 54464
+2022-09-20 21:35:10,647 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-20 21:35:17,106 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 21:47:59,892 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-20 21:48:05,460 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:01:18,388 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-20 22:01:22,005 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:03:20,713 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-20 22:03:23,327 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:17:22,436 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-20 22:17:25,409 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:17:55,900 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:19:09,553 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 16550
+2022-09-20 22:19:12,222 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 15436
+2022-09-20 22:19:12,274 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-20 22:20:16,302 [basehttp | INFO] "GET /api/v1/account/userview/4 HTTP/1.1" 200 62
+2022-09-20 22:20:40,188 [log | WARNING] Unauthorized: /api/v1/account/usercrud/
+2022-09-20 22:20:40,190 [basehttp | WARNING] "PATCH /api/v1/account/usercrud/ HTTP/1.1" 401 58
+2022-09-20 22:22:51,902 [basehttp | INFO] "POST /api/v1/account/register/ HTTP/1.1" 201 54
+2022-09-20 22:23:25,582 [basehttp | INFO] "POST /api/v1/account/activate/ HTTP/1.1" 200 38
+2022-09-20 22:23:29,962 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 583
+2022-09-20 22:25:13,228 [basehttp | INFO] "PATCH /api/v1/account/usercrud/ HTTP/1.1" 200 88
+2022-09-20 22:29:16,469 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/views.py changed, reloading.
+2022-09-20 22:29:21,454 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:29:59,631 [log | WARNING] Unauthorized: /api/v1/account/change_password/
+2022-09-20 22:29:59,632 [basehttp | WARNING] "POST /api/v1/account/change_password/ HTTP/1.1" 401 183
+2022-09-20 22:30:49,038 [basehttp | INFO] "POST /api/v1/account/change_password/ HTTP/1.1" 200 45
+2022-09-20 22:31:09,716 [log | WARNING] Unauthorized: /api/v1/account/login/
+2022-09-20 22:31:09,718 [basehttp | WARNING] "POST /api/v1/account/login/ HTTP/1.1" 401 43
+2022-09-20 22:31:26,843 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 581
+2022-09-20 22:31:40,594 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 581
+2022-09-20 22:35:35,430 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/views.py changed, reloading.
+2022-09-20 22:35:38,940 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:39:30,164 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-20 22:39:33,652 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:49:55,271 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-20 22:49:59,362 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:50:09,594 [log | WARNING] Bad Request: /api/v1/account/change_password/
+2022-09-20 22:50:09,594 [basehttp | WARNING] "POST /api/v1/account/change_password/ HTTP/1.1" 400 42
+2022-09-20 22:50:31,451 [log | ERROR] Internal Server Error: /api/v1/account/change_password/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/account/views.py", line 52, in post
+    if user and serializer.is_valid():
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py", line 123, in validate_old_password
+    user = self.context['request'].user
+KeyError: 'request'
+2022-09-20 22:50:31,451 [log | ERROR] Internal Server Error: /api/v1/account/change_password/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/account/views.py", line 52, in post
+    if user and serializer.is_valid():
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py", line 123, in validate_old_password
+    user = self.context['request'].user
+KeyError: 'request'
+2022-09-20 22:50:31,454 [basehttp | ERROR] "POST /api/v1/account/change_password/ HTTP/1.1" 500 111393 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-20 22:50:31,454 [basehttp | ERROR] "POST /api/v1/account/change_password/ HTTP/1.1" 500 111393
+2022-09-20 22:51:24,883 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/views.py changed, reloading.
+2022-09-20 22:51:27,455 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:52:04,614 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-20 22:52:07,266 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:52:10,162 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/views.py changed, reloading.
+2022-09-20 22:52:14,883 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-20 22:52:18,070 [log | WARNING] Bad Request: /api/v1/account/change_password/
+2022-09-20 22:52:18,071 [basehttp | WARNING] "POST /api/v1/account/change_password/ HTTP/1.1" 400 42
+2022-09-20 22:52:36,160 [log | WARNING] Unauthorized: /api/v1/account/login/
+2022-09-20 22:52:36,161 [basehttp | WARNING] "POST /api/v1/account/login/ HTTP/1.1" 401 43
+2022-09-20 22:52:48,570 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 581
+2022-09-20 22:53:35,350 [basehttp | INFO] "POST /api/v1/account/change_password/ HTTP/1.1" 200 45
+2022-09-20 22:54:18,826 [basehttp | INFO] "PATCH /api/v1/account/usercrud/ HTTP/1.1" 200 88
+2022-09-20 22:54:25,562 [log | WARNING] Unauthorized: /api/v1/account/login/
+2022-09-20 22:54:25,564 [basehttp | WARNING] "POST /api/v1/account/login/ HTTP/1.1" 401 43
+2022-09-20 22:54:32,410 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 581
+2022-09-21 00:46:56,590 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 00:47:00,502 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 00:49:06,885 [log | WARNING] Not Found: /api/v1/adds/addimages/2
+2022-09-21 00:49:29,603 [log | WARNING] Not Found: /api/v1/adds/addimages/1
+2022-09-21 00:50:54,526 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/models.py changed, reloading.
+2022-09-21 00:50:57,473 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:03:02,405 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 01:03:07,122 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:03:08,150 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 16550
+2022-09-21 01:03:10,158 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 43280
+2022-09-21 01:03:10,188 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 01:03:22,904 [basehttp | INFO] "GET /admin/adds/post/?p=2 HTTP/1.1" 200 45570
+2022-09-21 01:03:22,930 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 01:03:34,821 [basehttp | INFO] "GET /admin/adds/post/2/change/?_changelist_filters=p%3D2 HTTP/1.1" 200 26977
+2022-09-21 01:03:34,851 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 01:04:12,512 [basehttp | INFO] "GET /admin/adds/post/?p=2 HTTP/1.1" 200 45570
+2022-09-21 01:05:13,047 [log | ERROR] Internal Server Error: /api/v1/adds/postimages @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/postimages/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-21 01:05:13,047 [log | ERROR] Internal Server Error: /api/v1/adds/postimages
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/postimages/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-21 01:05:13,051 [basehttp | ERROR] "POST /api/v1/adds/postimages HTTP/1.1" 500 67182 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 01:05:13,051 [basehttp | ERROR] "POST /api/v1/adds/postimages HTTP/1.1" 500 67182
+2022-09-21 01:05:26,104 [basehttp | INFO] "POST /api/v1/adds/postimages/ HTTP/1.1" 201 77
+2022-09-21 01:05:53,345 [basehttp | INFO] "GET /api/v1/adds/detailpost/1 HTTP/1.1" 200 1001
+2022-09-21 01:06:41,850 [basehttp | INFO] "POST /api/v1/adds/postimages/ HTTP/1.1" 201 77
+2022-09-21 01:06:54,195 [basehttp | INFO] "GET /api/v1/adds/detailpost/1 HTTP/1.1" 200 1079
+2022-09-21 01:11:40,292 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/config/urls.py changed, reloading.
+2022-09-21 01:11:44,676 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:11:56,212 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-21 01:11:57,460 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:12:33,821 [basehttp | INFO] "POST /api/v1/adds/postimages/ HTTP/1.1" 201 288
+2022-09-21 01:13:16,310 [log | WARNING] Not Found: /api/v1/adds/postimages/5/
+2022-09-21 01:13:19,624 [log | WARNING] Not Found: /api/v1/adds/postimages/5/
+2022-09-21 01:13:24,854 [log | WARNING] Not Found: /api/v1/adds/postimages/5
+2022-09-21 01:15:22,039 [log | WARNING] Not Found: /api/v1/adds/addimages/
+2022-09-21 01:15:22,043 [basehttp | WARNING] "GET /api/v1/adds/addimages/?pk=2 HTTP/1.1" 404 7366
+2022-09-21 01:15:28,251 [log | WARNING] Not Found: /api/v1/adds/addimages/
+2022-09-21 01:15:28,252 [basehttp | WARNING] "GET /api/v1/adds/addimages/ HTTP/1.1" 404 7361
+2022-09-21 01:15:30,943 [log | WARNING] Not Found: /api/v1/adds/addimages/
+2022-09-21 01:15:30,944 [basehttp | WARNING] "GET /api/v1/adds/addimages/ HTTP/1.1" 404 7361
+2022-09-21 01:15:35,910 [log | WARNING] Not Found: /api/v1/adds/addimages
+2022-09-21 01:15:35,910 [basehttp | WARNING] "GET /api/v1/adds/addimages HTTP/1.1" 404 7358
+2022-09-21 01:15:46,724 [basehttp | INFO] "GET /api/v1/adds/postimages/ HTTP/1.1" 200 443
+2022-09-21 01:23:48,518 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/models.py changed, reloading.
+2022-09-21 01:23:51,437 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:24:31,828 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 01:24:34,780 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:25:01,555 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 01:25:03,675 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:25:10,882 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 01:25:12,074 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:27:17,861 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 01:27:22,162 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:30:52,405 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 01:30:56,842 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:37:27,517 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 01:37:31,096 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:38:09,495 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 01:38:14,173 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:39:00,405 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 01:39:03,170 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:39:39,014 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-21 01:39:41,444 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:39:49,662 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-21 01:39:52,476 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:40:17,719 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-21 01:40:20,088 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:41:30,709 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-21 01:41:33,507 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:41:43,353 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-21 01:41:45,718 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:43:09,205 [basehttp | INFO] "GET /api/v1/adds/subscription HTTP/1.1" 301 0
+2022-09-21 01:43:09,255 [basehttp | INFO] "GET /api/v1/adds/subscription/ HTTP/1.1" 200 179
+2022-09-21 01:45:41,841 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 01:45:45,077 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:49:19,348 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 01:49:22,987 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:49:43,218 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 52
+2022-09-21 01:50:13,218 [basehttp | INFO] "GET /api/v1/adds/postlist/ HTTP/1.1" 200 9648
+2022-09-21 01:50:13,442 [basehttp | INFO] "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+2022-09-21 01:50:18,762 [basehttp | INFO] "GET /api/v1/adds/postlistdate/ HTTP/1.1" 200 37209
+2022-09-21 01:55:50,203 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 01:55:53,587 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 01:56:34,851 [log | WARNING] Unauthorized: /api/v1/adds/favoritecreate/
+2022-09-21 01:56:34,855 [basehttp | WARNING] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 401 183
+2022-09-21 01:56:53,060 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10628e500>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:56:53,060 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10628e500>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:56:53,065 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131685 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 01:56:53,065 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131685
+2022-09-21 01:57:12,046 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 16550
+2022-09-21 01:57:14,146 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 15765
+2022-09-21 01:57:14,198 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 01:57:28,914 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10625e3b0>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:57:28,914 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10625e3b0>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:57:28,916 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131630 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 01:57:28,916 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131630
+2022-09-21 01:57:30,647 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10631ff10>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:57:30,647 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10631ff10>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:57:30,648 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131630 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 01:57:30,648 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131630
+2022-09-21 01:57:37,301 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x1060978b0>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:57:37,301 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x1060978b0>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:57:37,303 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131455 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 01:57:37,303 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131455
+2022-09-21 01:57:42,014 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/favoritecreate/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-21 01:57:42,014 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/favoritecreate/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-21 01:57:42,014 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate HTTP/1.1" 500 66994 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 01:57:42,014 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate HTTP/1.1" 500 66994
+2022-09-21 01:57:48,975 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10639e830>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:57:48,975 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 338, in __set__
+    super().__set__(instance, value)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x10639e830>": "Favorite.user" must be a "User" instance.
+2022-09-21 01:57:48,976 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131455 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 01:57:48,976 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 131455
+2022-09-21 01:57:57,806 [log | WARNING] Method Not Allowed: /api/v1/adds/favoritecreate/
+2022-09-21 01:57:57,809 [basehttp | WARNING] "GET /api/v1/adds/favoritecreate/ HTTP/1.1" 405 40
+2022-09-21 01:58:10,851 [log | WARNING] Method Not Allowed: /api/v1/adds/favoritecreate/
+2022-09-21 01:58:10,852 [basehttp | WARNING] "PATCH /api/v1/adds/favoritecreate/ HTTP/1.1" 405 42
+2022-09-21 01:58:52,405 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 581
+2022-09-21 01:59:14,339 [log | WARNING] Method Not Allowed: /api/v1/adds/favoritecreate/
+2022-09-21 01:59:14,340 [basehttp | WARNING] "GET /api/v1/adds/favoritecreate/ HTTP/1.1" 405 40
+2022-09-21 01:59:58,044 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 53
+2022-09-21 02:00:09,084 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+2022-09-21 02:00:09,084 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+2022-09-21 02:00:09,088 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 191113 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:00:09,088 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 191113
+2022-09-21 02:00:24,713 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+2022-09-21 02:00:24,713 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+2022-09-21 02:00:24,727 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 191252 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:00:24,727 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 191252
+2022-09-21 02:00:43,908 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 105
+2022-09-21 02:01:37,906 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/favoritecreate/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-21 02:01:37,906 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/favoritecreate/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-21 02:01:37,919 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate HTTP/1.1" 500 67373 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:01:37,919 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate HTTP/1.1" 500 67373
+2022-09-21 02:01:48,213 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+2022-09-21 02:01:48,213 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+2022-09-21 02:01:48,215 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 191113 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:01:48,215 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 191113
+2022-09-21 02:02:04,836 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+2022-09-21 02:02:04,836 [log | ERROR] Internal Server Error: /api/v1/adds/favoritecreate/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py", line 221, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: adds_favorite.user_id
+2022-09-21 02:02:04,837 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 191053 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:02:04,837 [basehttp | ERROR] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 500 191053
+2022-09-21 02:05:28,125 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/views.py changed, reloading.
+2022-09-21 02:05:31,946 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 02:06:47,315 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/urls.py changed, reloading.
+2022-09-21 02:06:50,951 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 02:06:59,871 [basehttp | INFO] "GET /api/v1/adds/favorites HTTP/1.1" 301 0
+2022-09-21 02:06:59,908 [basehttp | INFO] "GET /api/v1/adds/favorites/ HTTP/1.1" 200 105
+2022-09-21 02:07:26,357 [log | ERROR] Internal Server Error: /api/v1/adds/favorites @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/favorites/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-21 02:07:26,357 [log | ERROR] Internal Server Error: /api/v1/adds/favorites
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/adds/favorites/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2022-09-21 02:07:26,359 [basehttp | ERROR] "POST /api/v1/adds/favorites HTTP/1.1" 500 67281 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:07:26,359 [basehttp | ERROR] "POST /api/v1/adds/favorites HTTP/1.1" 500 67281
+2022-09-21 02:07:35,370 [log | ERROR] Internal Server Error: /api/v1/adds/favorites/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+2022-09-21 02:07:35,370 [log | ERROR] Internal Server Error: /api/v1/adds/favorites/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+2022-09-21 02:07:35,374 [basehttp | ERROR] "POST /api/v1/adds/favorites/ HTTP/1.1" 500 187699 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:07:35,374 [basehttp | ERROR] "POST /api/v1/adds/favorites/ HTTP/1.1" 500 187699
+2022-09-21 02:08:33,593 [log | ERROR] Internal Server Error: /api/v1/adds/favorites/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+2022-09-21 02:08:33,593 [log | ERROR] Internal Server Error: /api/v1/adds/favorites/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+2022-09-21 02:08:33,597 [basehttp | ERROR] "POST /api/v1/adds/favorites/ HTTP/1.1" 500 187814 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:08:33,597 [basehttp | ERROR] "POST /api/v1/adds/favorites/ HTTP/1.1" 500 187814
+2022-09-21 02:10:08,767 [basehttp | INFO] "GET /api/v1/adds/favorites/ HTTP/1.1" 200 105
+2022-09-21 02:10:30,327 [log | ERROR] Internal Server Error: /api/v1/adds/favorites/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+2022-09-21 02:10:30,327 [log | ERROR] Internal Server Error: /api/v1/adds/favorites/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+2022-09-21 02:10:30,329 [basehttp | ERROR] "POST /api/v1/adds/favorites/ HTTP/1.1" 500 187639 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:10:30,329 [basehttp | ERROR] "POST /api/v1/adds/favorites/ HTTP/1.1" 500 187639
+2022-09-21 02:11:59,328 [log | ERROR] Internal Server Error: /api/v1/adds/favorites/ @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+2022-09-21 02:11:59,328 [log | ERROR] Internal Server Error: /api/v1/adds/favorites/
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: adds_favorite.user_id
+2022-09-21 02:11:59,332 [basehttp | ERROR] "POST /api/v1/adds/favorites/ HTTP/1.1" 500 187655 @ /Users/timur/Desktop/ZEON/zmall_restapi/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-21 02:11:59,332 [basehttp | ERROR] "POST /api/v1/adds/favorites/ HTTP/1.1" 500 187655
+2022-09-21 02:13:54,682 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 15765
+2022-09-21 02:13:54,727 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
