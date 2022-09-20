@@ -56,10 +56,10 @@ class ConfPolitics(models.Model):
     def __str__(self):
         return self.title
 
+
 class Footer(models.Model):
     """Footer"""
-    title = models.CharField(max_length=100)
     image = models.ImageField()
     link = models.URLField()
     def __str__(self):
-        return f'ID:{self.id} - {self.title} - {self.link}'
+        return f'ID:{self.id} - {self.link}'

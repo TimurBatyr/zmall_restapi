@@ -99,11 +99,18 @@ class ReviewSerializer(serializers.ModelSerializer):
 class FavoriteSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.email')
 
+
     class Meta:
         model = Favorite
-        fields = ['id', 'post', 'user']
-        write_only_fields = "user"
-
+        fields = ['id', 'user', 'post', 'favorites']
+    def create(self, validated_data):
+        request = self.context.get('request')
+        user = request.user
+        post = validated_data.get('post')
+        favorite= Favorite.objects.get_or_create(user=user, post=post)[0]
+        favorite.favorites = True if favorite.favorites is False else False
+        favorite.save()
+        return favorite
 
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''

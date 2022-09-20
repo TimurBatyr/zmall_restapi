@@ -6,7 +6,6 @@ from .views import *
 
 router = DefaultRouter()
 router.register('subscription', SubscriptionViewSet)
-router.register('favorites', FavoriteViewSet)
 
 
 urlpatterns = [
@@ -29,7 +28,6 @@ urlpatterns = [
     path("review/", views.ReviewCreateView.as_view(), name="review"),
 
     path('favoritecreate/', FavoriteCreateView.as_view()),
-    path('favoriteupdate/<int:pk>/', FavoriteUpdateView.as_view()),
     path('favorite/', FavoriteListView.as_view()),
     path('favorite/<int:pk>/', FavoriteGetDeleteView.as_view()),
 
