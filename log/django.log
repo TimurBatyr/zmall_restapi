@@ -1870,3 +1870,4 @@ LINE 1: ...ession_data", "django_session"."expire_date" FROM "django_se...
 2022-09-21 13:49:00,411 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 2022-09-21 13:49:01,280 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 13054
 2022-09-21 13:49:01,342 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 13:54:48,649 [autoreload | INFO] Watching for file changes with StatReloader
