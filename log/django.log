@@ -20517,3 +20517,4 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2022-09-21 04:21:52,378 [autoreload | INFO] Watching for file changes with StatReloader
 2022-09-21 04:21:56,231 [basehttp | INFO] "GET /api/v1/info/footer/ HTTP/1.1" 200 5782
 2022-09-21 04:21:57,298 [basehttp | INFO] "GET /api/v1/info/footer/ HTTP/1.1" 200 5782
+2022-09-21 11:35:06,486 [autoreload | INFO] Watching for file changes with StatReloader
