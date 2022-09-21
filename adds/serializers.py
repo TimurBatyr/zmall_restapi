@@ -127,7 +127,7 @@ class PostEditSerializer(serializers.ModelSerializer):
     images = PostImagesSerializer(many=True)
     phone = ContactSerializer(many=True)
     subscription = SubscriptionSerializer(read_only=True)
-    reviews = ReviewSerializer(many=True)
+    reviews = ReviewSerializer(many=True, read_only=True)
     user_email = serializers.ReadOnlyField(source='user.email')
     user_username = serializers.ReadOnlyField(source='user.username')
 
