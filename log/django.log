@@ -20518,3 +20518,58 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2022-09-21 04:21:56,231 [basehttp | INFO] "GET /api/v1/info/footer/ HTTP/1.1" 200 5782
 2022-09-21 04:21:57,298 [basehttp | INFO] "GET /api/v1/info/footer/ HTTP/1.1" 200 5782
 2022-09-21 11:35:06,486 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 11:44:54,148 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 11:45:35,002 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 11:46:03,659 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 18679
+2022-09-21 11:46:08,023 [basehttp | INFO] "GET /admin/account/user/ HTTP/1.1" 200 16093
+2022-09-21 11:46:08,063 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 11:46:37,887 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 69
+2022-09-21 11:46:41,150 [basehttp | INFO] "POST /api/v1/adds/favoritecreate/ HTTP/1.1" 201 70
+2022-09-21 11:47:38,414 [log | WARNING] Not Found: /api/v1/adds/favoritec/
+2022-09-21 11:47:38,414 [basehttp | WARNING] "GET /api/v1/adds/favoritec/ HTTP/1.1" 404 8554
+2022-09-21 11:47:54,369 [basehttp | INFO] "POST /api/v1/account/login/ HTTP/1.1" 200 581
+2022-09-21 11:48:17,419 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 261
+2022-09-21 11:59:46,061 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 11:59:51,925 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:00:19,779 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 12:00:22,563 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:00:30,189 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 12:00:32,496 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:02:15,175 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 12:02:19,389 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:02:21,423 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 1090
+2022-09-21 12:02:52,802 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 12:02:56,284 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:02:59,475 [basehttp | INFO] "GET /api/v1/adds/favorite/ HTTP/1.1" 200 1111
+2022-09-21 12:06:07,917 [basehttp | INFO] "POST /api/v1/adds/postimages/ HTTP/1.1" 201 241
+2022-09-21 12:18:20,338 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-21 12:18:23,844 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:18:54,797 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-21 12:18:57,454 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:20:06,342 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/serializers.py changed, reloading.
+2022-09-21 12:20:09,366 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:20:25,215 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/views.py changed, reloading.
+2022-09-21 12:20:27,574 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:20:38,119 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/views.py changed, reloading.
+2022-09-21 12:20:40,717 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:21:00,841 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/account/views.py changed, reloading.
+2022-09-21 12:21:03,768 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:26:39,523 [autoreload | INFO] /Users/timur/Desktop/ZEON/zmall_restapi/adds/serializers.py changed, reloading.
+2022-09-21 12:26:47,394 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:27:13,996 [basehttp | INFO] "GET /api/v1/adds/category/ HTTP/1.1" 200 6003
+2022-09-21 12:27:55,941 [basehttp | INFO] "GET /admin/adds/post/ HTTP/1.1" 200 43280
+2022-09-21 12:27:55,971 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 12:28:06,168 [basehttp | INFO] "GET /admin/adds/post/?p=2 HTTP/1.1" 200 45481
+2022-09-21 12:28:06,231 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 12:28:16,647 [basehttp | INFO] "GET /admin/adds/post/1/change/?_changelist_filters=p%3D2 HTTP/1.1" 200 27397
+2022-09-21 12:28:16,676 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 12:28:25,344 [basehttp | INFO] "GET /admin/adds/post/?p=2 HTTP/1.1" 200 45481
+2022-09-21 12:28:26,997 [basehttp | INFO] "GET /admin/adds/post/2/change/?_changelist_filters=p%3D2 HTTP/1.1" 200 27029
+2022-09-21 12:28:27,029 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 12:28:32,633 [basehttp | INFO] "GET /admin/adds/post/?p=2 HTTP/1.1" 200 45481
+2022-09-21 12:28:34,197 [basehttp | INFO] "GET /admin/adds/post/7/change/?_changelist_filters=p%3D2 HTTP/1.1" 200 27072
+2022-09-21 12:28:34,239 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 12:28:37,872 [basehttp | INFO] "GET /admin/adds/post/?p=2 HTTP/1.1" 200 45481
+2022-09-21 12:28:39,525 [basehttp | INFO] "GET /admin/adds/post/1/change/?_changelist_filters=p%3D2 HTTP/1.1" 200 27397
+2022-09-21 12:28:39,554 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2022-09-21 12:29:07,600 [basehttp | INFO] "GET /api/v1/adds/subcategory/ HTTP/1.1" 200 7845
