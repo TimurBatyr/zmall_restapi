@@ -29,7 +29,7 @@ urlpatterns = [
 
     path('favoritecreate/', FavoriteCreateView.as_view()),
     path('favorite/', FavoriteListView.as_view()),
-    path('favorite/<int:pk>/', FavoriteGetDeleteView.as_view()),
+    path('favorite/<int:pk>', FavoriteGetDeleteView.as_view()),
 
     path('postcomplaint/', PostComplaintView.as_view()),
 

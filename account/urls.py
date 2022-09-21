@@ -3,7 +3,6 @@ from django.urls import path, include
 from .views import RegistrationAPIView, ActivateView, ForgotPasswordView, ChangePasswordView, LoginAPIView, UserView, \
     UserAccount
 from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
     TokenRefreshView,
 )
 

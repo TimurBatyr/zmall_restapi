@@ -136,9 +136,9 @@ class PostDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = fields = ('id', 'user' 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
-                           'from_price', 'to_price', 'image', 'email', 'phone_number', 'wa_number', 'phone',
-                           'is_activated', 'reviews', 'date_created', 'status')
+        fields = fields = ('id', 'user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
+                           'from_price', 'to_price', 'email', 'phone_number', 'wa_number',
+                           'is_activated', 'date_created')
         # read_only_fields = ['user']
 
 

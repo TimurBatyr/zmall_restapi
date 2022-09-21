@@ -284,7 +284,8 @@ def get_client_ip(request):
 
 class DetailPost(APIView):
     def get(self, request, pk):
-        posts = Post.objects.select_related('category').select_related('subcategory').get(pk=pk)
+        posts = Post.objects.select_related('category').get(pk=pk)
+
         # posts = get_object_or_404(Post, pk=pk)#1
         title = Post.objects.values('title').filter(pk=pk)#2
         title = title[0]['title']
@@ -312,10 +313,10 @@ class DetailPost(APIView):
 
         serializer_view = ViewSerializer(view, many=False).data
         serializer = PostEditSerializer(posts, many=False).data
-
+        post_sub = Post.objects.prefetch_related('subcategory').get(pk=pk)
         context = {
             'add': {**serializer, 'category': posts.category.title,
-                'subcategory':posts.subcategory.title},
+                'subcategory':post_sub.subcategory.title},
             'view': serializer_view
         }
         return Response(context)
