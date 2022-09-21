@@ -20589,3 +20589,4 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2022-09-21 13:00:59,686 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 324275
 2022-09-21 13:00:59,699 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1086481
 2022-09-21 13:01:00,137 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 75522
+2022-09-21 13:51:15,066 [autoreload | INFO] Watching for file changes with StatReloader
