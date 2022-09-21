@@ -20580,3 +20580,12 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2022-09-21 12:54:06,274 [log | WARNING] Bad Request: /api/v1/adds/editpost/3
 2022-09-21 12:54:06,274 [basehttp | WARNING] "PUT /api/v1/adds/editpost/3 HTTP/1.1" 400 16676
 2022-09-21 12:54:40,410 [basehttp | INFO] "PUT /api/v1/adds/editpost/3 HTTP/1.1" 200 17752
+2022-09-21 13:00:47,239 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 13:00:59,559 [basehttp | INFO] "GET /swagger/ HTTP/1.1" 200 2160
+2022-09-21 13:00:59,657 [basehttp | INFO] "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+2022-09-21 13:00:59,664 [basehttp | INFO] "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+2022-09-21 13:00:59,665 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+2022-09-21 13:00:59,678 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 143858
+2022-09-21 13:00:59,686 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 324275
+2022-09-21 13:00:59,699 [basehttp | INFO] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1086481
+2022-09-21 13:01:00,137 [basehttp | INFO] "GET /swagger/?format=openapi HTTP/1.1" 200 75522
