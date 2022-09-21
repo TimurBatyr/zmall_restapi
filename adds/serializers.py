@@ -99,7 +99,6 @@ class ReviewSerializer(serializers.ModelSerializer):
 class FavoriteSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.email')
 
-
     class Meta:
         model = Favorite
         fields = ['id', 'user', 'post', 'favorites']

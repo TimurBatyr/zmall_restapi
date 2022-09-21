@@ -48,11 +48,11 @@ class TestAdds(APITestCase):
         self.assertEqual(response.data['count'], 2)
         self.assertEqual(response.status_code, 200)
 
-    def test_subscription(self):
-        self.test = Subscription.objects.create(choice='urgent', price=500)
-        response = self.client.get(reverse('subscription'))
-        self.assertEqual(response.data['count'], 2)
-        self.assertEqual(response.status_code, 200)
+    # def test_subscription(self):
+    #     self.test = Subscription.objects.create(choice='urgent', price=500)
+    #     response = self.client.get(reverse('subscription'))
+    #     self.assertEqual(response.data['count'], 2)
+    #     self.assertEqual(response.status_code, 200)
 
     def test_city(self):
         self.test = City.objects.create(title='Bishkek', slug='Bishkek')
@@ -79,53 +79,5 @@ class TestAdds(APITestCase):
         self.assertEqual(response.status_code, 200)
 
 
-
-
-
-
-
-    # def test_create_post_invalid_user(self):
-    #     data = self.data.copy()
-    #     client = APIClient()
-    #     url = reverse('createpost')
-    #     response = client.post(url, data, format='json')
-    #     self.assertEqual(response.status_code, 401)
-
-
-    # def test_filtering_by_price(self):
-    #     client = APIClient()
-    #     url = reverse('postlist')
-    #     params = {'price_from': 8500}
-    #     response = client.get(url, params)
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertEqual(len(response.data['results']), 1)
-
-
-
-
-    # def authenticate(self):
-    #     self.client.post(reverse('register'), {
-    #         'username': 'username',
-    #         'email': 'email@email.com',
-    #         'password': 'adminemail',
-    #         'password_confirm': 'adminemail'})
-    #     user.is_active = True
-    #     user.save()
-    #     response = self.client.post(reverse('login'), {
-    #         'email': 'email@email.com',
-    #         'password': 'adminemail',
-    #         })
-    #     self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {response.data["token"]}')
-    #
-    # def test_create_post_validu_ser(self):
-    #     self.authenticate()
-    #     data = self.data.copy()
-    #     response =self.client.post(reverse('createpost'), data, format='json')
-    #     self.assertEqual(response.status_code, 201)
-
-    # def test_create_post_valid_user(self):
-    #     self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.user_token.key)
-    #     response = self.client.post(reverse('createpost'), self.data, format='json')
-    #     self.assertEqual(response.status_code, 201)
 
 

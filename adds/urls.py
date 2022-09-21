@@ -5,7 +5,7 @@ from . import views
 from .views import *
 
 router = DefaultRouter()
-router.register('subscription', SubscriptionViewSet)
+router.register('subscription', SubscriptionViewSet, basename='subscription')
 
 
 urlpatterns = [
