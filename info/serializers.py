@@ -44,4 +44,8 @@ class FooterSerializer(serializers.ModelSerializer):
         model = Footer
         fields = '__all__'
 
+    def to_representation(self, instance):
+        repr = super().to_representation(instance)
+        repr["text"] = "@ 2022 все права защищены"
+        return repr
 

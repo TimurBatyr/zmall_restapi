@@ -52,26 +52,6 @@ class PostCreateSerializer(serializers.ModelSerializer):
                   'from_price', 'to_price', 'image', 'email', 'phone_number', 'wa_number',
                   'is_activated')
 
-    # def validate(self, data):
-    #
-    #     images = self.context.get('images')
-    #     user = self.context.get('user')
-    #     if len(images) > 8:
-    #         raise serializers.ValidationError({'images': 'Images can not be more than 8'})
-    #     data['user'] = user
-    #
-    #     return data
-    #
-    # def create(self, validated_data):
-    #     instance = super(PostCreateSerializer, self).create(validated_data)
-    #     instance.save()
-    #     images = self.context.get('images')
-    #
-    #     for image in images:
-    #         PostImages.objects.create(advertisement=instance, image=image)
-    #
-    #     return instance
-
 
 class PostImagesSerializer(serializers.ModelSerializer):
     ''' Create images for a post'''
@@ -119,11 +99,18 @@ class ReviewSerializer(serializers.ModelSerializer):
 class FavoriteSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.email')
 
+
     class Meta:
         model = Favorite
-        fields = ['id', 'post', 'user']
-
-
+        fields = ['id', 'user', 'post', 'favorites']
+    def create(self, validated_data):
+        request = self.context.get('request')
+        user = request.user
+        post = validated_data.get('post')
+        favorite= Favorite.objects.get_or_create(user=user, post=post)[0]
+        favorite.favorites = True if favorite.favorites is False else False
+        favorite.save()
+        return favorite
 
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''
