@@ -20573,3 +20573,10 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2022-09-21 12:28:39,525 [basehttp | INFO] "GET /admin/adds/post/1/change/?_changelist_filters=p%3D2 HTTP/1.1" 200 27397
 2022-09-21 12:28:39,554 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 2022-09-21 12:29:07,600 [basehttp | INFO] "GET /api/v1/adds/subcategory/ HTTP/1.1" 200 7845
+2022-09-21 12:53:11,911 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-21 12:53:19,582 [basehttp | INFO] "GET /api/v1/adds/detailpost/3 HTTP/1.1" 200 7892
+2022-09-21 12:53:23,707 [basehttp | INFO] "GET /api/v1/adds/detailpost/3 HTTP/1.1" 200 7892
+2022-09-21 12:53:51,004 [basehttp | INFO] "GET /api/v1/adds/editpost/3 HTTP/1.1" 200 17697
+2022-09-21 12:54:06,274 [log | WARNING] Bad Request: /api/v1/adds/editpost/3
+2022-09-21 12:54:06,274 [basehttp | WARNING] "PUT /api/v1/adds/editpost/3 HTTP/1.1" 400 16676
+2022-09-21 12:54:40,410 [basehttp | INFO] "PUT /api/v1/adds/editpost/3 HTTP/1.1" 200 17752
