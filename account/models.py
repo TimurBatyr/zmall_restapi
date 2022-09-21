@@ -8,7 +8,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 class UserManager(BaseUserManager):
     def _create(self, email, password, **kwargs):
         if not email:
-            raise ValueError('The given email must be set')
+            raise ValueError('Укажите почту')
         user = self.model(email=email, **kwargs)
         user.set_password(password)
         user.save()

@@ -22,14 +22,14 @@ class RegistrationSerializer(serializers.ModelSerializer):
 
     def validate_email(self, email):
         if User.objects.filter(email=email).exists():
-            raise serializers.ValidationError('Email has already been taken')
+            raise serializers.ValidationError('Такая почта уже существует')
         return email
 
     def validate(self, validated_data):
         password = validated_data.get('password')
         password_confirm = validated_data.pop('password_confirm')
         if password != password_confirm:
-            raise serializers.ValidationError('Passwords do not match')
+            raise serializers.ValidationError('Пароли не совпали')
         return validated_data
 
     def save(self):
@@ -52,7 +52,7 @@ class ActivationSerializer(serializers.Serializer):
 
         if not User.objects.filter(email=email,
                                    activation_code=activation_code).exists():
-            raise serializers.ValidationError('User not found')
+            raise serializers.ValidationError('Юзер не найден')
         return attrs
 
     def activate(self):
@@ -95,9 +95,9 @@ class LoginSerializer(serializers.ModelSerializer):
                 detail='Please continue your login using ' + filtered_user_by_email[0].auth_provider)
 
         if not user:
-            raise AuthenticationFailed('Invalid credentials, try again')
+            raise AuthenticationFailed('Неверные учетные данные, повторите попытку')
         if not user.is_active:
-            raise AuthenticationFailed('Account disabled, contact admin')
+            raise AuthenticationFailed('Аккаунт отключен, обратитесь к администратору')
 
         return {
             'id': user.id,
@@ -122,14 +122,14 @@ class ChangePasswordSerializer(serializers.Serializer):
     def validate_old_password(self, old_password):
         user = self.context['request'].user
         if not user.check_password(old_password):
-            raise serializers.ValidationError('Type correct password')
+            raise serializers.ValidationError('Введите правильный пароль')
         return old_password
 
     def validate(self, attrs):
          password = attrs.get('new_password')
          password_confirm = attrs.get('password_confirm')
          if password != password_confirm:
-             raise serializers.ValidationError('Passwords do not match')
+             raise serializers.ValidationError('Пароли не совпали')
          return attrs
 
     def set_new_password(self):
@@ -144,7 +144,7 @@ class ForgotPasswordSerializer(serializers.Serializer):
 
     def validate_email(self, email):
         if not User.objects.filter(email=email).exists():
-            raise serializers.ValidationError('User not found')
+            raise serializers.ValidationError('Юзер не найден')
         return email
 
     def create_new_password(self, email):

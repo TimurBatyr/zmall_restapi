@@ -12,7 +12,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
-        representation['count_category_posts'] = Post.objects.filter(category=instance).count()
+        representation['count_category_posts'] = Post.objects.filter(category=instance, is_activated=True).count()
         return representation
 
 
@@ -24,7 +24,7 @@ class SubcategorySerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
-        representation['count_subcategory_posts'] = Post.objects.filter(subcategory=instance).count()
+        representation['count_subcategory_posts'] = Post.objects.filter(subcategory=instance, is_activated=True).count()
         return representation
 
 
@@ -96,13 +96,22 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'text', 'children', 'email')
 
 
+class FavoriteFieldsSerializer(serializers.ModelSerializer):
+    ''' For favorite '''
+
+    class Meta:
+        model = Post
+        fields = ('id', 'city', 'subscription', 'title', 'from_price', 'image', 'is_activated')
+
+
 class FavoriteSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.email')
-
+    post = FavoriteFieldsSerializer()
 
     class Meta:
         model = Favorite
         fields = ['id', 'user', 'post', 'favorites']
+
     def create(self, validated_data):
         request = self.context.get('request')
         user = request.user
@@ -111,6 +120,7 @@ class FavoriteSerializer(serializers.ModelSerializer):
         favorite.favorites = True if favorite.favorites is False else False
         favorite.save()
         return favorite
+
 
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''

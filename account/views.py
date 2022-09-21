@@ -15,7 +15,7 @@ class RegistrationAPIView(generics.GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response('Successfully registered. Check your email to confirm', status=status.HTTP_201_CREATED)
+        return Response('Успешно зарегистрирован. Проверьте свою электронную почту, чтобы подтвердить', status=status.HTTP_201_CREATED)
 
 
 class ActivateView(generics.GenericAPIView):
@@ -25,7 +25,7 @@ class ActivateView(generics.GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.activate()
-        return Response('Your account successfully activated!', status=status.HTTP_200_OK)
+        return Response('Ваш аккаунт успешно активирован!', status=status.HTTP_200_OK)
 
 
 class LoginAPIView(generics.GenericAPIView):
@@ -44,7 +44,7 @@ class ChangePasswordView(APIView):
         serializer = ChangePasswordSerializer(data=data, context={'request': request})
         if serializer.is_valid(raise_exception=True):
             serializer.set_new_password()
-            return Response('You have successfully updated your password')
+            return Response('Вы успешно обновили свой учетные данные')
 
 
 class ForgotPasswordView(APIView):
@@ -53,7 +53,7 @@ class ForgotPasswordView(APIView):
         serializer = ForgotPasswordSerializer(data=data)
         serializer.is_valid(raise_exception=True)
         serializer.create_new_password(serializer.data['email'])
-        return Response('New password has been sent to your email')
+        return Response('Новый пароль отправлен на вашу электронную почту')
 
 
 class UserView(generics.RetrieveAPIView):
