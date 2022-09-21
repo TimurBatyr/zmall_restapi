@@ -397,7 +397,7 @@ def get_post_number(client, number, pk):
 
 class Contacts(APIView):
     def get(self, request, pk):
-
+        print('oOOOOOOOOOKKKKKKKKKK')
         post_object = Post.objects.get(pk=pk)
         number = PostContacts.objects.get(post_number=post_object)
 

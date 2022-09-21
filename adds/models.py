@@ -39,8 +39,8 @@ class City(models.Model):
 
 LIST = (
     ('VIP', 'VIP'),
-    ('urgent', 'Добавить стикер "Срочно"'),
-    ('highlight', 'Выделить цветом'),
+    ('Добавить стикер "Срочно"', 'Добавить стикер "Срочно"'),
+    ('Выделить цветом', 'Выделить цветом'),
 )
 
 PERIOD = (
@@ -58,6 +58,7 @@ class Subscription(models.Model):
     price = models.DecimalField(max_digits=20, decimal_places=2, default=0)
     text = models.CharField(max_length=100)
     icon_image = models.ImageField()
+    outer_image = models.ImageField()
     period = models.CharField(max_length=100, choices=PERIOD)
 
     class Meta:
@@ -68,9 +69,9 @@ class Subscription(models.Model):
 
 
 STATUS = (
-        ('in_progress', 'в рассмотрении'),
-        ('verified', 'одобрено'),
-        ('rejected', 'отклонено')
+        ('в рассмотрени', 'в рассмотрении'),
+        ('одобрено', 'одобрено'),
+        ('отклонено', 'отклонено')
     )
 
 class Post(models.Model):

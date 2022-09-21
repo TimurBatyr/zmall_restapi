@@ -96,17 +96,8 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'text', 'children', 'email')
 
 
-class FavoriteFieldsSerializer(serializers.ModelSerializer):
-    ''' For favorite '''
-
-    class Meta:
-        model = Post
-        fields = ('id', 'city', 'subscription', 'title', 'from_price', 'image', 'is_activated')
-
-
 class FavoriteSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.email')
-    post = FavoriteFieldsSerializer()
 
     class Meta:
         model = Favorite
@@ -134,9 +125,9 @@ class PostEditSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'user_email', 'user_username', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
-                  'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number', 'phone',
-                  'is_activated', 'reviews', 'date_created', 'status')
+        fields = ('id', 'user_email', 'user_username', 'category', 'subcategory', 'city', 'subscription', 'title',
+                  'description', 'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number',
+                  'phone', 'is_activated', 'reviews', 'date_created', 'status')
         # read_only_fields = ['user']
 
 
@@ -145,8 +136,9 @@ class PostDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        # fields = '__all__'
-        exclude =['image']
+        fields = fields = ('id', 'user' 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
+                           'from_price', 'to_price', 'image', 'email', 'phone_number', 'wa_number', 'phone',
+                           'is_activated', 'reviews', 'date_created', 'status')
         # read_only_fields = ['user']
 
 
@@ -158,7 +150,6 @@ class PostListSerializer(serializers.ModelSerializer):
         model = Post
         fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image',
                   'description', 'date_created', 'city', 'is_activated', 'status')
-
 
 
 class PostComplaintSerializer(serializers.ModelSerializer):
