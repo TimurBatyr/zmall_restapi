@@ -65,6 +65,9 @@ class ContactSerializer(serializers.ModelSerializer):
         model = PostContacts
         fields = "__all__"
 
+    # def create(self, validated_data):
+    #     return PostContacts.objects.create(**validated_data)
+
 
 class FilterReviewListSerializer(serializers.ListSerializer):
     '''Review filter, only parents'''

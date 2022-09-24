@@ -16,10 +16,9 @@ urlpatterns = [
 
     path('createpost/', views.PostCreate.as_view(), name="createpost"), #no
     path('postimages/', views.PostImagesView.as_view()),
-    path('addcontacts/', views.PostContactsCreate.as_view()),
-    path('editcontacts/<int:pk>', views.ContactsEdit.as_view()),
+    path('postcontacts/', views.PostContactsView.as_view()),
 
-    path('detailpost/<int:pk>', views.PostDetail.as_view()),
+    path('deletepost/<int:pk>', views.PostDelete.as_view()),
     path('editpost/<int:pk>', views.PostEdit.as_view()),
     path('postlist/', views.PostList.as_view(), name="postlist"),
     path('postlistdate/', views.PostlistDate.as_view(), name="postlistdate"),

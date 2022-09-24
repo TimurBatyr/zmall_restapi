@@ -5,10 +5,11 @@ import redis
 from django.db.models import Q
 from django.http import JsonResponse
 from django_filters.rest_framework import DjangoFilterBackend
+from phonenumber_field.validators import validate_international_phonenumber
 from rest_framework import generics, status, filters as f
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -60,7 +61,6 @@ class PostCreate(generics.CreateAPIView):
     # permission_classes = [IsAuthenticated]
 
 
-
 class PostImagesView(APIView):
     '''Adding images to post'''
     permission_classes = [AllowAny]
@@ -98,25 +98,34 @@ class PostImagesView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class PostContactsCreate(generics.CreateAPIView):
-    '''Adding/updating contacts to the post'''
+class PostContactsView(APIView):
+    parser_classes = (MultiPartParser, FormParser)
 
-    serializer_class = ContactSerializer
-    permission_classes = [AllowAny]
-    # permission_classes = [IsAuthenticated]
+    def get(self, request):
+        all_phones = PostContacts.objects.all()
+        serializer = ContactSerializer(all_phones, many=True)
+        return JsonResponse(serializer.data, safe=False)
+
+    def post(self, request, *args, **kwargs):
+        post = request.data['post']
+        post = Post.objects.get(pk=post)
+        list_contacts = []
+        contacts = request.data['phone_number'].split(',')
+        for contact in contacts:
+            validate_international_phonenumber(contact)
+            list_contacts.append(PostContacts(post_number=post, phone_number=contact))
+
+        PostContacts.objects.bulk_create(list_contacts)
+        return Response({"status": "created"}, status=status.HTTP_201_CREATED)
+
+    def delete(self, request):
+        pk = request.GET.get('pk')
+        phone = PostContacts.objects.get(id=pk)
+        phone.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class ContactsEdit(generics.RetrieveUpdateDestroyAPIView):
-    '''Contacts Update/delete/detail'''
-    serializer_class = ContactSerializer
-    # permission_classes = [IsAuthenticated, UserPermission, ]
-    permission_classes = [AllowAny]
-    lookup_field = 'pk'
-    queryset = PostContacts.objects.all()
-
-
-class PostDetail(generics.RetrieveDestroyAPIView):
-    '''Post Update/delete/detail'''
+class PostDelete(generics.RetrieveDestroyAPIView):
 
     serializer_class = PostEditSerializer
     # permission_classes = [IsAuthenticated, UserPermission, ]
@@ -126,7 +135,6 @@ class PostDetail(generics.RetrieveDestroyAPIView):
 
 
 class PostEdit(generics.RetrieveUpdateAPIView):
-    '''Post Update/delete/detail'''
 
     serializer_class = PostDetailSerializer
     # permission_classes = [IsAuthenticated, UserPermission, ]

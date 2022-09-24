@@ -113,9 +113,9 @@ class PostImages(models.Model):
 
 
 class PostContacts(models.Model):
-    post_number = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='phone')
+    post_number = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='post_phone')
     phone_number = PhoneNumberField()
-    view = models.IntegerField(default=0)
+    view = models.IntegerField(default=0, blank=True, null=True)
 
     def __str__(self):
         return f'Contact ID: {self.id}_ {str(self.phone_number)} : {self.post_number.title} ID: {self.post_number.id}'
