@@ -100,6 +100,8 @@ class PostImagesView(APIView):
 
 class PostContactsView(APIView):
     parser_classes = (MultiPartParser, FormParser)
+    permission_classes = [AllowAny]
+    # permission_classes = [IsAuthenticated]
 
     def get(self, request):
         all_phones = PostContacts.objects.all()
