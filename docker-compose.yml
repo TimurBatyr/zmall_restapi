@@ -32,7 +32,6 @@ services:
     depends_on:
       - db_group_c
       - redis_group_c
-      - mongo_gruop_c
 
   redis_group_c:
     image: redis:alpine
@@ -45,13 +44,6 @@ services:
       - ./.env
     depends_on:
       - web_group_c
-
-  mongo_group_c:
-    image: mongo
-    volumes:
-      - ./data-mongodb:/data/db
-    ports:
-      pass
 
 volumes:
     postgres_data:
