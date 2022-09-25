@@ -1,6 +1,7 @@
 import django_filters
 from django.db.models import Q
-from django_filters.rest_framework import filters, DjangoFilterBackend
+from django_filters.rest_framework import DjangoFilterBackend
+from django_filters import rest_framework as filters
 from rest_framework import filters as f
 from rest_framework.filters import SearchFilter
 from rest_framework.viewsets import ModelViewSet
