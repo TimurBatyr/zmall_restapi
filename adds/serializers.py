@@ -101,10 +101,13 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class FavoriteSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.email')
-
+    post_title = serializers.ReadOnlyField(source='post.title')
+    post_price = serializers.ReadOnlyField(source='post.from_price')
+    post_city = serializers.ReadOnlyField(source='post.city')
+    post_subscription = serializers.ReadOnlyField(source='post.subscription')
     class Meta:
         model = Favorite
-        fields = ['id', 'user', 'post', 'favorites']
+        fields = ['id', 'user', 'post', 'favorites', 'post_title', 'post_price', 'post_city', 'post_subscription']
 
     def create(self, validated_data):
         request = self.context.get('request')

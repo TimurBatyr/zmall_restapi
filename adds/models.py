@@ -84,7 +84,7 @@ class Post(models.Model):
     city = models.ForeignKey(City, related_name='posts', on_delete=models.PROTECT, blank=True, null=True)
     subscription = models.ForeignKey(Subscription, related_name='posts', on_delete=models.PROTECT, blank=True, null=True)
     title = models.CharField(max_length=100)
-    description = models.TextField(max_length=300, blank=True, null=True)
+    description = models.TextField(max_length=900, blank=True, null=True)
     from_price = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True)
     to_price = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d', verbose_name='Фотография', blank=True, null=True)
