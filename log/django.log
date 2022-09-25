@@ -53,3 +53,262 @@
 2022-09-21 13:59:24,398 [basehttp | INFO] "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 2022-09-21 13:59:24,534 [basehttp | INFO] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
 2022-09-21 14:00:10,373 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-25 15:09:30,914 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-25 15:14:02,699 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-25 15:15:01,840 [basehttp | INFO] "GET /admin/information/event/add/ HTTP/1.1" 302 0
+2022-09-25 15:15:03,131 [log | WARNING] Not Found: /
+2022-09-25 15:15:03,131 [basehttp | WARNING] "GET / HTTP/1.1" 404 3278
+2022-09-25 15:15:03,576 [basehttp | INFO] "GET /admin/login/?next=/admin/information/event/add/ HTTP/1.1" 200 2260
+2022-09-25 15:15:14,424 [basehttp | INFO] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2616
+2022-09-25 15:15:14,748 [basehttp | INFO] "GET /static/admin/css/login.css HTTP/1.1" 200 954
+2022-09-25 15:15:14,882 [basehttp | INFO] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+2022-09-25 15:15:15,701 [basehttp | INFO] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18575
+2022-09-25 15:15:16,229 [basehttp | INFO] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+2022-09-25 15:15:16,390 [basehttp | INFO] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2022-09-25 15:15:17,831 [log | WARNING] Not Found: /favicon.ico
+2022-09-25 15:15:17,831 [basehttp | WARNING] "GET /favicon.ico HTTP/1.1" 404 3329
+2022-09-25 15:15:17,990 [basehttp | INFO] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+2022-09-25 15:17:16,206 [autoreload | INFO] /home/oskon/PycharmProjects/pythonProject10/zmall_restapi/config/urls.py changed, reloading.
+2022-09-25 15:17:19,540 [autoreload | INFO] Watching for file changes with StatReloader
+2022-09-25 15:17:31,689 [basehttp | INFO] "GET /api/payment HTTP/1.1" 301 0
+2022-09-25 15:17:31,955 [basehttp | INFO] "GET /api/payment/ HTTP/1.1" 200 5358
+2022-09-25 15:17:32,549 [basehttp | INFO] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2022-09-25 15:17:32,550 [basehttp | INFO] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2022-09-25 15:17:32,550 [basehttp | INFO] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2022-09-25 15:17:32,563 [basehttp | INFO] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2022-09-25 15:17:32,564 [basehttp | INFO] "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+2022-09-25 15:17:32,635 [basehttp | INFO] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2022-09-25 15:17:32,796 [basehttp | INFO] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2022-09-25 15:17:32,799 [basehttp | INFO] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2022-09-25 15:17:32,801 [basehttp | INFO] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+2022-09-25 15:17:32,802 [basehttp | INFO] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2022-09-25 15:17:33,345 [basehttp | INFO] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2022-09-25 15:17:42,260 [log | WARNING] Method Not Allowed: /api/payment/create/
+2022-09-25 15:17:42,261 [basehttp | WARNING] "GET /api/payment/create/ HTTP/1.1" 405 7946
+2022-09-25 15:18:28,418 [basehttp | INFO] "GET /admin/ HTTP/1.1" 302 0
+2022-09-25 15:18:28,443 [basehttp | INFO] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2216
+2022-09-25 15:18:28,473 [basehttp | INFO] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2022-09-25 15:18:28,473 [basehttp | INFO] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2022-09-25 15:18:28,474 [basehttp | INFO] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2022-09-25 15:18:28,474 [basehttp | INFO] "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2022-09-25 15:18:28,534 [basehttp | INFO] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2022-09-25 15:18:28,537 [basehttp | INFO] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2022-09-25 15:18:28,638 [basehttp | INFO] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2022-09-25 15:18:28,924 [basehttp | INFO] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+2022-09-25 15:19:45,685 [basehttp | INFO] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2022-09-25 15:19:45,783 [basehttp | INFO] "GET /admin/ HTTP/1.1" 200 15083
+2022-09-25 15:19:45,912 [basehttp | INFO] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+2022-09-25 15:19:45,930 [basehttp | INFO] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2022-09-25 15:19:45,932 [basehttp | INFO] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2022-09-25 15:19:46,111 [basehttp | INFO] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+2022-09-25 15:19:54,994 [log | WARNING] Method Not Allowed: /api/payment/create/
+2022-09-25 15:19:54,995 [basehttp | WARNING] "GET /api/payment/create/ HTTP/1.1" 405 8037
+2022-09-25 15:20:27,418 [log | ERROR] Internal Server Error: /api/payment/create/ @ /home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/zmall_restapi/payment/views.py", line 23, in create
+    payment['id'] = obj.id
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 526, in __setitem__
+    self._assert_mutable()
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 523, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2022-09-25 15:20:27,418 [log | ERROR] Internal Server Error: /api/payment/create/
+Traceback (most recent call last):
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/zmall_restapi/payment/views.py", line 23, in create
+    payment['id'] = obj.id
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 526, in __setitem__
+    self._assert_mutable()
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 523, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2022-09-25 15:20:27,420 [basehttp | ERROR] "POST /api/payment/create/ HTTP/1.1" 500 112829 @ /home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-25 15:20:27,420 [basehttp | ERROR] "POST /api/payment/create/ HTTP/1.1" 500 112829
+2022-09-25 15:21:00,746 [log | ERROR] Internal Server Error: /api/payment/create/ @ /home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/zmall_restapi/payment/views.py", line 23, in create
+    payment['id'] = obj.id
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 526, in __setitem__
+    self._assert_mutable()
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 523, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2022-09-25 15:21:00,746 [log | ERROR] Internal Server Error: /api/payment/create/
+Traceback (most recent call last):
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/zmall_restapi/payment/views.py", line 23, in create
+    payment['id'] = obj.id
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 526, in __setitem__
+    self._assert_mutable()
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 523, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2022-09-25 15:21:00,747 [basehttp | ERROR] "POST /api/payment/create/ HTTP/1.1" 500 112829 @ /home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-25 15:21:00,747 [basehttp | ERROR] "POST /api/payment/create/ HTTP/1.1" 500 112829
+2022-09-25 15:21:47,518 [log | ERROR] Internal Server Error: /api/payment/create/ @ /home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/zmall_restapi/payment/views.py", line 23, in create
+    payment['id'] = obj.id
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 526, in __setitem__
+    self._assert_mutable()
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 523, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2022-09-25 15:21:47,518 [log | ERROR] Internal Server Error: /api/payment/create/
+Traceback (most recent call last):
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/zmall_restapi/payment/views.py", line 23, in create
+    payment['id'] = obj.id
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 526, in __setitem__
+    self._assert_mutable()
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 523, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2022-09-25 15:21:47,519 [basehttp | ERROR] "POST /api/payment/create/ HTTP/1.1" 500 112829 @ /home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-25 15:21:47,519 [basehttp | ERROR] "POST /api/payment/create/ HTTP/1.1" 500 112829
+2022-09-25 15:22:00,493 [log | ERROR] Internal Server Error: /api/payment/create/ @ /home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/utils/log.py : 241 : log_response
+Traceback (most recent call last):
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/zmall_restapi/payment/views.py", line 23, in create
+    payment['id'] = obj.id
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 526, in __setitem__
+    self._assert_mutable()
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 523, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2022-09-25 15:22:00,493 [log | ERROR] Internal Server Error: /api/payment/create/
+Traceback (most recent call last):
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/oskon/PycharmProjects/pythonProject10/zmall_restapi/payment/views.py", line 23, in create
+    payment['id'] = obj.id
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 526, in __setitem__
+    self._assert_mutable()
+  File "/home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/http/request.py", line 523, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2022-09-25 15:22:00,497 [basehttp | ERROR] "POST /api/payment/create/ HTTP/1.1" 500 112835 @ /home/oskon/PycharmProjects/pythonProject10/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py : 187 : log_message
+2022-09-25 15:22:00,497 [basehttp | ERROR] "POST /api/payment/create/ HTTP/1.1" 500 112835
+2022-09-25 15:22:51,127 [autoreload | INFO] /home/oskon/PycharmProjects/pythonProject10/zmall_restapi/config/settings.py changed, reloading.

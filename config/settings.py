@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'chat',
     'social_auth',
     'admin_rights',
+
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -94,15 +96,22 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         # 'HOST': 'localhost',
+#         'HOST': 'db_group_c',
+#         'PORT': '', # default 5432
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        # 'HOST': 'localhost',
-        'HOST': 'db_group_c',
-        'PORT': '', # default 5432
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -182,51 +191,52 @@ CELERY_BROKER_TRANSPORT_OPTIONS = {"visibility_timeout": 3600}
 CELERY_RESULT_BACKEND = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-
-    # 'formatters': {
-    #     'main_formatter': {
-    #     '()': CustomJsonFormatter
-    #     },
-    # },
-    'formatters': {
-        'simple': {
-            'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s',
-        },
-        'verbose': {
-            'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s @ %(pathname)s : %(lineno)d : %(funcName)s',
-        },
-    },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-        'debug': {
-            'class': 'logging.FileHandler',
-            'filename': 'log/django.log',
-            'formatter': 'simple',
-            'level': 'DEBUG'
-        },
-        'error': {
-            'class': 'logging.FileHandler',
-            'filename': 'log/django.log',
-            'formatter': 'verbose',
-            'level': 'ERROR'
-        },
-        'info': {
-            'class': 'logging.FileHandler',
-            'filename': 'log/django.log',
-            'formatter': 'simple',
-            'level': 'INFO'
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ["error", "info", "error"],
-            "level": 1,
-        },
-    },
-}
+#
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#
+#     # 'formatters': {
+#     #     'main_formatter': {
+#     #     '()': CustomJsonFormatter
+#     #     },
+#     # },
+#
+#     'formatters': {
+#         'simple': {
+#             'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s',
+#         },
+#         'verbose': {
+#             'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s @ %(pathname)s : %(lineno)d : %(funcName)s',
+#         },
+#     },
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#         },
+#         'debug': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'log/django.log',
+#             'formatter': 'simple',
+#             'level': 'DEBUG'
+#         },
+#         'error': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'log/django.log',
+#             'formatter': 'verbose',
+#             'level': 'ERROR'
+#         },
+#         'info': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'log/django.log',
+#             'formatter': 'simple',
+#             'level': 'INFO'
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ["error", "info", "error"],
+#             "level": 1,
+#         },
+#     },
+# }
