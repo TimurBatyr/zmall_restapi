@@ -1,20 +1,20 @@
-from rest_framework.pagination import PageNumberPagination
+import django_filters
+from django.db.models import Q
+from django_filters.rest_framework import filters, DjangoFilterBackend
+from rest_framework import filters as f
+from rest_framework.filters import SearchFilter
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAdminUser
 
 from account.models import User
 from adds.models import Category, Subcategory, Subscription, PostImages, PostContacts, Post, ReviewPost, Views, \
     Favorite, City, PostComplaint
+from admin_rights.pagination import PostPagination
 from admin_rights.serializers import UserDetailSerializerAd, CategorySerializerAd, SubscriptionSerializerAd, \
     PostImagesSerializerAd, PostContactsSerializerAd, SubcategorySerializerAd, PostSerializerAd, ReviewSerializerAd, \
     ViewsSerializerAd, FavoriteSerializerAd, MessageSerializerAd, CitySerializerAd, PostComplaintSerializerAd
 from chat.models import Message
 
-
-class Pagination(PageNumberPagination):
-    '''Pagination for all'''
-    def get_paginated_response(self, data):
-        return super().get_paginated_response(data)
 
 
 class UserViewSet(ModelViewSet):
@@ -59,10 +59,32 @@ class PostContactsViewSet(ModelViewSet):
     permission_classes = [IsAdminUser]
 
 
+class ProductFilter(filters.FilterSet):
+    '''Setting filters from and to on prices and cities'''
+    min_price = filters.NumberFilter(field_name="from_price", lookup_expr='gte')
+    max_price = filters.NumberFilter(field_name="from_price", lookup_expr='lte')
+    city = django_filters.ModelMultipleChoiceFilter(field_name='city', queryset=City.objects.all())
+    image = django_filters.BooleanFilter(
+        lookup_expr="isnull", field_name="image"
+    )
+
+    class Meta:
+        model = Post
+        fields = ['category', 'subcategory', 'city', 'image']
+
+
 class PostViewSet(ModelViewSet):
-    queryset = Post.objects.all()
     serializer_class = PostSerializerAd
     permission_classes = [IsAdminUser]
+
+    filter_backends = [DjangoFilterBackend]
+    filter_backends = [SearchFilter, DjangoFilterBackend, f.OrderingFilter]
+    search_fields = ['title', 'description']
+    ordering_fields = ['date_created', 'from_price']
+    queryset = Post.objects.filter(Q(subscription__choice='highlight') | Q(subscription__choice='VIP') |
+                                   Q(subscription__choice='urgent'), is_activated=True)
+    pagination_class = PostPagination
+    filterset_class = ProductFilter
 
 
 class ReviewViewSet(ModelViewSet):
