@@ -14,10 +14,10 @@ urlpatterns = [
     path("subcategory/", SubcategoryAPIView.as_view(), name="subcategory"),
     path("city/", CityAPIView.as_view(), name="city"),
 
-    path('createpost/', views.PostCreate.as_view(), name="createpost"), #no
     path('postimages/', views.PostImagesView.as_view()),
     path('postcontacts/', views.PostContactsView.as_view()),
 
+    path('createpost/', views.PostCreate.as_view(), name="createpost"), #no
     path('deletepost/<int:pk>', views.PostDelete.as_view()),
     path('editpost/<int:pk>', views.PostEdit.as_view()),
     path('postlist/', views.PostList.as_view(), name="postlist"),
