@@ -114,7 +114,7 @@ class PostImages(models.Model):
 
 class PostContacts(models.Model):
     post_number = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='post_phone')
-    phone_number = PhoneNumberField()
+    phone_number = models.CharField(max_length=13, blank=True)
     view = models.IntegerField(default=0, blank=True, null=True)
 
     def __str__(self):
