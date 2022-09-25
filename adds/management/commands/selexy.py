@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from django.utils import timezone
 from django.core.management import BaseCommand
 from account.models import User
-from adds.models import Post, Category, Subcategory
+from adds.models import Post, Category, Subcategory, PostContacts
 
 headers = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
@@ -107,13 +107,15 @@ def run_pars_selexy():
 
             try:
 
-                Post.objects.create(user=me, category=category_id,
+               post= Post.objects.create(user=me, category=category_id,
                                     subcategory=subcategory_id,
                                     title=title, image=img,
                                     city=town, from_price=price,
                                     description=description)
-
-                count_post += 1
+               post_id = Post.objects.get(pk=post.id)
+               PostContacts.objects.create(post_number=post_id,
+                                            phone_number='+996999999999')
+               count_post += 1
             except:
                 pass
 

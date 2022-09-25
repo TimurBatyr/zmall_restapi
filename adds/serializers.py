@@ -65,6 +65,9 @@ class ContactSerializer(serializers.ModelSerializer):
         model = PostContacts
         fields = "__all__"
 
+    # def create(self, validated_data):
+    #     return PostContacts.objects.create(**validated_data)
+
 
 class FilterReviewListSerializer(serializers.ListSerializer):
     '''Review filter, only parents'''
@@ -96,21 +99,15 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'text', 'children', 'email')
 
 
-class FavoriteFieldsSerializer(serializers.ModelSerializer):
-    ''' For favorite '''
-
-    class Meta:
-        model = Post
-        fields = ('id', 'city', 'subscription', 'title', 'from_price', 'image', 'is_activated')
-
-
 class FavoriteSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.email')
-    post = FavoriteFieldsSerializer()
-
+    post_title = serializers.ReadOnlyField(source='post.title')
+    post_price = serializers.ReadOnlyField(source='post.from_price')
+    post_city = serializers.ReadOnlyField(source='post.city')
+    post_subscription = serializers.ReadOnlyField(source='post.subscription')
     class Meta:
         model = Favorite
-        fields = ['id', 'user', 'post', 'favorites']
+        fields = ['id', 'user', 'post', 'favorites', 'post_title', 'post_price', 'post_city', 'post_subscription']
 
     def create(self, validated_data):
         request = self.context.get('request')
@@ -125,7 +122,7 @@ class FavoriteSerializer(serializers.ModelSerializer):
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''
     images = PostImagesSerializer(many=True)
-    phone = ContactSerializer(many=True)
+    # phone = ContactSerializer(many=True)
     subscription = SubscriptionSerializer(read_only=True)
     reviews = ReviewSerializer(many=True, read_only=True)
     user_email = serializers.ReadOnlyField(source='user.email')
@@ -134,8 +131,8 @@ class PostEditSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'user_email', 'user_username', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
-                  'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number', 'phone',
+        fields = ('id', 'user_email', 'user_username', 'category', 'subcategory', 'city', 'subscription', 'title',
+                  'description', 'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number',
                   'is_activated', 'reviews', 'date_created', 'status')
         # read_only_fields = ['user']
 
@@ -145,8 +142,9 @@ class PostDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        # fields = '__all__'
-        exclude =['image']
+        fields = fields = ('id', 'user', 'category', 'subcategory', 'city', 'subscription', 'title', 'description',
+                           'from_price', 'to_price', 'email', 'phone_number', 'wa_number',
+                           'is_activated', 'date_created')
         # read_only_fields = ['user']
 
 
@@ -158,7 +156,6 @@ class PostListSerializer(serializers.ModelSerializer):
         model = Post
         fields = ('id', 'title', 'subscription', 'from_price', 'subcategory', 'category', 'image',
                   'description', 'date_created', 'city', 'is_activated', 'status')
-
 
 
 class PostComplaintSerializer(serializers.ModelSerializer):

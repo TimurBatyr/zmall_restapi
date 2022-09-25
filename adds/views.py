@@ -5,10 +5,11 @@ import redis
 from django.db.models import Q
 from django.http import JsonResponse
 from django_filters.rest_framework import DjangoFilterBackend
+from phonenumber_field.validators import validate_international_phonenumber
 from rest_framework import generics, status, filters as f
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -60,7 +61,6 @@ class PostCreate(generics.CreateAPIView):
     # permission_classes = [IsAuthenticated]
 
 
-
 class PostImagesView(APIView):
     '''Adding images to post'''
     permission_classes = [AllowAny]
@@ -98,25 +98,36 @@ class PostImagesView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class PostContactsCreate(generics.CreateAPIView):
-    '''Adding/updating contacts to the post'''
-
-    serializer_class = ContactSerializer
+class PostContactsView(APIView):
+    parser_classes = (MultiPartParser, FormParser)
     permission_classes = [AllowAny]
     # permission_classes = [IsAuthenticated]
 
+    def get(self, request):
+        all_phones = PostContacts.objects.all()
+        serializer = ContactSerializer(all_phones, many=True)
+        return JsonResponse(serializer.data, safe=False)
 
-class ContactsEdit(generics.RetrieveUpdateDestroyAPIView):
-    '''Contacts Update/delete/detail'''
-    serializer_class = ContactSerializer
-    # permission_classes = [IsAuthenticated, UserPermission, ]
-    permission_classes = [AllowAny]
-    lookup_field = 'pk'
-    queryset = PostContacts.objects.all()
+    def post(self, request, *args, **kwargs):
+        post = request.data['post']
+        post = Post.objects.get(pk=post)
+        list_contacts = []
+        contacts = request.data['phone_number'].split(',')
+        for contact in contacts:
+            validate_international_phonenumber(contact)
+            list_contacts.append(PostContacts(post_number=post, phone_number=contact))
+
+        PostContacts.objects.bulk_create(list_contacts)
+        return Response({"status": "created"}, status=status.HTTP_201_CREATED)
+
+    def delete(self, request):
+        pk = request.GET.get('pk')
+        phone = PostContacts.objects.get(id=pk)
+        phone.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class PostDetail(generics.RetrieveDestroyAPIView):
-    '''Post Update/delete/detail'''
+class PostDelete(generics.RetrieveDestroyAPIView):
 
     serializer_class = PostEditSerializer
     # permission_classes = [IsAuthenticated, UserPermission, ]
@@ -126,7 +137,6 @@ class PostDetail(generics.RetrieveDestroyAPIView):
 
 
 class PostEdit(generics.RetrieveUpdateAPIView):
-    '''Post Update/delete/detail'''
 
     serializer_class = PostDetailSerializer
     # permission_classes = [IsAuthenticated, UserPermission, ]
@@ -284,7 +294,8 @@ def get_client_ip(request):
 
 class DetailPost(APIView):
     def get(self, request, pk):
-        posts = Post.objects.select_related('category').select_related('subcategory').get(pk=pk)
+        posts = Post.objects.select_related('category').get(pk=pk)
+
         # posts = get_object_or_404(Post, pk=pk)#1
         title = Post.objects.values('title').filter(pk=pk)#2
         title = title[0]['title']
@@ -312,10 +323,10 @@ class DetailPost(APIView):
 
         serializer_view = ViewSerializer(view, many=False).data
         serializer = PostEditSerializer(posts, many=False).data
-
+        post_sub = Post.objects.prefetch_related('subcategory').get(pk=pk)
         context = {
             'add': {**serializer, 'category': posts.category.title,
-                'subcategory':posts.subcategory.title},
+                'subcategory':post_sub.subcategory.title},
             'view': serializer_view
         }
         return Response(context)
@@ -397,7 +408,7 @@ def get_post_number(client, number, pk):
 
 class Contacts(APIView):
     def get(self, request, pk):
-
+        print('oOOOOOOOOOKKKKKKKKKK')
         post_object = Post.objects.get(pk=pk)
         number = PostContacts.objects.get(post_number=post_object)
 

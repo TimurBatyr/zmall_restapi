@@ -155,7 +155,8 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 1000
+    'PAGE_SIZE': 10
+
 }
 
 SIMPLE_JWT = {
@@ -183,50 +184,50 @@ CELERY_RESULT_BACKEND = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-
-    # 'formatters': {
-    #     'main_formatter': {
-    #     '()': CustomJsonFormatter
-    #     },
-    # },
-    'formatters': {
-        'simple': {
-            'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s',
-        },
-        'verbose': {
-            'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s @ %(pathname)s : %(lineno)d : %(funcName)s',
-        },
-    },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-        'debug': {
-            'class': 'logging.FileHandler',
-            'filename': 'log/django.log',
-            'formatter': 'simple',
-            'level': 'DEBUG'
-        },
-        'error': {
-            'class': 'logging.FileHandler',
-            'filename': 'log/django.log',
-            'formatter': 'verbose',
-            'level': 'ERROR'
-        },
-        'info': {
-            'class': 'logging.FileHandler',
-            'filename': 'log/django.log',
-            'formatter': 'simple',
-            'level': 'INFO'
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ["error", "info", "error"],
-            "level": 1,
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#
+#     # 'formatters': {
+#     #     'main_formatter': {
+#     #     '()': CustomJsonFormatter
+#     #     },
+#     # },
+#     'formatters': {
+#         'simple': {
+#             'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s',
+#         },
+#         'verbose': {
+#             'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s @ %(pathname)s : %(lineno)d : %(funcName)s',
+#         },
+#     },
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#         },
+#         'debug': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'log/django.log',
+#             'formatter': 'simple',
+#             'level': 'DEBUG'
+#         },
+#         'error': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'log/django.log',
+#             'formatter': 'verbose',
+#             'level': 'ERROR'
+#         },
+#         'info': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'log/django.log',
+#             'formatter': 'simple',
+#             'level': 'INFO'
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ["error", "info", "error"],
+#             "level": 1,
+#         },
+#     },
+# }

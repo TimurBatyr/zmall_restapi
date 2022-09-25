@@ -39,26 +39,29 @@ class City(models.Model):
 
 LIST = (
     ('VIP', 'VIP'),
-    ('urgent', 'Добавить стикер "Срочно"'),
-    ('highlight', 'Выделить цветом'),
+    ('Добавить стикер "Срочно"', 'Добавить стикер "Срочно"'),
+    ('Выделить цветом', 'Выделить цветом'),
+    ('', ''),
 )
 
 PERIOD = (
-    ('5 days', '5'),
-    ('10 days', '10'),
-    ('15 days', '15'),
-    ('20 days', '20'),
-    ('25 days', '25'),
-    ('30 days', '30'),
+    ('5', '5'),
+    ('10', '10'),
+    ('15', '15'),
+    ('20', '20'),
+    ('25', '25'),
+    ('30', '30'),
+    ('', ''),
 )
 
 
 class Subscription(models.Model):
-    choice = models.CharField(max_length=100, choices=LIST)
+    choice = models.CharField(max_length=100, choices=LIST, default='')
     price = models.DecimalField(max_digits=20, decimal_places=2, default=0)
     text = models.CharField(max_length=100)
     icon_image = models.ImageField()
-    period = models.CharField(max_length=100, choices=PERIOD)
+    outer_image = models.ImageField()
+    period = models.CharField(max_length=100, choices=PERIOD, default='')
 
     class Meta:
         ordering = ['-id']
@@ -68,9 +71,10 @@ class Subscription(models.Model):
 
 
 STATUS = (
-        ('in_progress', 'в рассмотрении'),
-        ('verified', 'одобрено'),
-        ('rejected', 'отклонено')
+        ('в рассмотрени', 'в рассмотрении'),
+        ('одобрено', 'одобрено'),
+        ('отклонено', 'отклонено'),
+
     )
 
 class Post(models.Model):
@@ -80,7 +84,7 @@ class Post(models.Model):
     city = models.ForeignKey(City, related_name='posts', on_delete=models.PROTECT, blank=True, null=True)
     subscription = models.ForeignKey(Subscription, related_name='posts', on_delete=models.PROTECT, blank=True, null=True)
     title = models.CharField(max_length=100)
-    description = models.TextField(max_length=300, blank=True, null=True)
+    description = models.TextField(max_length=900, blank=True, null=True)
     from_price = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True)
     to_price = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d', verbose_name='Фотография', blank=True, null=True)
@@ -109,9 +113,9 @@ class PostImages(models.Model):
 
 
 class PostContacts(models.Model):
-    post_number = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='phone')
-    phone_number = PhoneNumberField()
-    view = models.IntegerField(default=0)
+    post_number = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='post_phone')
+    phone_number = models.CharField(max_length=13, blank=True)
+    view = models.IntegerField(default=0, blank=True, null=True)
 
     def __str__(self):
         return f'Contact ID: {self.id}_ {str(self.phone_number)} : {self.post_number.title} ID: {self.post_number.id}'
@@ -158,11 +162,11 @@ class Favorite(models.Model):
         return f'{self.id} - {self.user}'
 
 COMPLAIN_LIST = (
-    ('wrong', 'Неверная рубрика'),
-    ('forbidden', 'Запрещенный товар'),
-    ('not_relevant', 'Объявление не актуально'),
-    ('wrong_address', 'Неверный адрес'),
-    ('other', 'Другое'),
+    ('Неверная рубрика', 'Неверная рубрика'),
+    ('Запрещенный товар', 'Запрещенный товар'),
+    ('Объявление не актуально', 'Объявление не актуально'),
+    ('Неверный адрес', 'Неверный адрес'),
+    ('Другое', 'Другое'),
     ('', ''),
 )
 
