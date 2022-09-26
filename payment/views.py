@@ -26,13 +26,8 @@ class PaymentViewSet(viewsets.ModelViewSet):
 
         payment = generate_sig(payment, method)
         params = payment
-
-
         base_url = 'https://api.paybox.money/'
         r = requests.post(f"{base_url}{method}", params=params)
-
         assert 200 == r.status_code
-
         url = get_url_from_content(r.content)
-
         return response.Response({"redirect": url}, status=status.HTTP_200_OK)
