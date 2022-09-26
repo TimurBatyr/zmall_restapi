@@ -3,4 +3,9 @@ __pycache__
 data
 zmall_db
 .idea
+.env
+media
+mediafiles
+staticfiles
+data
 

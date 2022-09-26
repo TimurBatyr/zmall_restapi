@@ -139,14 +139,13 @@ class ViewsContact(models.Model):
 class ReviewPost(models.Model):
     '''Comment to posts'''
     email = models.EmailField()
-    title = models.CharField(max_length=100)
     text = models.TextField(max_length=5000)
     parent = models.ForeignKey('self', verbose_name='Parent', on_delete=models.SET_NULL, blank=True, null=True,
                                related_name='children')
     post = models.ForeignKey(Post, verbose_name='post', on_delete=models.CASCADE, related_name='reviews')
 
     def __str__(self):
-        return f'{self.title} - {self.post}'
+        return f'{self.post}'
 
     class Meta:
         verbose_name = 'Review'
@@ -163,7 +162,7 @@ class Favorite(models.Model):
 
 COMPLAIN_LIST = (
     ('Неверная рубрика', 'Неверная рубрика'),
-    ('Запрещенный товар', 'Запрещенный товар'),
+    ('Запрещенный товар', 'Запрещенный товар/услуги'),
     ('Объявление не актуально', 'Объявление не актуально'),
     ('Неверный адрес', 'Неверный адрес'),
     ('Другое', 'Другое'),
