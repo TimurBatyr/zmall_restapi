@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from rest_framework import generics
+from rest_framework.pagination import PageNumberPagination
 
 from info.models import Issue, Help, AdminContact, AdminHat, ConfPolitics, Footer
 from info.serializers import IssueSerializer, HelpSerializer, AdminContactSerializer, AdminHatSerializer, \
     ConfPoliticsSerializer, FooterSerializer
+
+
+class Pagination(PageNumberPagination):
+    '''Pagination for all'''
+    def get_paginated_response(self, data):
+        return super().get_paginated_response(data)
 
 
 class IssueAPIView(generics.ListAPIView):
@@ -12,10 +19,14 @@ class IssueAPIView(generics.ListAPIView):
     serializer_class = IssueSerializer
 
 
+class HelpPagination(Pagination):
+    page_size = 1000
+
 class HelpAPIView(generics.ListAPIView):
     '''List of names of help'''
     queryset = Help.objects.all()
     serializer_class = HelpSerializer
+    pagination_class = HelpPagination
 
 
 class HelpGetAPIView(generics.RetrieveAPIView):

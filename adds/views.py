@@ -8,6 +8,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from phonenumber_field.validators import validate_international_phonenumber
 from rest_framework import generics, status, filters as f
 from rest_framework.filters import SearchFilter
+from rest_framework.generics import get_object_or_404
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.permissions import IsAuthenticated, AllowAny
@@ -20,6 +21,12 @@ from .serializers import *
 from django_filters import rest_framework as filters
 
 from .utils import multiple_images, sql_recursive
+
+''' For views/statistics '''
+date = datetime.datetime.now(tz=None)
+month = date.month
+yaer = date.year
+today = date.day
 
 
 class Pagination(PageNumberPagination):
@@ -257,24 +264,22 @@ class PostComplaintView(generics.ListCreateAPIView):
     serializer_class = PostComplaintSerializer
 
 
-#Views
+# Views
 def get_post(client, title, pk):
     data = redis.Redis()
     data_value = data.get(str(client))
+
     if data_value is None or data_value.decode('utf-8') != title:
         data.mset({str(client): title})
-        date = datetime.datetime.now(tz=None)
-        today = date.date()
-        # today = datetime.date(year=2022, month=9, day=9)
-        post_object = Post.objects.get(pk=pk)  #4
-        view_object = Views.objects.filter(post=post_object).filter(date=today).exists()
+        post_object = Post.objects.get(pk=pk)  # 4
+        view_object = Views.objects.filter(post=post_object).filter(date=date).exists()
 
         if view_object == False:
-            Views.objects.create(post=post_object, date=today)
+            Views.objects.create(post=post_object, date=date)
 
-        name = Views.objects.filter(post=post_object).filter(date=today).values('pk')
+        name = Views.objects.filter(post=post_object).filter(date=date).values('pk')
         name = Views.objects.get(pk=name[0]['pk'])
-        name.date = today
+        name.date = date
         name.save(update_fields=["date"])
         name.views += 1
         name.save(update_fields=["views"])
@@ -296,10 +301,10 @@ def get_client_ip(request):
 
 class DetailPost(APIView):
     def get(self, request, pk):
+        get_object_or_404(Post, pk=pk)  # 1
         posts = Post.objects.select_related('category').get(pk=pk)
+        title = Post.objects.values('title').filter(pk=pk)  # 2
 
-        # posts = get_object_or_404(Post, pk=pk)#1
-        title = Post.objects.values('title').filter(pk=pk)#2
         title = title[0]['title']
         ip = get_client_ip(request)
 
@@ -312,23 +317,15 @@ class DetailPost(APIView):
                 posts.views += 1
                 posts.save(update_fields=["views"])
 
-        post_object = Post.objects.get(pk=pk)#3
-        date = datetime.datetime.now(tz=None)
-        today = date.date()
-        view = Views.objects.filter(post=post_object).filter(date=today).exists()
-
-        if not view:
-            Views.objects.create(post=post_object, date=today)
-
-        view = Views.objects.filter(post=post_object).filter(date=today)
+        post_object = Post.objects.get(pk=pk)  # 3
+        view = Views.objects.filter(post=post_object).filter(date=date)
         view = view[0]
-
         serializer_view = ViewSerializer(view, many=False).data
         serializer = PostEditSerializer(posts, many=False).data
         post_sub = Post.objects.prefetch_related('subcategory').get(pk=pk)
         context = {
             'add': {**serializer, 'category': posts.category.title,
-                'subcategory':post_sub.subcategory.title},
+                    'subcategory': post_sub.subcategory.title},
             'view': serializer_view
         }
         return Response(context)
@@ -336,22 +333,15 @@ class DetailPost(APIView):
 
 class StatistictsApi(APIView):
     def get(self, requests, pk):
-        post = Post.objects.get(pk=pk)
+        post=get_object_or_404(Post,pk=pk)
         serializer_post = StatisticsPostSerilizer(post, many=False).data
-        date = datetime.datetime.now(tz=None)
-        month = date.month
-        yaer = date.year
-        today = date.day
-
         id_post = Post.objects.filter(pk=pk).values('pk')
         view_every_day = Views.objects.filter(post=id_post[0]['pk']).filter(date__year=yaer, date__month=month)
         serializer_view_every_day = StatisticsViewSerializer(view_every_day, many=True).data
-
         view_today_id = Views.objects.filter(post=id_post[0]['pk']).filter(date__year=yaer,
                                                                            date__month=month,
                                                                            date__day=today).values('pk').exists()
         object_post = Post.objects.get(pk=pk)
-
         if view_today_id == False:
             Views.objects.create(post=object_post, date=date)
             view_today_id = Views.objects.filter(post=object_post).filter(date=date).values('pk')
@@ -360,11 +350,15 @@ class StatistictsApi(APIView):
 
         view_today = Views.objects.get(pk=view_today_id[0]['pk'])
         serializer_view_today = TodaySerializer(view_today, many=False).data
-
         post_object = Post.objects.get(pk=pk)
-        phone_object = PostContacts.objects.get(post_number=post_object)
-        view_contact_objects=ViewsContact.objects.get(phone=phone_object)
-        serializer_view_number = StaticsNumberSerializer(phone_object, many=False).data
+        phone_object = PostContacts.objects.filter(post_number=post_object).exists()
+
+        if phone_object ==False:
+            serializer_view_number = 'Контакты отсутствую!'
+
+        else:
+            phone_object = PostContacts.objects.get(post_number=post_object)
+            serializer_view_number = StaticsNumberSerializer(phone_object, many=False).data
 
         context = {
             'common post view': serializer_post,
@@ -380,21 +374,18 @@ def get_post_number(client, number, pk):
     data = redis.Redis()
     data_value = data.get(str(client))
     client = str(client)
-    print(number)
 
     if data_value is None or data_value.decode('utf-8') != number[0]['phone_number']:
         data.mset({client: number[0]['phone_number']})
 
         date = datetime.datetime.now(tz=None)
         today = date.date()
-
         post_object = Post.objects.get(pk=pk)
         number = PostContacts.objects.get(post_number=post_object)
         viewscontact_object = ViewsContact.objects.filter(phone=number).filter(date=today).exists()
-        print('ooooooooooooooooooo')
-        if viewscontact_object ==False:
-            object_view=Views.objects.get(post=post_object)
-            ViewsContact.objects.create(phone=number,date=today,view_key=object_view)
+        if viewscontact_object == False:
+            object_view = Views.objects.get(post=post_object)
+            ViewsContact.objects.create(phone=number, date=today, view_key=object_view)
 
         name = ViewsContact.objects.filter(phone=number).filter(date=today).values('pk')
         name = ViewsContact.objects.get(pk=name[0]['pk'])
@@ -410,10 +401,14 @@ def get_post_number(client, number, pk):
 
 class Contacts(APIView):
     def get(self, request, pk):
-        print('oOOOOOOOOOKKKKKKKKKK')
+        get_object_or_404(Post, pk=pk)
         post_object = Post.objects.get(pk=pk)
-        number = PostContacts.objects.get(post_number=post_object)
+        value_number_check = PostContacts.objects.filter(post_number=post_object).exists()
 
+        if value_number_check == False:
+            return Response('Контакты отсутсвуют!')
+
+        number = PostContacts.objects.get(post_number=post_object)
         value_number = PostContacts.objects.filter(post_number=post_object).values('phone_number')
         ip = get_client_ip(request)
 
@@ -426,10 +421,13 @@ class Contacts(APIView):
                 number.view += 1
                 number.save(update_fields=["view"])
 
-        post_object=Post.objects.get(pk=pk)
-        object=PostContacts.objects.get(post_number=post_object)
+        post_object = Post.objects.get(pk=pk)
+        view = Views.objects.filter(post=pk).filter(date=date).exists()
+
+        if view == False:
+            Views.objects.create(post=post_object, date=date)
+
+        object = PostContacts.objects.get(post_number=post_object)
         queryset = object
         serializer = ContactSerializer(queryset, many=False).data
-
         return Response(serializer)
-
