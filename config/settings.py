@@ -30,7 +30,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'chat',
     'social_auth',
     'admin_rights',
+
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -94,16 +96,22 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         # 'HOST': 'localhost',
+#         'HOST': 'db_group_c',
+#         'PORT': '', # default 5432
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': config('DB_NAME'),
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -157,6 +165,7 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
+
 }
 
 SIMPLE_JWT = {
@@ -175,7 +184,8 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-REDIS_HOST = "0.0.0.0"
+# REDIS_HOST = "localhost"
+REDIS_HOST = "redis_group_c"
 REDIS_PORT = "6379"
 CELERY_BROKER_URL = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
 CELERY_BROKER_TRANSPORT_OPTIONS = {"visibility_timeout": 3600}
@@ -192,6 +202,7 @@ CELERY_TASK_SERIALIZER = 'json'
 #     #     '()': CustomJsonFormatter
 #     #     },
 #     # },
+
 #     'formatters': {
 #         'simple': {
 #             'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s',

@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  db_group_c:
+    image: postgres
+    container_name: postgres_zmall_tim
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=zmall_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    restart: unless-stopped
+    depends_on:
+      - redis_group_c
+
+  web_group_c:
+    build: .
+    ports:
+      - 8011:8000
+    container_name: zmall_restapi
+    environment:
+      - POSTGRES_NAME=zmall_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - media_volume:/zmall_rest/mediafiles
+      - static_volume:/zmall_rest/staticfiles
+      - .:/zmall_rest
+    restart: unless-stopped
+    depends_on:
+      - db_group_c
+      - redis_group_c
+
+  redis_group_c:
+    image: redis:alpine
+  celery_group_c:
+    restart: unless-stopped
+    build:
+      context: .
+    command: celery -A config worker -l info
+    env_file:
+      - ./.env
+    depends_on:
+      - web_group_c
+
+
+volumes:
+    postgres_data:
+    static_volume:
+    media_volume:
