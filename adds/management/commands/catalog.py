@@ -63,7 +63,7 @@ def run_pars_catalog():
 
     count_post = 0
 
-    for l in range(200):
+    for l in range(1,200):
 
         link_catalog = f'https://www.catalog.kg/board/22-{l}'
         post = requests.get(link_catalog, headers=headers)

@@ -81,7 +81,7 @@ def run_parser_doska():
 
     count_post = 0
 
-    for q in range(200):
+    for q in range(1,200):
 
         link_doska = f'http://resume.doska.kg/vacancy/&page={q}&sortby=new'
         post = requests.get(link_doska, headers=headers)
