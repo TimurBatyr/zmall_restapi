@@ -252,7 +252,7 @@ class FavoriteGetDeleteView(generics.RetrieveDestroyAPIView):
     permission_classes = [AllowAny]
 
 
-class PostComplaintView(generics.CreateAPIView):
+class PostComplaintView(generics.ListCreateAPIView):
     queryset = PostComplaint.objects.all()
     serializer_class = PostComplaintSerializer
 
