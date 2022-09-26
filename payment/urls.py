@@ -7,7 +7,7 @@ router = DefaultRouter()
 router.register("create", PaymentViewSet, basename='payment')
 
 urlpatterns = [
-    path("payment/", include(router.urls)),
+    path("payment/<int:pk>", include(router.urls)),
     path('success', api.as_view()),
     path('failure', api2.as_view()),
     path('result', api3.as_view())

@@ -10,12 +10,15 @@ from .serializers import PaymentSerializer
 from .utils import generate_sig, get_url_from_content
 from rest_framework.views import APIView
 
+from ..adds.models import Post
+
+
 class PaymentViewSet(viewsets.ModelViewSet):
     queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
     http_method_names = ['post', ]
 
-    def create(self, request, *args, **kwargs):
+    def create(self, request,pk,*args, **kwargs):
         data = request.data
         serializer = self.get_serializer(data=data)
         serializer.is_valid(raise_exception=True)
