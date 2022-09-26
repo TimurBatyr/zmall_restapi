@@ -52,7 +52,7 @@ services:
     volumes:
       - ./data-mongodb:/data/db
     ports:
-      - "27017:27017"
+      - "27019:27017"
 
 volumes:
     postgres_data:
