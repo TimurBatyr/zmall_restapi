@@ -139,7 +139,6 @@ class ViewsContact(models.Model):
 class ReviewPost(models.Model):
     '''Comment to posts'''
     email = models.EmailField()
-    title = models.CharField(max_length=100)
     text = models.TextField(max_length=5000)
     parent = models.ForeignKey('self', verbose_name='Parent', on_delete=models.SET_NULL, blank=True, null=True,
                                related_name='children')

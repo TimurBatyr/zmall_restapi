@@ -38,8 +38,7 @@ THEME = (
 class AdminContact(models.Model):
     """Contact with admin"""
     adminhat = models.ForeignKey(AdminHat, related_name='categories', on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
+    username = models.CharField(max_length=100)
     theme = models.CharField(max_length=100, choices=THEME, default=('other', 'other'))
     message = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)

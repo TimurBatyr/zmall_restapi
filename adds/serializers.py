@@ -96,7 +96,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         list_serializer_class = FilterReviewListSerializer
         model = ReviewPost
-        fields = ('id', 'title', 'text', 'children', 'email')
+        fields = ('id', 'text', 'children', 'email')
 
 
 class FavoriteSerializer(serializers.ModelSerializer):
