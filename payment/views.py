@@ -1,16 +1,13 @@
 import requests
 from django.http import HttpResponse
-from requests import Response
-
 from rest_framework import viewsets, response, status
-from decouple import config
-
-from .models import Payment
-from .serializers import PaymentSerializer
-from .utils import generate_sig, get_url_from_content
 from rest_framework.views import APIView
 
-from ..adds.models import Post
+from .models import Payment
+from .serializers import PaymentSerializer, PostSubscription
+from .utils import generate_sig, get_url_from_content
+# from adds.models import Post
+from adds.models import
 
 
 class PaymentViewSet(viewsets.ModelViewSet):
@@ -19,6 +16,9 @@ class PaymentViewSet(viewsets.ModelViewSet):
     http_method_names = ['post', ]
 
     def create(self, request,pk,*args, **kwargs):
+        post= Post.objects.get(pk=pk)
+        serializer = PostSubscription(post, many=False).data
+
         data = request.data
         serializer = self.get_serializer(data=data)
         serializer.is_valid(raise_exception=True)
@@ -35,7 +35,7 @@ class PaymentViewSet(viewsets.ModelViewSet):
         r = requests.post(f"{base_url}{method}", params=params)
         assert 200 == r.status_code
         url = get_url_from_content(r.content)
-        return response.Response({"redirect": url}, status=status.HTTP_200_OK)
+        return response.Response({"redirect": url,'subscription':serializer}, status=status.HTTP_200_OK)
 
 
 class api(APIView):

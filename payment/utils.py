@@ -16,7 +16,9 @@ def generate_sig(data: dict, method: str) -> dict:
         pg_merchant_id=535456,
         pg_amount=int(amont[0]),
         pg_description=des[0],
-        pg_salt=salt[0]
+        pg_salt=salt[0],
+        pg_success_url = 'http://127.0.0.1:8000/api/success',
+        pg_failure_url ='http://127.0.0.1:8000/api/failure'
     )
 
     data = OrderedDict(sorted(data.items()))
