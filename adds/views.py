@@ -171,8 +171,8 @@ class PostList(generics.ListAPIView):
     filter_backends = [SearchFilter, DjangoFilterBackend, f.OrderingFilter]
     search_fields = ['title', 'description']
     ordering_fields = ['date_created', 'from_price']
-    queryset = Post.objects.filter(Q(subscription__choice='highlight') | Q(subscription__choice='VIP') |
-                                   Q(subscription__choice='urgent'), is_activated=True)
+    queryset = Post.objects.filter(Q(subscription__choice='Добавить стикер "Срочно"') | Q(subscription__choice='VIP') |
+                                   Q(subscription__choice='Выделить цветом'), is_activated=True)
     pagination_class = PostListHighlightPagination
     filterset_class = ProductFilter
 
@@ -211,14 +211,6 @@ class MyPostList(generics.ListAPIView):
     def get_queryset(self):
         return Post.objects.filter(user=self.request.user.id)
 
-#
-# class ReviewCreateView(APIView):
-#     '''Adding comment to the post'''
-#     def post(self, request):
-#         review = ReviewCreateSerializer(data=request.data)
-#         if review.is_valid():
-#             review.save()
-#         return Response(status=201)
 
 class ReviewView(ModelViewSet):
     queryset = ReviewPost.objects.all()
