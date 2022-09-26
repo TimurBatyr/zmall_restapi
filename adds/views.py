@@ -19,7 +19,7 @@ from .permissions import UserPermission
 from .serializers import *
 from django_filters import rest_framework as filters
 
-from .utils import multiple_images
+from .utils import multiple_images, sql_recursive
 
 
 class Pagination(PageNumberPagination):
@@ -211,14 +211,24 @@ class MyPostList(generics.ListAPIView):
     def get_queryset(self):
         return Post.objects.filter(user=self.request.user.id)
 
+#
+# class ReviewCreateView(APIView):
+#     '''Adding comment to the post'''
+#     def post(self, request):
+#         review = ReviewCreateSerializer(data=request.data)
+#         if review.is_valid():
+#             review.save()
+#         return Response(status=201)
 
-class ReviewCreateView(APIView):
-    '''Adding comment to the post'''
-    def post(self, request):
-        review = ReviewCreateSerializer(data=request.data)
-        if review.is_valid():
-            review.save()
-        return Response(status=201)
+class ReviewView(ModelViewSet):
+    queryset = ReviewPost.objects.all()
+    serializer_class = ReviewCreateSerializer
+
+    def list(self, request, *args, **kwargs):
+        comments = sql_recursive()
+        # print(list(comments))
+        serializer = ReviewSerializer(comments, many=True)
+        return Response(serializer.data)
 
 
 class FavoriteCreateView(generics.CreateAPIView):

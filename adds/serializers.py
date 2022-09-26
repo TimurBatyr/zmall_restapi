@@ -69,11 +69,11 @@ class ContactSerializer(serializers.ModelSerializer):
     #     return PostContacts.objects.create(**validated_data)
 
 
-class FilterReviewListSerializer(serializers.ListSerializer):
-    '''Review filter, only parents'''
-    def to_representation(self, data):
-        data = data.filter(parent=None)
-        return super().to_representation(data)
+# class FilterReviewListSerializer(serializers.ListSerializer):
+#     '''Review filter, only parents'''
+#     def to_representation(self, data):
+#         data = data.filter(parent=None)
+#         return super().to_representation(data)
 
 
 class ReviewRecursiveSerializer(serializers.Serializer):
@@ -94,7 +94,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     '''Display reviews'''
     children = ReviewRecursiveSerializer(many=True)
     class Meta:
-        list_serializer_class = FilterReviewListSerializer
+        # list_serializer_class = FilterReviewListSerializer
         model = ReviewPost
         fields = ('id', 'text', 'children', 'email')
 

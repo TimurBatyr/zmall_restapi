@@ -20,5 +20,5 @@ class SubscirptionAdmin(admin.ModelAdmin):
 
 @admin.register(ReviewPost)
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ["title", "email", 'text', "parent", "post", "id"]
-    readonly_fields = ("title", "email")
+    list_display = ["email", 'text', "parent", "post", "id"]
+    readonly_fields = ("email",)

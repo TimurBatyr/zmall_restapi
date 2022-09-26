@@ -145,7 +145,7 @@ class ReviewPost(models.Model):
     post = models.ForeignKey(Post, verbose_name='post', on_delete=models.CASCADE, related_name='reviews')
 
     def __str__(self):
-        return f'{self.title} - {self.post}'
+        return f'{self.post}'
 
     class Meta:
         verbose_name = 'Review'

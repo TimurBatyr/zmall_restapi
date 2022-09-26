@@ -5,7 +5,8 @@ from . import views
 from .views import *
 
 router = DefaultRouter()
-router.register('subscription', SubscriptionViewSet)
+router.register('subscription', SubscriptionViewSet, basename='subscription')
+router.register("review", ReviewView, basename='review')
 
 
 urlpatterns = [
@@ -24,7 +25,7 @@ urlpatterns = [
     path('postlistdate/', views.PostlistDate.as_view(), name="postlistdate"),
     path('mypost/', views.MyPostList.as_view(), name="mypost"),
 
-    path("review/", views.ReviewCreateView.as_view(), name="review"),
+    # path("review/", views.ReviewCreateView.as_view(), name="review"),
 
     path('favoritecreate/', FavoriteCreateView.as_view()),
     path('favorite/', FavoriteListView.as_view()),
