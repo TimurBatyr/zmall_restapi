@@ -9,7 +9,7 @@ class DatabaseLoggingHandler(logging.Handler):
 
     def __init__(self, database, collection="logs"):
         logging.Handler.__init__(self)
-        self.client = MongoClient("localhost")
+        self.client = MongoClient("mongo_db_group_c")
         self.db = self.client[database]
         self.collection = self.db[collection]
 

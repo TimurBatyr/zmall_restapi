@@ -32,7 +32,7 @@ services:
     depends_on:
       - db_group_c
       - redis_group_c
-      - mongo
+      - mongo_group_c
 
   redis_group_c:
     image: redis:alpine
@@ -47,7 +47,7 @@ services:
       - web_group_c
 
   mongo_group_c:
-    container_name: mongo_db
+    container_name: mongo_db_group_c
     image: mongo
     volumes:
       - ./data-mongodb:/data/db
