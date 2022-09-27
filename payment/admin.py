@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from .models import Payment, StoreTarsaction
+from .models import  StoreTarsaction
 
 # Register your models here.
 
-admin.site.register(Payment)
+
 admin.site.register(StoreTarsaction)
