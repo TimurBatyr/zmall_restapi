@@ -105,10 +105,25 @@ class PostImagesView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+class PostContactlist(APIView):
+    def get(self, request, pk):
+        post = Post.objects.get(pk=pk)
+        image_list = PostContacts.objects.all().filter(post_number=post)
+        serializer = ContactSerializer(image_list, many=True).data
+        return Response(serializer)
+
+
 class PostContactsView(APIView):
     parser_classes = (MultiPartParser, FormParser)
     permission_classes = [AllowAny]
     # permission_classes = [IsAuthenticated]
+
+    # def get(self, request):
+    #     pk = request.GET.get('pk')
+    #     contact = PostContacts.objects.get(id=pk)
+    #     serializer = ContactSerializer(contact)
+    #     return JsonResponse(serializer.data)
+
 
     def get(self, request):
         all_phones = PostContacts.objects.all()

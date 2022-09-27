@@ -1,10 +1,13 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.pagination import PageNumberPagination
+from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.views import APIView
 
-from info.models import Issue, Help, AdminContact, AdminHat, ConfPolitics, Footer
+from info.models import Issue, Help, AdminContact, AdminHat, ConfPolitics, Footer, AdminTheme
 from info.serializers import IssueSerializer, HelpSerializer, AdminContactSerializer, AdminHatSerializer, \
-    ConfPoliticsSerializer, FooterSerializer
+    ConfPoliticsSerializer, FooterSerializer, AdminThemeSerializer
 
 
 class Pagination(PageNumberPagination):
@@ -39,6 +42,11 @@ class AdminHatAPIView(generics.ListAPIView):
     '''List of categories'''
     queryset = AdminHat.objects.all()
     serializer_class = AdminHatSerializer
+
+
+class AdminThemeAPIView(generics.ListAPIView):
+    queryset = AdminTheme.objects.all()
+    serializer_class = AdminThemeSerializer
 
 
 class AdminContactCreateAPIView(generics.CreateAPIView):

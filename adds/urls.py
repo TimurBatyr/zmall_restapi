@@ -16,7 +16,9 @@ urlpatterns = [
     path("city/", CityAPIView.as_view(), name="city"),
 
     path('postimages/', views.PostImagesView.as_view()),
+
     path('postcontacts/', views.PostContactsView.as_view()),
+    path('postcontactlist/<int:pk>', PostContactlist.as_view()),
 
     path('createpost/', views.PostCreate.as_view(), name="createpost"), #no
     path('deletepost/<int:pk>', views.PostDelete.as_view()),

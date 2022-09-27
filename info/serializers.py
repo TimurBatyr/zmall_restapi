@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from info.models import Issue, Help, AdminContact, AdminHat, ConfPolitics, Footer
+from info.models import Issue, Help, AdminContact, AdminHat, ConfPolitics, Footer, AdminTheme
 
 
 class IssueSerializer(serializers.ModelSerializer):
@@ -22,6 +22,12 @@ class AdminHatSerializer(serializers.ModelSerializer):
     class Meta:
         model = AdminHat
         fields = '__all__'
+
+
+class AdminThemeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AdminTheme
+        fields = "__all__"
 
 
 class AdminContactSerializer(serializers.ModelSerializer):

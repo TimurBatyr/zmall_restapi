@@ -9,3 +9,4 @@ mediafiles
 staticfiles
 data
 data-mongodb
+celerybeat-schedule
