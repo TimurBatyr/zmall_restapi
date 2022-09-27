@@ -15,7 +15,7 @@ from rest_framework import generics
 
 # from adds.models import
 
-class api(APIView):
+class Success(APIView):
     def get(self, request):
         data1 = str(request)
         id = data1.split('&')
