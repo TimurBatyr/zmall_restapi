@@ -34,7 +34,7 @@ class AdminContactSerializer(serializers.ModelSerializer):
     """Contact with admin"""
     class Meta:
         model = AdminContact
-        fields = ['adminhat', 'username', 'theme', 'message', 'date_created']
+        fields = ['adminhat', 'username', 'message', 'date_created']
 
 
 class ConfPoliticsSerializer(serializers.ModelSerializer):

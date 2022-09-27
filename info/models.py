@@ -36,13 +36,13 @@ class AdminTheme(models.Model):
 
 class AdminContact(models.Model):
     """Contact with admin"""
-    adminhat = models.ForeignKey(AdminHat, related_name='categories', on_delete=models.CASCADE)
+    adminhat = models.ForeignKey(AdminHat, related_name='adminhat', on_delete=models.CASCADE)
     username = models.CharField(max_length=100)
     message = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'ID:{self.id} - {self.adminhat} - {self.theme} - {self.date_created}'
+        return f'ID:{self.id} - {self.adminhat} - {self.date_created}'
 
 
 class ConfPolitics(models.Model):
