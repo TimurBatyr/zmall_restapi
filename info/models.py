@@ -27,19 +27,17 @@ class AdminHat(models.Model):
         return self.title
 
 
-THEME = (
-        ('abc', 'abc'),
-        ('acb', 'acb'),
-        ('cba', 'cba'),
-        ('other', 'other')
-    )
+class AdminTheme(models.Model):
+    theme = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.theme
 
 
 class AdminContact(models.Model):
     """Contact with admin"""
     adminhat = models.ForeignKey(AdminHat, related_name='categories', on_delete=models.CASCADE)
     username = models.CharField(max_length=100)
-    theme = models.CharField(max_length=100, choices=THEME, default=('other', 'other'))
     message = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
 

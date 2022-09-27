@@ -83,7 +83,7 @@ class PostViewSet(ModelViewSet):
     search_fields = ['title', 'description']
     ordering_fields = ['date_created', 'from_price']
     queryset = Post.objects.filter(Q(subscription__choice='Добавить стикер "Срочно"') | Q(subscription__choice='VIP') |
-                                   Q(subscription__choice='Выделить цветом'), is_activated=True)
+                                   Q(subscription__choice='Выделить цветом'))
     pagination_class = PostPagination
     filterset_class = ProductFilter
 
