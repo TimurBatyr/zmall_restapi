@@ -43,7 +43,7 @@ class Success(APIView):
         post = Post.objects.get(pk=pk_post.decode('utf-8'))
         subscription = Subscription.objects.get(pk=pk_subscription.decode('utf-8'))
         post.subscription = subscription
-        print('---------')
+        # print('---------')
         post.save(update_fields=["subscription"])
 
         for i in StoreTarsaction.objects.all():
