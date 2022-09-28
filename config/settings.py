@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'chat',
     'social_auth',
     'admin_rights',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -151,8 +152,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #       'rest_framework.permissions.AllowAny',
+    #   ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
@@ -160,9 +166,10 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'logging_formatter.exception_handler.handle_exception'
 }
 
+
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=600),
-    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=3),
+    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(days=2),
+    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=10),
 }
 
 AUTH_USER_MODEL = 'account.User'
