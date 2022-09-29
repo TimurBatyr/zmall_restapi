@@ -1,4 +1,4 @@
-import jwt
+import jwt, datetime
 from django.conf import settings
 from django.contrib import auth
 from rest_framework import status, generics
@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .models import User
-from .serializers import RegistrationSerializer, ActivationSerializer, LoginSerializer
-    # ForgotPasswordSerializer, ChangePasswordSerializer,  UserDetailSerializer
+from .serializers import RegistrationSerializer, ActivationSerializer, LoginSerializer, ForgotPasswordSerializer, ChangePasswordSerializer
+# UserDetailSerializer
 
 
 class RegistrationAPIView(generics.GenericAPIView):
@@ -44,7 +44,9 @@ class LoginAPIView(generics.GenericAPIView):
         # print(settings.JWT_SECRET_KEY)
         if user:
             auth_token = jwt.encode(
-                {"email": str(user.email)}, settings.JWT_SECRET_KEY, algorithm="HS256")
+                {"email": str(user.email),
+                 'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=30)},
+                settings.JWT_SECRET_KEY, algorithm="HS256")
             print(auth_token)
 
             serializer = LoginSerializer(user)
@@ -56,25 +58,25 @@ class LoginAPIView(generics.GenericAPIView):
         return Response({'detail': 'Неправильные данные'}, status=status.HTTP_401_UNAUTHORIZED)
 
 
-# class ChangePasswordView(APIView):
-#     permission_classes = [IsAuthenticated]
-#     def post(self, request):
-#         data = request.data
-#         serializer = ChangePasswordSerializer(data=data, context={'request': request})
-#         if serializer.is_valid(raise_exception=True):
-#             serializer.set_new_password()
-#             return Response('Вы успешно обновили свой учетные данные')
-#
-#
-# class ForgotPasswordView(APIView):
-#     def post(self, request):
-#         data = request.data
-#         serializer = ForgotPasswordSerializer(data=data)
-#         serializer.is_valid(raise_exception=True)
-#         serializer.create_new_password(serializer.data['email'])
-#         return Response('Новый пароль отправлен на вашу электронную почту')
-#
-#
+class ChangePasswordView(APIView):
+    permission_classes = [IsAuthenticated]
+    def post(self, request):
+        data = request.data
+        serializer = ChangePasswordSerializer(data=data, context={'request': request})
+        if serializer.is_valid(raise_exception=True):
+            serializer.set_new_password()
+            return Response('Вы успешно обновили свой учетные данные')
+
+
+class ForgotPasswordView(APIView):
+    def post(self, request):
+        data = request.data
+        serializer = ForgotPasswordSerializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        serializer.create_new_password(serializer.data['email'])
+        return Response('Новый пароль отправлен на вашу электронную почту')
+
+
 # class UserView(generics.RetrieveAPIView):
 #     serializer_class = UserDetailSerializer
 #     queryset = User.objects.all()

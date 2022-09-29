@@ -236,70 +236,70 @@ CELERY_TASK_SERIALIZER = 'json'
 #     },
 # }
 
-LOGGING = {
-   'version': 1,
-   'disable_existing_loggers': True,
-   'filters': {
-       'filter_info_level': {
-           '()': 'logging_formatter.log_middleware.FilterLevels',
-           'filter_levels' : [
-               "INFO"
-           ]
-       },
-       'filter_error_level': {
-           '()': 'logging_formatter.log_middleware.FilterLevels',
-           'filter_levels' : [
-               "ERROR"
-           ]
-       },
-       'filter_warning_level': {
-           '()': 'logging_formatter.log_middleware.FilterLevels',
-           'filter_levels' : [
-               "WARNING"
-           ]
-       }
-   },
-   'formatters': {
-       'info-formatter': {
-           'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s',
-       },
-       'error-formatter': {
-           'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s @ %(pathname)s : %(lineno)d : %(funcName)s',
-           'datefmt': '%Y-%m-%d %H:%M'
-       },
-       'short': {
-           'format': '%(levelname)s : %(message)s'
-       }
-   },
-   'handlers': {
-       'customHandler_1': {
-           'formatter': 'info-formatter',
-           'class': 'logging_formatter.log_middleware.DatabaseLoggingHandler',
-           'database': 'logging_formatter',
-           'collection': 'logs',
-           'filters': ['filter_info_level'],
-       },
-       'customHandler_2': {
-           'formatter': 'error-formatter',
-           'class': 'logging_formatter.log_middleware.DatabaseLoggingHandler',
-           'database': 'logging_formatter',
-           'collection': 'logs',
-           'filters': ['filter_error_level'],
-       },
-       'customHandler_3': {
-           'formatter': 'short',
-           'class': 'logging.StreamHandler',
-           'filters': ['filter_warning_level'],
-       },
-   },
-   'loggers': {
-       'customLogger': {
-           'handlers': [
-               'customHandler_1',
-               'customHandler_2',
-               'customHandler_3'
-           ],
-           'level': 'DEBUG',
-       },
-   },
-}
+# LOGGING = {
+#    'version': 1,
+#    'disable_existing_loggers': True,
+#    'filters': {
+#        'filter_info_level': {
+#            '()': 'logging_formatter.log_middleware.FilterLevels',
+#            'filter_levels' : [
+#                "INFO"
+#            ]
+#        },
+#        'filter_error_level': {
+#            '()': 'logging_formatter.log_middleware.FilterLevels',
+#            'filter_levels' : [
+#                "ERROR"
+#            ]
+#        },
+#        'filter_warning_level': {
+#            '()': 'logging_formatter.log_middleware.FilterLevels',
+#            'filter_levels' : [
+#                "WARNING"
+#            ]
+#        }
+#    },
+#    'formatters': {
+#        'info-formatter': {
+#            'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s',
+#        },
+#        'error-formatter': {
+#            'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s @ %(pathname)s : %(lineno)d : %(funcName)s',
+#            'datefmt': '%Y-%m-%d %H:%M'
+#        },
+#        'short': {
+#            'format': '%(levelname)s : %(message)s'
+#        }
+#    },
+#    'handlers': {
+#        'customHandler_1': {
+#            'formatter': 'info-formatter',
+#            'class': 'logging_formatter.log_middleware.DatabaseLoggingHandler',
+#            'database': 'logging_formatter',
+#            'collection': 'logs',
+#            'filters': ['filter_info_level'],
+#        },
+#        'customHandler_2': {
+#            'formatter': 'error-formatter',
+#            'class': 'logging_formatter.log_middleware.DatabaseLoggingHandler',
+#            'database': 'logging_formatter',
+#            'collection': 'logs',
+#            'filters': ['filter_error_level'],
+#        },
+#        'customHandler_3': {
+#            'formatter': 'short',
+#            'class': 'logging.StreamHandler',
+#            'filters': ['filter_warning_level'],
+#        },
+#    },
+#    'loggers': {
+#        'customLogger': {
+#            'handlers': [
+#                'customHandler_1',
+#                'customHandler_2',
+#                'customHandler_3'
+#            ],
+#            'level': 'DEBUG',
+#        },
+#    },
+# }

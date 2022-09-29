@@ -110,52 +110,52 @@ class LoginSerializer(serializers.ModelSerializer):
     #     return super().validate(attrs)
 
 
-# class ChangePasswordSerializer(serializers.Serializer):
-#     username = serializers.CharField(
-#         max_length=255, min_length=3, allow_blank=True)
-#     email = serializers.EmailField(allow_blank=True)
-#     phone = PhoneNumberField(allow_blank=True)
-#     old_password = serializers.CharField(required=True)
-#     new_password = serializers.CharField(required=True)
-#     password_confirm = serializers.CharField(required=True)
-#
-#     def validate_old_password(self, old_password):
-#         user = self.context['request'].user
-#         if not user.check_password(old_password):
-#             raise serializers.ValidationError('Введите правильный пароль')
-#         return old_password
-#
-#     def validate(self, attrs):
-#          password = attrs.get('new_password')
-#          password_confirm = attrs.get('password_confirm')
-#          if password != password_confirm:
-#              raise serializers.ValidationError('Пароли не совпали')
-#          return attrs
-#
-#     def set_new_password(self):
-#          user = self.context['request'].user
-#          password = self.validated_data.get('new_password')
-#          user.set_password(password)
-#          user.save()
-#
-#
-# class ForgotPasswordSerializer(serializers.Serializer):
-#     email = serializers.EmailField()
-#
-#     def validate_email(self, email):
-#         if not User.objects.filter(email=email).exists():
-#             raise serializers.ValidationError('Юзер не найден')
-#         return email
-#
-#     def create_new_password(self, email):
-#
-#         user = User.objects.get(email=email)
-#         random_password = get_random_string(8)
-#         user.set_password(random_password)
-#         user.save()
-#         send_new_password(random_password, email)
-#
-#
+class ChangePasswordSerializer(serializers.Serializer):
+    username = serializers.CharField(
+        max_length=255, min_length=3, allow_blank=True)
+    email = serializers.EmailField(allow_blank=True)
+    phone = PhoneNumberField(allow_blank=True)
+    old_password = serializers.CharField(required=True)
+    new_password = serializers.CharField(required=True)
+    password_confirm = serializers.CharField(required=True)
+
+    def validate_old_password(self, old_password):
+        user = self.context['request'].user
+        if not user.check_password(old_password):
+            raise serializers.ValidationError('Введите правильный пароль')
+        return old_password
+
+    def validate(self, attrs):
+         password = attrs.get('new_password')
+         password_confirm = attrs.get('password_confirm')
+         if password != password_confirm:
+             raise serializers.ValidationError('Пароли не совпали')
+         return attrs
+
+    def set_new_password(self):
+         user = self.context['request'].user
+         password = self.validated_data.get('new_password')
+         user.set_password(password)
+         user.save()
+
+
+class ForgotPasswordSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+
+    def validate_email(self, email):
+        if not User.objects.filter(email=email).exists():
+            raise serializers.ValidationError('Юзер не найден')
+        return email
+
+    def create_new_password(self, email):
+
+        user = User.objects.get(email=email)
+        random_password = get_random_string(8)
+        user.set_password(random_password)
+        user.save()
+        send_new_password(random_password, email)
+
+
 # class UserDetailSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = User
