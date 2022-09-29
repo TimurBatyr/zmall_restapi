@@ -248,8 +248,8 @@ class ReviewView(ModelViewSet):
 class FavoriteCreateView(generics.CreateAPIView):
     queryset = Favorite.objects.all()
     serializer_class = FavoriteSerializer
-    # permission_classes = [IsAuthenticated, UserPermission, ]
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated, UserPermission, ]
+    # permission_classes = [AllowAny]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -315,7 +315,10 @@ def get_client_ip(request):
 
 
 class DetailPost(APIView):
+    permission_classes = [AllowAny]
+
     def get(self, request, pk):
+        print(request.user)
         get_object_or_404(Post, pk=pk)  # 1
         posts = Post.objects.select_related('category').get(pk=pk)
         title = Post.objects.values('title').filter(pk=pk)  # 2
