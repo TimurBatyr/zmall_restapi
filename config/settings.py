@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'chat',
     'social_auth',
     'admin_rights',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -150,8 +151,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #       'rest_framework.permissions.AllowAny',
+    #   ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
@@ -159,9 +165,10 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'logging_formatter.exception_handler.handle_exception'
 }
 
+
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=600),
-    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=3),
+    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(days=2),
+    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=10),
 }
 
 AUTH_USER_MODEL = 'account.User'
@@ -184,54 +191,6 @@ CELERY_RESULT_BACKEND = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 
-
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#
-#     # 'formatters': {
-#     #     'main_formatter': {
-#     #     '()': CustomJsonFormatter
-#     #     },
-#     # },
-#     'formatters': {
-#         'simple': {
-#             'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s',
-#         },
-#         'verbose': {
-#             'format': '%(asctime)s [%(module)s | %(levelname)s] %(message)s @ %(pathname)s : %(lineno)d : %(funcName)s',
-#         },
-#     },
-#     'handlers': {
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#         },
-#         'debug': {
-#             'class': 'logging.FileHandler',
-#             'filename': 'log/django.log',
-#             'formatter': 'simple',
-#             'level': 'DEBUG'
-#         },
-#         'error': {
-#             'class': 'logging.FileHandler',
-#             'filename': 'log/django.log',
-#             'formatter': 'verbose',
-#             'level': 'ERROR'
-#         },
-#         'info': {
-#             'class': 'logging.FileHandler',
-#             'filename': 'log/django.log',
-#             'formatter': 'simple',
-#             'level': 'INFO'
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ["error", "info", "error"],
-#             "level": 1,
-#         },
-#     },
-# }
 
 LOGGING = {
    'version': 1,

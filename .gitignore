@@ -8,5 +8,6 @@ media
 mediafiles
 staticfiles
 data
-data-mongodb
 celerybeat-schedule
+data-mongodb
+
