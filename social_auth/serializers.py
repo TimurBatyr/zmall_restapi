@@ -24,13 +24,12 @@ class GoogleSocialAuthSerializer(serializers.Serializer):
 
             raise AuthenticationFailed('oops, who are you?')
 
-        user_id = user_data['sub']
         email = user_data['email']
         name = user_data['name']
         provider = 'google'
 
         return register_social_user(
-            provider=provider, user_id=user_id, email=email, name=name)
+            provider=provider, email=email, name=name)
 
 
 class FacebookSocialAuthSerializer(serializers.Serializer):
@@ -41,13 +40,11 @@ class FacebookSocialAuthSerializer(serializers.Serializer):
         user_data = facebook.Facebook.validate(auth_token)
 
         try:
-            user_id = user_data['id']
             email = user_data['email']
             name = user_data['name']
             provider = 'facebook'
             return register_social_user(
                 provider=provider,
-                user_id=user_id,
                 email=email,
                 name=name
             )
