@@ -1,3 +1,8 @@
+import datetime
+
+import jwt
+from django.conf import settings
+from django.contrib import auth
 from rest_framework import status, generics
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -84,3 +89,31 @@ class UserAccount(generics.GenericAPIView):
         user = User.objects.get(pk=self.request.user.id)
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+# """"Эта вьюшка используется для логина с JWT"""
+# class LoginAPIView(generics.GenericAPIView):
+#     serializer_class = LoginSerializer
+#
+#     def post(self, request):
+#         data = request.data
+#         email = data.get('email', '')
+#         password = data.get('password', '')
+#         user = auth.authenticate(email=email, password=password)
+#         # print(user.email)
+#         # print(type(user.email))
+#         # print(settings.JWT_SECRET_KEY)
+#         if user:
+#             auth_token = jwt.encode(
+#                 {"email": str(user.email),
+#                  'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=30)},
+#                 settings.JWT_SECRET_KEY, algorithm="HS256")
+#             print(auth_token)
+#
+#             serializer = LoginSerializer(user)
+#
+#             data = {'user': serializer.data, 'token': auth_token}
+#
+#             return Response(data, status=status.HTTP_200_OK)
+#
+#         return Response({'detail': 'Неправильные данные'}, status=status.HTTP_401_UNAUTHORIZED)
