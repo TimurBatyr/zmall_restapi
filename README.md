@@ -3,10 +3,21 @@
 
 
 
-| Command                                                         | Description                                                       |
+| Установка                                                       | Описание.                                                         |
 |:----------------------------------------------------------------|:------------------------------------------------------------------|                     
 |                                                                 |                                                                   |
-| `git clone https://github.com/TimurBatyr/zmall_restapi.git`     | **Install project**.                                              |
-| `pip install -r requirements.txt`                               | **Installing dependencies**.                                      |
-| `pytthon manage.py runserver`                                   | **Run project**.                                                  |
+| `git clone https://github.com/TimurBatyr/zmall_restapi.git`     | **Клон проекта**                                                  |
+| `pip install -r requirements.txt`                               | **Установка зависимостей**                                        |
+| `python manage.py runserver`                                   | **Запуск проекта**                                                 |
 
+
+
+# Проект сайт объявлений:
+- Создание, редактирование объявлений
+- Добавление в избранное
+- Пользователи
+- Поиск и фильтрация объявлений по городу, названию, категориям
+
+## Backend
+- Framework - Django, Django Restframework
+- DB - PostgreSQL
