@@ -2,6 +2,7 @@ import datetime
 
 import django_filters
 import redis
+from django.conf import settings
 from django.db.models import Q
 from django.http import JsonResponse
 from django_filters.rest_framework import DjangoFilterBackend
@@ -281,7 +282,7 @@ class PostComplaintView(generics.ListCreateAPIView):
 
 # Views
 def get_post(client, title, pk):
-    data = redis.Redis()
+    data = redis.Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
     data_value = data.get(str(client))
 
     if data_value is None or data_value.decode('utf-8') != title:
@@ -298,9 +299,10 @@ def get_post(client, title, pk):
         name.save(update_fields=["date"])
         name.views += 1
         name.save(update_fields=["views"])
-
+        data.close()
         return False
     else:
+        data.close()
         return True
 
 
@@ -389,7 +391,7 @@ class StatistictsApi(APIView):
 
 
 def get_post_number(client, number, pk):
-    data = redis.Redis()
+    data = redis.Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
     data_value = data.get(str(client))
     client = str(client)
 
@@ -412,8 +414,10 @@ def get_post_number(client, number, pk):
         name.views += 1
         name.save(update_fields=["views"])
 
+        data.close()
         return False
     else:
+        data.close()
         return True
 
 
