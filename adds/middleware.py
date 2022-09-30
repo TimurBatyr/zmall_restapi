@@ -16,7 +16,7 @@ class FirstMiddleware:
 
         count = cache.get_or_set(f'ip:{ip}',0,30)
         count += 1
-        if count > 100:
+        if count > 1000:
             raise Exception('Давай, - до свидания')
         else:
             cache.set(f'ip:{ip}', count,30)

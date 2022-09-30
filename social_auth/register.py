@@ -6,38 +6,28 @@ import random
 from rest_framework.exceptions import AuthenticationFailed
 
 
-def register_social_user(provider, email, name):
+def register_social_user(provider, email, user):
     filtered_user_by_email = User.objects.filter(email=email)
-
     if filtered_user_by_email.exists():
 
         if provider == filtered_user_by_email[0].auth_provider:
+            user = User.objects.get(email=email)
 
-            registered_user = authenticate(
-                email=email, password=config('SOCIAL_SECRET'))
-
-            return {
-                'username': registered_user.username,
-                'email': registered_user.email,
-                'tokens': registered_user.tokens()}
+            return {"email": user.email, "tokens": user.tokens()}
 
         else:
             raise AuthenticationFailed(
-                detail='Please continue your login using ' + filtered_user_by_email[0].auth_provider)
+                detail="Please continue your login using "
+                + filtered_user_by_email[0].auth_provider
+            )
 
     else:
-        user = {
-            'username': name, 'email': email,
-            'password': config('SOCIAL_SECRET')}
-        user = User.objects.create_user(**user)
-        user.is_verified = True
+        user = {"email": email, "password": config("SOCIAL_SECRET"), "first_name": user['given_name'],
+                "last_name": user['family_name']}
+        user = User.objects.create(**user)
+        user.is_active = True
         user.auth_provider = provider
         user.save()
-
-        new_user = authenticate(
-            email=email, password=config('SOCIAL_SECRET'))
-        return {
-            'email': new_user.email,
-            'username': new_user.username,
-            'tokens': new_user.tokens()
-        }
+        new_user = authenticate(email=email, password=config("SOCIAL_SECRET"))
+        tokens = new_user.tokens()
+        return {"email": user.email, **tokens}
