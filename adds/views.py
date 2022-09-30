@@ -374,17 +374,17 @@ class StatistictsApi(APIView):
         phone_object = PostContacts.objects.filter(post_number=post_object).exists()
 
         if phone_object ==False:
-            serializer_view_number = 'Контакты отсутствую!'
+            serializer_view_number = 'Контакты отсутствуют!'
 
         else:
             phone_object = PostContacts.objects.get(post_number=post_object)
             serializer_view_number = StaticsNumberSerializer(phone_object, many=False).data
 
         context = {
-            'common post view': serializer_post,
-            'view post today': serializer_view_today,
-            'common view number of contacts': serializer_view_number,
-            'view post every day': serializer_view_every_day,
+            'common_post': serializer_post,
+            'view_today': serializer_view_today,
+            'amount_contacts': serializer_view_number,
+            'every_day': serializer_view_every_day,
 
         }
         return Response(context)
