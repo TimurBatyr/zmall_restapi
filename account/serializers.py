@@ -5,7 +5,6 @@ from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
 from rest_framework.exceptions import AuthenticationFailed
 
-from adds.models import Post
 from .utils import send_new_password, get_activation_code, send_activation_mail
 
 User = get_user_model()
@@ -161,3 +160,17 @@ class UserDetailSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'email', 'phone', 'username']
 
+
+
+# """"Этот сериалайзер используется для логина с JWT"""
+# class LoginSerializer(serializers.ModelSerializer):
+#     email = serializers.EmailField(max_length=255, min_length=3)
+#     password = serializers.CharField(
+#         max_length=100, min_length=5, write_only=True)
+#     username = serializers.CharField(
+#         max_length=255, min_length=3, read_only=True)
+#     phone = PhoneNumberField(allow_blank=True, allow_null=True)
+#
+#     class Meta:
+#         model = User
+#         fields = ['id', 'email', 'password', 'phone', 'username']
