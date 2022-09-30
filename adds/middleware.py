@@ -12,7 +12,7 @@ class FirstMiddleware:
         else:
             ip = request.META.get('REMOTE_ADDR')
 
-        # print(ip)
+        print(ip)
 
         count = cache.get_or_set(f'ip:{ip}',0,30)
         count += 1
