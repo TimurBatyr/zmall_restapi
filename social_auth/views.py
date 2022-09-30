@@ -10,9 +10,6 @@ class GoogleSocialAuthView(GenericAPIView):
     serializer_class = GoogleSocialAuthSerializer
 
     def post(self, request):
-        """ POST with 'auth_token'
-        Send an idtoken as from google to get user information
-        """
 
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -25,10 +22,7 @@ class FacebookSocialAuthView(GenericAPIView):
     serializer_class = FacebookSocialAuthSerializer
 
     def post(self, request):
-        """
-        POST with 'auth_token'
-        Send an access token as from facebook to get user information
-        """
+
 
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)

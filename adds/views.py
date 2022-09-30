@@ -2,6 +2,7 @@ import datetime
 
 import django_filters
 import redis
+from django.conf import settings
 from django.db.models import Q
 from django.http import JsonResponse
 from django_filters.rest_framework import DjangoFilterBackend
@@ -248,8 +249,8 @@ class ReviewView(ModelViewSet):
 class FavoriteCreateView(generics.CreateAPIView):
     queryset = Favorite.objects.all()
     serializer_class = FavoriteSerializer
-    # permission_classes = [IsAuthenticated, UserPermission, ]
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated, UserPermission, ]
+    # permission_classes = [AllowAny]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -281,7 +282,7 @@ class PostComplaintView(generics.ListCreateAPIView):
 
 # Views
 def get_post(client, title, pk):
-    data = redis.Redis()
+    data = redis.Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
     data_value = data.get(str(client))
 
     if data_value is None or data_value.decode('utf-8') != title:
@@ -298,9 +299,10 @@ def get_post(client, title, pk):
         name.save(update_fields=["date"])
         name.views += 1
         name.save(update_fields=["views"])
-
+        data.close()
         return False
     else:
+        data.close()
         return True
 
 
@@ -315,7 +317,10 @@ def get_client_ip(request):
 
 
 class DetailPost(APIView):
+    permission_classes = [AllowAny]
+
     def get(self, request, pk):
+        print(request.user)
         get_object_or_404(Post, pk=pk)  # 1
         posts = Post.objects.select_related('category').get(pk=pk)
         title = Post.objects.values('title').filter(pk=pk)  # 2
@@ -386,7 +391,7 @@ class StatistictsApi(APIView):
 
 
 def get_post_number(client, number, pk):
-    data = redis.Redis()
+    data = redis.Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
     data_value = data.get(str(client))
     client = str(client)
 
@@ -409,8 +414,10 @@ def get_post_number(client, number, pk):
         name.views += 1
         name.save(update_fields=["views"])
 
+        data.close()
         return False
     else:
+        data.close()
         return True
 
 

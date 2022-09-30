@@ -1,5 +1,6 @@
 import redis
 import requests
+from django.conf import settings
 from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -36,9 +37,10 @@ class Success(APIView):
         transaction.date = date
         transaction.save(update_fields=["date"])
 
-        data = redis.Redis()
+        data = redis.Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
         pk_post = data.get('pk')
         pk_subscription = data.get('pn')
+
 
         post = Post.objects.get(pk=pk_post.decode('utf-8'))
         subscription = Subscription.objects.get(pk=pk_subscription.decode('utf-8'))
@@ -50,7 +52,7 @@ class Success(APIView):
             val = i.date
             if val == None:
                 i.delete()
-
+        data.close()
         return HttpResponse(r.headers)
 
 
@@ -96,9 +98,10 @@ class Payment(APIView):
         StoreTarsaction.objects.create(id=payment, title=title,
                                        type_adverments=type_adversment,
                                        user=user, price=price)
-        data = redis.Redis()
+        data = redis.Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
         data.mset({'pk': pk})
         data.mset({'pn': pn})
+        data.close()
         return Response({'redirect': url})
 
 
