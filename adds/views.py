@@ -170,7 +170,7 @@ class PostEdit(generics.RetrieveUpdateAPIView):
 
 class PostListHighlightPagination(Pagination):
     '''Pagination for post list by date'''
-    page_size = 10
+    page_size = 9
 
 
 class ProductFilter(filters.FilterSet):

@@ -107,7 +107,7 @@ class Payment(APIView):
 
 class TransactionView(APIView):
     def get(self, request):
-        user = str(request.user)
+        user = request.user
         user_obj = User.objects.get(email=user)
         queryset = StoreTarsaction.objects.all().filter(user=user_obj)
         serializer = TransactionSerializer(queryset, many=True).data
