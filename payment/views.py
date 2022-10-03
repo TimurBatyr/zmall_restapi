@@ -92,9 +92,9 @@ class Payment(APIView):
         subscription = Subscription.objects.get(pk=pn)
         type_adversment = subscription.choice
         title = post.title
-        user = str(request.user)
-        print(user)
-        user = User.objects.get(email=user)
+        # user = str(request.user)
+        # print(user)
+        user = request.user
         StoreTarsaction.objects.create(id=payment, title=title,
                                        type_adverments=type_adversment,
                                        user=user, price=price)
