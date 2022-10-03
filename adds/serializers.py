@@ -110,22 +110,35 @@ class FavoriteSerializer(serializers.ModelSerializer):
         return favorite
 
 
+# class PostEditSerializer(serializers.ModelSerializer):
+#     ''' Editing(detail, delete, update(just for post) post'''
+#     images = PostImagesSerializer(many=True)
+#     # phone = ContactSerializer(many=True)
+#     subscription = SubscriptionSerializer(read_only=True)
+#     reviews = ReviewSerializer(many=True, read_only=True)
+#     user_email = serializers.ReadOnlyField(source='user.email')
+#     user_username = serializers.ReadOnlyField(source='user.username')
+#
+#
+#     class Meta:
+#         model = Post
+#         fields = ('id', 'user_email', 'user_username', 'category', 'subcategory', 'city', 'subscription', 'title',
+#                   'description', 'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number',
+#                   'is_activated', 'reviews', 'date_created', 'status')
+
 class PostEditSerializer(serializers.ModelSerializer):
     ''' Editing(detail, delete, update(just for post) post'''
     images = PostImagesSerializer(many=True)
-    # phone = ContactSerializer(many=True)
     subscription = SubscriptionSerializer(read_only=True)
     reviews = ReviewSerializer(many=True, read_only=True)
     user_email = serializers.ReadOnlyField(source='user.email')
     user_username = serializers.ReadOnlyField(source='user.username')
-
-
+    views = serializers.IntegerField(read_only=True)
     class Meta:
         model = Post
         fields = ('id', 'user_email', 'user_username', 'category', 'subcategory', 'city', 'subscription', 'title',
                   'description', 'from_price', 'to_price', 'image', 'images', 'email', 'phone_number', 'wa_number',
-                  'is_activated', 'reviews', 'date_created', 'status')
-        # read_only_fields = ['user']
+                  'is_activated', 'reviews', 'date_created', 'status', 'views')
 
 
 class PostDetailSerializer(serializers.ModelSerializer):
