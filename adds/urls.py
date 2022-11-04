@@ -39,4 +39,7 @@ urlpatterns = [
     path('view/<int:pk>', DetailPost.as_view()),
     path('viewstatistics/<int:pk>', StatistictsApi.as_view()),
     path('viewcontact/<int:pk>', Contacts.as_view()),
+
+#Flask
+    path('get_data/', Get_flask.as_view()),
 ]

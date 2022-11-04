@@ -1,4 +1,5 @@
 import datetime
+import json
 
 import django_filters
 import redis
@@ -454,3 +455,9 @@ class Contacts(APIView):
         serializer = ContactSerializer(queryset, many=False).data
         return Response(serializer)
 
+#Flask
+class Get_flask(APIView):
+    def get(self, request):
+        data = request
+        print(data)
+        return '---ok-----------------'
