@@ -453,3 +453,4 @@ class Contacts(APIView):
         queryset = object
         serializer = ContactSerializer(queryset, many=False).data
         return Response(serializer)
+
