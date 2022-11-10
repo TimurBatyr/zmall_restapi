@@ -8,7 +8,7 @@ from django.db.models import Q
 from django.http import JsonResponse
 from django_filters.rest_framework import DjangoFilterBackend
 from phonenumber_field.validators import validate_international_phonenumber
-from rest_framework import generics, status, filters as f
+from rest_framework import generics, status, filters as f, viewsets, response
 from rest_framework.filters import SearchFilter
 from rest_framework.generics import get_object_or_404
 from rest_framework.pagination import PageNumberPagination
@@ -456,8 +456,51 @@ class Contacts(APIView):
         return Response(serializer)
 
 #Flask
-class Get_flask(APIView):
-    def get(self, request):
-        data = request
-        print(data)
-        return '---ok-----------------'
+# class Get_flask(APIView):
+#     def post(self, request):
+#         data = request
+#         print(data)
+#         return Response(status=status.HTTP_201_CREATED)
+
+# class PostCreateViewSet(viewsets.ModelViewSet):
+#     '''Create Post'''
+#     queryset = Post.objects.all()
+#     serializer_class = PostCreateSerializer
+#     http_method_names = ['post']
+#
+#     def create(self, request):
+#         data = request.data
+#         advert = []
+#         for item in data:
+#             serializer = PostCreateSerializer(data=item)
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    http_method_names = ['post']
+
+    def create(self, request):
+        data = request.data
+        category = []
+        for item in data:
+            # serializer = CategorySerializer(data=item)
+            # serializer.is_valid(raise_exception=True)
+            category.append(Category(**item))
+
+        Category.objects.bulk_create(category)
+        return response.Response({'category': 'created successfully'}, status= status.HTTP_201_CREATED)
+
+class SubCategoryViewSet(viewsets.ModelViewSet):
+    queryset = Subcategory.objects.all()
+    serializer_class = SubcategorySerializer
+    http_method_names = ['post']
+
+    def create(self, request):
+        data = request.data
+        subcategory = []
+        for item in data:
+            category = get_object_or_404(Category.objects, id=item.pop("category"))
+            subcategory.append(Subcategory(category=category, **item))
+
+        Subcategory.objects.bulk_create(subcategory)
+        return response.Response({'subcategory': 'created successfully'}, status= status.HTTP_201_CREATED)

@@ -8,7 +8,7 @@ from account.models import User
 class Category(models.Model):
     """Category for post"""
     title = models.CharField(max_length=100, unique=True)
-    icon_image = models.ImageField()
+    icon_image = models.ImageField(blank=True)
 
     def __str__(self):
         return self.title

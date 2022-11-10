@@ -7,7 +7,9 @@ from .views import *
 router = DefaultRouter()
 router.register('subscription', SubscriptionViewSet, basename='subscription')
 router.register("review", ReviewView, basename='review')
-
+#Flask
+router.register('get_category', CategoryViewSet)
+router.register('get_subcategory', SubCategoryViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
@@ -40,6 +42,5 @@ urlpatterns = [
     path('viewstatistics/<int:pk>', StatistictsApi.as_view()),
     path('viewcontact/<int:pk>', Contacts.as_view()),
 
-#Flask
-    path('get_data/', Get_flask.as_view()),
+
 ]
